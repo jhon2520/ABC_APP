@@ -71,6 +71,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="logica\FormComportamiento.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Prueba.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="Vista\FormHorizontalAnalisis.Designer.cs">
       <DependentUpon>FormHorizontalAnalisis.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\FormHorizontalController.cs" />
     <Compile Include="Vista\FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +89,12 @@
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\FormMainController.cs" />
+    <Compile Include="Vista\FormSectorAnalisis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormSectorAnalisis.Designer.cs">
+      <DependentUpon>FormSectorAnalisis.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -95,9 +103,16 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Vista\FormHorizontalAnalisis.resx">
+      <DependentUpon>FormHorizontalAnalisis.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormSectorAnalisis.resx">
+      <DependentUpon>FormSectorAnalisis.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -115,6 +130,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ObjectPy.py" />
+    <None Include="Resources\return.png" />
+    <None Include="Resources\close2.png" />
+    <None Include="Resources\close1.png" />
+    <None Include="Resources\minimice.png" />
+    <None Include="Resources\close.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

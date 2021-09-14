@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace ABC_APP.Vista
 {
-    public partial class FormHorizontalAnalisis : Form
+    public partial class FormSectorAnalisis : Form
     {
-        public FormHorizontalAnalisis()
+        public FormSectorAnalisis()
         {
             InitializeComponent();
-            FormHorizontalController formHorizontalController = new FormHorizontalController(this);
         }
     }
 }
