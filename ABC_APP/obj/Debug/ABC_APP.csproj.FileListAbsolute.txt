@@ -26,3 +26,10 @@ C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\bin\Debug\Bunifu_UI_v1.52.dll
 C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\obj\Debug\ABC_APP.Vista.FormHorizontalAnalisis.resources
 C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\obj\Debug\ABC_APP.Vista.FormSectorAnalisis.resources
 C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\obj\Debug\ABC_APP.csproj.AssemblyReference.cache
+C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\bin\Debug\SpreadsheetLight.dll
+C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\bin\Debug\System.Drawing.Common.dll
+C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\bin\Debug\System.IO.Packaging.dll
+C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\bin\Debug\SpreadsheetLight.xml
+C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\bin\Debug\System.IO.Packaging.xml
