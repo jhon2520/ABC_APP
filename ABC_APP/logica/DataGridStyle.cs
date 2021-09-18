@@ -10,29 +10,33 @@ namespace ABC_APP.logica
 {
     class DataGridStyle
     {
-        public void DataGridGetStyle(DataGridView dataGridView)
+        public void DataGridGetStyle(List<DataGridView> dataGridViews)
         {
-            dataGridView.BackgroundColor = Color.FromArgb(45, 65, 91);
-            dataGridView.BorderStyle = BorderStyle.None;
-            dataGridView.RowsDefaultCellStyle.BackColor = Color.FromArgb(45, 65, 91);
-            dataGridView.RowsDefaultCellStyle.Font = new Font("poppins",8);
-            dataGridView.RowsDefaultCellStyle.SelectionBackColor = Color.SteelBlue;
-            dataGridView.RowsDefaultCellStyle.ForeColor = Color.White;
-            dataGridView.GridColor = Color.SteelBlue;
-            dataGridView.EnableHeadersVisualStyles = false;
-            dataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(3,101,202);
-            dataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            dataGridView.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridView.ColumnHeadersHeight = 30;
-            dataGridView.RowHeadersDefaultCellStyle.BackColor = Color.FromArgb(45, 65, 91);
-            dataGridView.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridView.RowHeadersVisible = false;
-            dataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView.AllowUserToResizeRows = false;
-            //dataGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            //dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            foreach (var item in dataGridViews)
+            {
+                item.BackgroundColor = Color.FromArgb(45, 65, 91);
+                item.BorderStyle = BorderStyle.None;
+                item.RowsDefaultCellStyle.BackColor = Color.FromArgb(45, 65, 91);
+                item.RowsDefaultCellStyle.Font = new Font("poppins", 8);
+                item.RowsDefaultCellStyle.SelectionBackColor = Color.SteelBlue;
+                item.RowsDefaultCellStyle.ForeColor = Color.White;
+                item.GridColor = Color.SteelBlue;
+                item.EnableHeadersVisualStyles = false;
+                item.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(3, 101, 202);
+                item.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+                item.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                item.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+                item.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+                item.ColumnHeadersHeight = 30;
+                item.RowHeadersDefaultCellStyle.BackColor = Color.FromArgb(45, 65, 91);
+                item.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+                item.RowHeadersVisible = false;
+                item.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                item.AllowUserToResizeRows = false;
+
+            }
+
+    
 
         }
 

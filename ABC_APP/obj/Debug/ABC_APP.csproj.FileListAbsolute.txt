@@ -33,3 +33,9 @@ C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\bin\Debug\System.IO.Packaging.
 C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\bin\Debug\DocumentFormat.OpenXml.xml
 C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\bin\Debug\SpreadsheetLight.xml
 C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\bin\Debug\System.IO.Packaging.xml
+C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\bin\Debug\ABC_APP.exe.manifest
+C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\bin\Debug\ABC_APP.application
+C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\obj\Debug\ABC_APP.exe.manifest
+C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\obj\Debug\ABC_APP.application
+C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\bin\Debug\PythonCode\main.exe
+C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\obj\Debug\ABC_APP.Vista.FormGrafica.resources

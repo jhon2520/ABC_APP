@@ -12,6 +12,22 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Jhon Romero\Documents\Code++\Csharp\Pruebas\ABC_APP\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>12</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +47,18 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>34D6D15BA5CADF94689142AEAEE4B22938AB44E9</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ABC_APP_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.52">
@@ -89,13 +117,22 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="logica\Archivos.cs" />
     <Compile Include="logica\DataGridCellFormat.cs" />
     <Compile Include="logica\DataGridStyle.cs" />
     <Compile Include="logica\FormComportamiento.cs" />
     <Compile Include="logica\ImportExcel.cs" />
+    <Compile Include="logica\Procesos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Prueba.cs" />
+    <Compile Include="Vista\FormGrafica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormGrafica.Designer.cs">
+      <DependentUpon>FormGrafica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormGraficaController.cs" />
     <Compile Include="Vista\FormHorizontalAnalisis.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +163,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Vista\FormGrafica.resx">
+      <DependentUpon>FormGrafica.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\FormHorizontalAnalisis.resx">
       <DependentUpon>FormHorizontalAnalisis.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,6 +175,7 @@
     <EmbeddedResource Include="Vista\FormSectorAnalisis.resx">
       <DependentUpon>FormSectorAnalisis.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ABC_APP_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -151,12 +192,27 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ObjectPy.py" />
+    <Content Include="PythonCode\main.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\no-imagen.jpeg" />
     <None Include="Resources\return.png" />
     <None Include="Resources\close2.png" />
     <None Include="Resources\close1.png" />
     <None Include="Resources\minimice.png" />
     <None Include="Resources\close.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

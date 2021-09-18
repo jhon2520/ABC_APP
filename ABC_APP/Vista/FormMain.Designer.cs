@@ -31,19 +31,19 @@ namespace ABC_APP.Vista
         {
             this.components = new System.ComponentModel.Container();
             this.pnlSuperior = new System.Windows.Forms.Panel();
+            this.btnReturn = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnClose = new System.Windows.Forms.PictureBox();
             this.pnlIzquierdo = new System.Windows.Forms.Panel();
             this.btnSector = new System.Windows.Forms.Button();
             this.btnHorizontal = new System.Windows.Forms.Button();
             this.pnlCentral = new System.Windows.Forms.Panel();
             this.dragSuperior = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.btnReturn = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnClose = new System.Windows.Forms.PictureBox();
             this.pnlSuperior.SuspendLayout();
-            this.pnlIzquierdo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnReturn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
+            this.pnlIzquierdo.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlSuperior
@@ -58,6 +58,39 @@ namespace ABC_APP.Vista
             this.pnlSuperior.Name = "pnlSuperior";
             this.pnlSuperior.Size = new System.Drawing.Size(895, 54);
             this.pnlSuperior.TabIndex = 0;
+            // 
+            // btnReturn
+            // 
+            this.btnReturn.Image = global::ABC_APP.Properties.Resources._return;
+            this.btnReturn.Location = new System.Drawing.Point(12, 10);
+            this.btnReturn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(35, 35);
+            this.btnReturn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnReturn.TabIndex = 0;
+            this.btnReturn.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ABC_APP.Properties.Resources.minimice1;
+            this.pictureBox1.Location = new System.Drawing.Point(841, 3);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Image = global::ABC_APP.Properties.Resources.close2;
+            this.btnClose.Location = new System.Drawing.Point(867, 3);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(25, 25);
+            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnClose.TabIndex = 0;
+            this.btnClose.TabStop = false;
             // 
             // pnlIzquierdo
             // 
@@ -122,39 +155,6 @@ namespace ABC_APP.Vista
             this.dragSuperior.TargetControl = this.pnlSuperior;
             this.dragSuperior.Vertical = true;
             // 
-            // btnReturn
-            // 
-            this.btnReturn.Image = global::ABC_APP.Properties.Resources._return;
-            this.btnReturn.Location = new System.Drawing.Point(12, 10);
-            this.btnReturn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(35, 35);
-            this.btnReturn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnReturn.TabIndex = 0;
-            this.btnReturn.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ABC_APP.Properties.Resources.minimice1;
-            this.pictureBox1.Location = new System.Drawing.Point(843, 1);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnClose
-            // 
-            this.btnClose.Image = global::ABC_APP.Properties.Resources.close2;
-            this.btnClose.Location = new System.Drawing.Point(869, 1);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(25, 25);
-            this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnClose.TabIndex = 0;
-            this.btnClose.TabStop = false;
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
@@ -169,10 +169,10 @@ namespace ABC_APP.Vista
             this.Name = "FormMain";
             this.Text = "FormMain";
             this.pnlSuperior.ResumeLayout(false);
-            this.pnlIzquierdo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnReturn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
+            this.pnlIzquierdo.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
