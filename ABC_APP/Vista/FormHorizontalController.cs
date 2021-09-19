@@ -23,6 +23,8 @@ namespace ABC_APP.Vista
         private Procesos procesos = new Procesos();
         private string pathC = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
         private FormGrafica formGrafica;
+        private FormError FormError;
+        
 
         public FormHorizontalController(FormHorizontalAnalisis formHorizontalAnalisis)
         {
@@ -45,16 +47,39 @@ namespace ABC_APP.Vista
 
         private void ImportarExcelToDGVSuperior(object sender, EventArgs args)
         {
-            importExcel = new ImportExcel();
-            importExcel.ImportarExcelOpenFile(this.formHorizontalAnalisis.dgImport, "Hoja1",this.formHorizontalAnalisis.tbxRuta.Text,this.formHorizontalAnalisis.tbxRuta);
+            try
+            {
+                importExcel = new ImportExcel();
+                importExcel.ImportarExcelOpenFile(this.formHorizontalAnalisis.dgImport, "Hoja1", this.formHorizontalAnalisis.tbxRuta.Text, this.formHorizontalAnalisis.tbxRuta);
 
+            }
+            catch (Exception ex)
+            {
+
+                FormError = new FormError(ex.ToString());
+                FormError.ShowDialog();
+            }
+      
         }
         private void ImportarExcelToDGVInferior()
         {
-            //TODO: Quitar la primera columna del archivo que se exporta
-            importExcel = new ImportExcel();
-            string completePath = this.pathC + @"\archivosABC\Exportado.xlsx";
-            importExcel.ImportarExcelDeRuta(this.formHorizontalAnalisis.dgExport, "Results", completePath);
+
+            try
+            {
+
+                //TODO: Quitar la primera columna del archivo que se exporta
+                importExcel = new ImportExcel();
+                string completePath = this.pathC + @"\archivosABC\Exportado.xlsx";
+                importExcel.ImportarExcelDeRuta(this.formHorizontalAnalisis.dgExport, "Results", completePath);
+            }
+            catch (Exception ex)
+            {
+
+                FormError = new FormError(ex.ToString());
+                FormError.ShowDialog();
+            }
+
+
         }
 
         private void DataGridCellFormating(object sender, EventArgs args)
@@ -65,17 +90,36 @@ namespace ABC_APP.Vista
 
         private void EjecutarPython(object sender, EventArgs args)
         {
-            string currentDomain = AppDomain.CurrentDomain.BaseDirectory + @"PythonCode\main.exe";
-            //TODO: Mejor la gráfica visualmente, probar en otro pc el código hasta el momento
-            procesos.EjecutarProceso(currentDomain);
-            ImportarExcelToDGVInferior();
+            try
+            {
+                string currentDomain = AppDomain.CurrentDomain.BaseDirectory + @"PythonCode\main.exe";
+                //TODO: Mejor la gráfica visualmente, probar en otro pc el código hasta el momento
+                procesos.EjecutarProceso(currentDomain);
+                ImportarExcelToDGVInferior();
+            }
+            catch (Exception ex)
+            {
+
+                FormError = new FormError(ex.ToString());
+                FormError.ShowDialog();
+            }
+
         }
 
         private void CreateFolder()
         {
-            
-            string completePath = this.pathC + @"\";
-            archivos.CrearCarpetaABC(completePath, "archivosABC");
+            try
+            {
+                string completePath = this.pathC + @"\";
+                archivos.CrearCarpetaABC(completePath, "archivosABC");
+            }
+            catch (Exception ex)
+            {
+
+                FormError = new FormError(ex.ToString());
+                FormError.ShowDialog();
+            }
+
         }
 
         private void MostrarGrafica(object sender, EventArgs args)

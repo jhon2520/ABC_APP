@@ -1,5 +1,7 @@
-﻿using System;
+﻿using ABC_APP.Vista;
+using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -10,6 +12,10 @@ namespace ABC_APP.logica
 {
     class Archivos
     {
+
+        
+            
+
         /// <summary>
         /// Este método crea una carpeta en una ruta específica
         /// </summary>
@@ -31,7 +37,6 @@ namespace ABC_APP.logica
                 MessageBox.Show(ex.ToString());
 
             }
-            MessageBox.Show("La carpeta archivosABC fue creada si no existe");
 
         }
 
@@ -46,6 +51,17 @@ namespace ABC_APP.logica
             File.Copy(rutaArchivoOrigen, rutaCompleta, true);
             MessageBox.Show("Archivo copiado");
 
+        }
+
+        /// <summary>
+        /// Método para mostrar una gráfica en un picture box
+        /// </summary>
+        /// <param name="ruta">Ruta donde está alojada la imagen</param>
+        /// <param name="pictureBox">PictureBox donde se mostrará la imagen</param>
+        public void MostrarGrafica(string ruta, PictureBox pictureBox)
+        {
+            pictureBox.Image = Image.FromFile(ruta);
+  
         }
 
     }

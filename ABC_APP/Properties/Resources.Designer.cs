@@ -103,6 +103,16 @@ namespace ABC_APP.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap error_fondo {
+            get {
+                object obj = ResourceManager.GetObject("error-fondo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap minimice {
             get {
                 object obj = ResourceManager.GetObject("minimice", resourceCulture);
@@ -126,6 +136,16 @@ namespace ABC_APP.Properties {
         internal static System.Drawing.Bitmap no_imagen {
             get {
                 object obj = ResourceManager.GetObject("no-imagen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap question {
+            get {
+                object obj = ResourceManager.GetObject("question", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -15,6 +15,7 @@ namespace ABC_APP.Vista
         private FormComportamiento formComportamiento = new FormComportamiento();
         private FormHorizontalAnalisis formHorizontalAnalisis;
         private FormSectorAnalisis formSectorAnalisis;
+        private FormConfirmacion formConfirmacion;
 
 
         public FormMainController(FormMain formMain)
@@ -44,19 +45,63 @@ namespace ABC_APP.Vista
 
         private void AbrirFormHorizontal(object sender, EventArgs args)
         {
-            //TODO: Crear form para confirmar cambio
-            formHorizontalAnalisis = new FormHorizontalAnalisis();
-            formComportamiento.AbrirFormHijo(formHorizontalAnalisis, this.formMain.pnlCentral);
-            
+
+            if (formComportamiento.activeForm != null)
+            {
+                using (formConfirmacion = new FormConfirmacion("¿Desea cambiar de ventana de análisis o reiniciar la actual?"))
+                {
+                    //TODO: Crear form para confirmar cambio
+                    DialogResult result = formConfirmacion.ShowDialog();
+                    if (result == DialogResult.OK)
+                    {
+
+                        formHorizontalAnalisis = new FormHorizontalAnalisis();
+                        formComportamiento.AbrirFormHijo(formHorizontalAnalisis, this.formMain.pnlCentral);
+                    }
+
+
+                }
+            }
+            else
+            {
+                formHorizontalAnalisis = new FormHorizontalAnalisis();
+                formComportamiento.AbrirFormHijo(formHorizontalAnalisis, this.formMain.pnlCentral);
+            }
+
+
+
+
 
         }
         private void AbrirFormSector(object sender, EventArgs args)
         {
-            //TODO: Crear form para confirmar cambio
-            formSectorAnalisis = new FormSectorAnalisis();
-            formComportamiento.AbrirFormHijo(formSectorAnalisis, this.formMain.pnlCentral);
-           
-            
+
+            if (formComportamiento.activeForm != null)
+            {
+                using (formConfirmacion = new FormConfirmacion("¿Desea cambiar de ventana de análisis o reiniciar la actual?"))
+                {
+                    //TODO: Crear form para confirmar cambio
+                    DialogResult result = formConfirmacion.ShowDialog();
+                    if (result == DialogResult.OK)
+                    {
+
+                        //TODO: Crear form para confirmar cambio
+                        formSectorAnalisis = new FormSectorAnalisis();
+                        formComportamiento.AbrirFormHijo(formSectorAnalisis, this.formMain.pnlCentral);
+
+                    }
+
+
+                }
+            }
+            else
+            {
+                //TODO: Crear form para confirmar cambio
+                formSectorAnalisis = new FormSectorAnalisis();
+                formComportamiento.AbrirFormHijo(formSectorAnalisis, this.formMain.pnlCentral);
+
+            }
+
         }
 
         private void CerrarFormActivo(object sender, EventArgs args)

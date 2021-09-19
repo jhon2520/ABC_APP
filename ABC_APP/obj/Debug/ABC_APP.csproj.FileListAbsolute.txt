@@ -39,3 +39,5 @@ C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\obj\Debug\ABC_APP.exe.manifest
 C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\obj\Debug\ABC_APP.application
 C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\bin\Debug\PythonCode\main.exe
 C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\obj\Debug\ABC_APP.Vista.FormGrafica.resources
+C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\obj\Debug\ABC_APP.Vista.FormError.resources
+C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\obj\Debug\ABC_APP.Vista.FormConfirmacion.resources
