@@ -49,7 +49,7 @@ namespace ABC_APP.logica
             FileInfo fileInfo = new FileInfo(rutaArchivoOrigen);
             string rutaCompleta = Path.Combine(rutaCarpetaDestino, fileInfo.Name);
             File.Copy(rutaArchivoOrigen, rutaCompleta, true);
-            MessageBox.Show("Archivo copiado");
+           // MessageBox.Show("Archivo copiado");
 
         }
 

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using IronPython.Hosting;
 using Microsoft.Scripting.Hosting;
 using System.IO;
+using System.Drawing;
 
 namespace ABC_APP.Vista
 {
@@ -24,6 +25,7 @@ namespace ABC_APP.Vista
         private string pathC = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
         private FormGrafica formGrafica;
         private FormError FormError;
+        private FormFormatoDataGrid formFormato;
         
 
         public FormHorizontalController(FormHorizontalAnalisis formHorizontalAnalisis)
@@ -31,6 +33,7 @@ namespace ABC_APP.Vista
             this.formHorizontalAnalisis = formHorizontalAnalisis;
             dataGridStyle.DataGridGetStyle(new List<DataGridView>() { this.formHorizontalAnalisis.dgImport ,this.formHorizontalAnalisis.dgExport} );
             Recargas();
+            SetDefaultColors();
             CreateFolder();
             
         }
@@ -41,7 +44,15 @@ namespace ABC_APP.Vista
             this.formHorizontalAnalisis.btnFormato.Click += new EventHandler(DataGridCellFormating);
             this.formHorizontalAnalisis.btnPython.Click += new EventHandler(EjecutarPython);
             this.formHorizontalAnalisis.btnGrafica.Click += new EventHandler(MostrarGrafica);
-            
+            this.formHorizontalAnalisis.btnPrueba.Click += new EventHandler(ProbarComboBox);
+            this.formHorizontalAnalisis.btnFormatoCelda.Click += new EventHandler(AbrirFormFormatoGrid);
+
+        }
+
+        private void SetDefaultColors()
+        {
+            CacheData.Cache.ColorFondo = Color.Red;
+            CacheData.Cache.ColorLetra = Color.White;
         }
 
 
@@ -71,6 +82,7 @@ namespace ABC_APP.Vista
                 importExcel = new ImportExcel();
                 string completePath = this.pathC + @"\archivosABC\Exportado.xlsx";
                 importExcel.ImportarExcelDeRuta(this.formHorizontalAnalisis.dgExport, "Results", completePath);
+                dataGridStyle.DataGridDecimales(this.formHorizontalAnalisis.dgExport);
             }
             catch (Exception ex)
             {
@@ -86,6 +98,9 @@ namespace ABC_APP.Vista
         {
             gridCellFormat.dataGrid = this.formHorizontalAnalisis.dgImport; 
             this.formHorizontalAnalisis.dgImport.CellFormatting += new DataGridViewCellFormattingEventHandler(gridCellFormat.DataGridFormat);
+
+
+
         }
 
         private void EjecutarPython(object sender, EventArgs args)
@@ -126,6 +141,19 @@ namespace ABC_APP.Vista
         {
             formGrafica = new FormGrafica();
             formGrafica.ShowDialog();
+        }
+
+        private void ProbarComboBox(object sender, EventArgs args)
+        {
+            dataGridStyle.GetDataGridColumns(this.formHorizontalAnalisis.dgExport, this.formHorizontalAnalisis.cbxColumns);
+        }
+
+        private void AbrirFormFormatoGrid(object sender, EventArgs args)
+        {
+            using (formFormato = new FormFormatoDataGrid())
+            {
+                formFormato.ShowDialog();
+            }
         }
 
 

@@ -33,11 +33,6 @@ namespace ABC_APP.Vista
 
         }
 
-        private void MostrarMensaje(object sender, EventArgs args)
-        {
-            MessageBox.Show("Hola mundo");
-        }
-
         private void CerrarForm(object sender, EventArgs args)
         {
             Application.Exit();
@@ -106,7 +101,18 @@ namespace ABC_APP.Vista
 
         private void CerrarFormActivo(object sender, EventArgs args)
         {
-            if (formComportamiento.activeForm != null) { formComportamiento.activeForm.Close(); }
+            if (formComportamiento.activeForm != null) 
+            {
+                using (formConfirmacion = new FormConfirmacion("¿Desea volver a la ventana principal? Perderá los cambios que no haya exportado o almacenado"))
+                {
+                    DialogResult result = formConfirmacion.ShowDialog();
+                    if (result == DialogResult.OK)
+                    {
+                        formComportamiento.activeForm.Close();
+                        formComportamiento.activeForm = null;
+                    }
+                }
+            }
         }
 
 

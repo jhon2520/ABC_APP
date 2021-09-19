@@ -36,8 +36,27 @@ namespace ABC_APP.logica
 
             }
 
-    
+        }
 
+        public void DataGridDecimales(DataGridView dataGridView)
+        {
+ 
+            for (int i = 0; i < dataGridView.Columns.Count-1; i++)
+            {
+                dataGridView.Columns[i + 1].DefaultCellStyle.Format = "N3";
+            }
+        }
+        /// <summary>
+        /// Agrega todas las columnas de un Datagrid como item de un combobox
+        /// </summary>
+        /// <param name="dataGridView">DataGrdi de donde se tomarán los nombres de columnas</param>
+        /// <param name="comboBox">Combobox al cual se le agregaran las columnas</param>
+        public void GetDataGridColumns(DataGridView dataGridView, ComboBox comboBox)
+        {
+            for (int i = 0; i < dataGridView.Columns.Count ; i++)
+            {
+                comboBox.Items.Add(dataGridView.Columns[i].Name);
+            }
         }
 
     }
