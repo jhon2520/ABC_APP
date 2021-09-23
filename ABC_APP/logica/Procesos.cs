@@ -32,7 +32,7 @@ namespace ABC_APP.logica
             process.Start();
 
             formAviso.ShowDialog();
-            formAviso = new FormAviso("El proceso a terminado, gracias por la espera");
+            formAviso = new FormAviso("El proceso ha terminado, gracias por la espera");
             process.WaitForExit();
             formAviso.ShowDialog();
 

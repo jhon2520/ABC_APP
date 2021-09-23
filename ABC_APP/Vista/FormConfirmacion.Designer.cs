@@ -31,8 +31,9 @@ namespace ABC_APP.Vista
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblMensaje = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblMensaje = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.elipseForm = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -41,7 +42,6 @@ namespace ABC_APP.Vista
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuDragControl3 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -58,6 +58,27 @@ namespace ABC_APP.Vista
             this.panel1.Size = new System.Drawing.Size(418, 143);
             this.panel1.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ABC_APP.Properties.Resources.question;
+            this.pictureBox1.Location = new System.Drawing.Point(377, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(41, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Poppins", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(9, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(99, 36);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Aceptar";
+            // 
             // lblMensaje
             // 
             this.lblMensaje.AllowDrop = true;
@@ -70,17 +91,6 @@ namespace ABC_APP.Vista
             this.lblMensaje.Size = new System.Drawing.Size(394, 56);
             this.lblMensaje.TabIndex = 2;
             this.lblMensaje.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Poppins", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(9, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 36);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Aceptar";
             // 
             // btnAceptar
             // 
@@ -146,21 +156,11 @@ namespace ABC_APP.Vista
             this.bunifuDragControl3.TargetControl = this.panel1;
             this.bunifuDragControl3.Vertical = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ABC_APP.Properties.Resources.question;
-            this.pictureBox1.Location = new System.Drawing.Point(377, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(41, 32);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // FormConfirmacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(255)))), ((int)(((byte)(233)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(418, 205);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);

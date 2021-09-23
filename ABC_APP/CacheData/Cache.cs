@@ -12,8 +12,10 @@ namespace ABC_APP.CacheData
     {
         private static Color colorLetra;
         private static Color colorFondo;
+        private static double valorCeldaFormato;
 
         public static Color ColorLetra { get => colorLetra; set => colorLetra = value; }
         public static Color ColorFondo { get => colorFondo; set => colorFondo = value; }
+        public static double ValorCeldaFormato { get => valorCeldaFormato; set => valorCeldaFormato = value; }
     }
 }

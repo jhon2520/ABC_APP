@@ -119,6 +119,7 @@
   <ItemGroup>
     <Compile Include="CacheData\Cache.cs" />
     <Compile Include="logica\Archivos.cs" />
+    <Compile Include="logica\ComboBoxLogica.cs" />
     <Compile Include="logica\DataGridCellFormat.cs" />
     <Compile Include="logica\DataGridStyle.cs" />
     <Compile Include="logica\FormComportamiento.cs" />
@@ -236,6 +237,7 @@
     <Content Include="PythonCode\main.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\clear.png" />
     <None Include="Resources\colors.png" />
     <None Include="Resources\reditos-footer1.jfif" />
     <None Include="Resources\1568379706.png" />

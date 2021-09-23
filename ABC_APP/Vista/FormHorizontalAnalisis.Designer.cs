@@ -29,6 +29,7 @@ namespace ABC_APP.Vista
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dgImport = new System.Windows.Forms.DataGridView();
             this.tbxRuta = new System.Windows.Forms.TextBox();
             this.btnImportar = new System.Windows.Forms.Button();
@@ -38,13 +39,25 @@ namespace ABC_APP.Vista
             this.btnGrafica = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUPDownFormato = new System.Windows.Forms.NumericUpDown();
             this.cbxColumns = new System.Windows.Forms.ComboBox();
-            this.btnPrueba = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnBorrarFormato = new System.Windows.Forms.Button();
+            this.btnLimpiarCbx = new System.Windows.Forms.PictureBox();
             this.btnFormatoCelda = new System.Windows.Forms.PictureBox();
+            this.cbxDestino = new System.Windows.Forms.ComboBox();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.elipseBtnImportar = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgImport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgExport)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUPDownFormato)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLimpiarCbx)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFormatoCelda)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,17 +66,17 @@ namespace ABC_APP.Vista
             this.dgImport.AllowUserToAddRows = false;
             this.dgImport.AllowUserToDeleteRows = false;
             this.dgImport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgImport.Location = new System.Drawing.Point(19, 16);
+            this.dgImport.Location = new System.Drawing.Point(19, 15);
             this.dgImport.Name = "dgImport";
             this.dgImport.ReadOnly = true;
-            this.dgImport.Size = new System.Drawing.Size(731, 245);
+            this.dgImport.Size = new System.Drawing.Size(731, 200);
             this.dgImport.TabIndex = 0;
             // 
             // tbxRuta
             // 
             this.tbxRuta.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tbxRuta.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbxRuta.Location = new System.Drawing.Point(19, 270);
+            this.tbxRuta.Location = new System.Drawing.Point(19, 222);
             this.tbxRuta.Name = "tbxRuta";
             this.tbxRuta.Size = new System.Drawing.Size(544, 17);
             this.tbxRuta.TabIndex = 1;
@@ -75,7 +88,7 @@ namespace ABC_APP.Vista
             this.btnImportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImportar.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImportar.ForeColor = System.Drawing.Color.White;
-            this.btnImportar.Location = new System.Drawing.Point(569, 267);
+            this.btnImportar.Location = new System.Drawing.Point(569, 217);
             this.btnImportar.Name = "btnImportar";
             this.btnImportar.Size = new System.Drawing.Size(181, 26);
             this.btnImportar.TabIndex = 2;
@@ -84,14 +97,14 @@ namespace ABC_APP.Vista
             // 
             // btnFormato
             // 
-            this.btnFormato.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnFormato.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(18)))), ((int)(((byte)(129)))));
             this.btnFormato.FlatAppearance.BorderSize = 0;
             this.btnFormato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFormato.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFormato.ForeColor = System.Drawing.Color.White;
-            this.btnFormato.Location = new System.Drawing.Point(50, 632);
+            this.btnFormato.Location = new System.Drawing.Point(550, 97);
             this.btnFormato.Name = "btnFormato";
-            this.btnFormato.Size = new System.Drawing.Size(173, 26);
+            this.btnFormato.Size = new System.Drawing.Size(160, 27);
             this.btnFormato.TabIndex = 2;
             this.btnFormato.Text = "Aplicar Formato";
             this.btnFormato.UseVisualStyleBackColor = false;
@@ -103,7 +116,7 @@ namespace ABC_APP.Vista
             this.btnPython.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPython.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPython.ForeColor = System.Drawing.Color.White;
-            this.btnPython.Location = new System.Drawing.Point(19, 305);
+            this.btnPython.Location = new System.Drawing.Point(19, 262);
             this.btnPython.Name = "btnPython";
             this.btnPython.Size = new System.Drawing.Size(173, 26);
             this.btnPython.TabIndex = 2;
@@ -115,10 +128,10 @@ namespace ABC_APP.Vista
             this.dgExport.AllowUserToAddRows = false;
             this.dgExport.AllowUserToDeleteRows = false;
             this.dgExport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgExport.Location = new System.Drawing.Point(19, 337);
+            this.dgExport.Location = new System.Drawing.Point(19, 290);
             this.dgExport.Name = "dgExport";
             this.dgExport.ReadOnly = true;
-            this.dgExport.Size = new System.Drawing.Size(731, 289);
+            this.dgExport.Size = new System.Drawing.Size(731, 200);
             this.dgExport.TabIndex = 0;
             // 
             // btnGrafica
@@ -128,17 +141,17 @@ namespace ABC_APP.Vista
             this.btnGrafica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGrafica.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGrafica.ForeColor = System.Drawing.Color.White;
-            this.btnGrafica.Location = new System.Drawing.Point(91, 664);
+            this.btnGrafica.Location = new System.Drawing.Point(19, 672);
             this.btnGrafica.Name = "btnGrafica";
-            this.btnGrafica.Size = new System.Drawing.Size(173, 26);
+            this.btnGrafica.Size = new System.Drawing.Size(249, 26);
             this.btnGrafica.TabIndex = 2;
             this.btnGrafica.Text = "Ver Grafica";
             this.btnGrafica.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Teal;
-            this.panel1.Location = new System.Drawing.Point(19, 289);
+            this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.Location = new System.Drawing.Point(19, 241);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(544, 1);
             this.panel1.TabIndex = 3;
@@ -147,65 +160,170 @@ namespace ABC_APP.Vista
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.LightGray;
-            this.label1.Location = new System.Drawing.Point(196, 308);
+            this.label1.ForeColor = System.Drawing.Color.Silver;
+            this.label1.Location = new System.Drawing.Point(196, 264);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(404, 22);
             this.label1.TabIndex = 4;
             this.label1.Text = "Aquí podrá ejectuar el código de python para iniciar el análisis.";
             // 
-            // numericUpDown1
+            // numericUPDownFormato
             // 
-            this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numericUpDown1.DecimalPlaces = 2;
-            this.numericUpDown1.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.ForeColor = System.Drawing.Color.DimGray;
-            this.numericUpDown1.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            131072});
-            this.numericUpDown1.Location = new System.Drawing.Point(243, 637);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(73, 21);
-            this.numericUpDown1.TabIndex = 5;
+            this.numericUPDownFormato.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numericUPDownFormato.DecimalPlaces = 1;
+            this.numericUPDownFormato.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUPDownFormato.ForeColor = System.Drawing.Color.DimGray;
+            this.numericUPDownFormato.Location = new System.Drawing.Point(348, 44);
+            this.numericUPDownFormato.Name = "numericUPDownFormato";
+            this.numericUPDownFormato.Size = new System.Drawing.Size(68, 21);
+            this.numericUPDownFormato.TabIndex = 5;
+            this.numericUPDownFormato.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // cbxColumns
             // 
+            this.cbxColumns.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cbxColumns.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxColumns.ForeColor = System.Drawing.Color.DimGray;
             this.cbxColumns.FormattingEnabled = true;
-            this.cbxColumns.Location = new System.Drawing.Point(322, 633);
+            this.cbxColumns.Location = new System.Drawing.Point(9, 94);
             this.cbxColumns.Name = "cbxColumns";
-            this.cbxColumns.Size = new System.Drawing.Size(121, 27);
+            this.cbxColumns.Size = new System.Drawing.Size(112, 27);
             this.cbxColumns.TabIndex = 7;
             // 
-            // btnPrueba
+            // panel2
             // 
-            this.btnPrueba.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.btnPrueba.FlatAppearance.BorderSize = 0;
-            this.btnPrueba.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrueba.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrueba.ForeColor = System.Drawing.Color.White;
-            this.btnPrueba.Location = new System.Drawing.Point(526, 637);
-            this.btnPrueba.Name = "btnPrueba";
-            this.btnPrueba.Size = new System.Drawing.Size(173, 26);
-            this.btnPrueba.TabIndex = 2;
-            this.btnPrueba.Text = "Prueba";
-            this.btnPrueba.UseVisualStyleBackColor = false;
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.btnLimpiarCbx);
+            this.panel2.Controls.Add(this.btnFormatoCelda);
+            this.panel2.Controls.Add(this.btnFormato);
+            this.panel2.Controls.Add(this.cbxDestino);
+            this.panel2.Controls.Add(this.cbxColumns);
+            this.panel2.Controls.Add(this.numericUPDownFormato);
+            this.panel2.Location = new System.Drawing.Point(19, 493);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(730, 146);
+            this.panel2.TabIndex = 9;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Silver;
+            this.label5.Location = new System.Drawing.Point(123, 95);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(261, 22);
+            this.label5.TabIndex = 13;
+            this.label5.Text = ">>> Seleccione columnas a formatear >>>";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Silver;
+            this.label4.Location = new System.Drawing.Point(421, 44);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(236, 22);
+            this.label4.TabIndex = 12;
+            this.label4.Text = ">>> Seleccione un limite superior (%)";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Silver;
+            this.panel3.Location = new System.Drawing.Point(5, 29);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(720, 1);
+            this.panel3.TabIndex = 11;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.Location = new System.Drawing.Point(2, 2);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(164, 28);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Formato de Celdas";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Silver;
+            this.label2.Location = new System.Drawing.Point(101, 46);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(223, 22);
+            this.label2.TabIndex = 9;
+            this.label2.Text = ">>> Seleccione un color de formato";
+            // 
+            // btnBorrarFormato
+            // 
+            this.btnBorrarFormato.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnBorrarFormato.FlatAppearance.BorderSize = 0;
+            this.btnBorrarFormato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBorrarFormato.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrarFormato.ForeColor = System.Drawing.Color.White;
+            this.btnBorrarFormato.Location = new System.Drawing.Point(267, 672);
+            this.btnBorrarFormato.Name = "btnBorrarFormato";
+            this.btnBorrarFormato.Size = new System.Drawing.Size(233, 26);
+            this.btnBorrarFormato.TabIndex = 2;
+            this.btnBorrarFormato.Text = "BORRAR FORMATO";
+            this.btnBorrarFormato.UseVisualStyleBackColor = false;
+            // 
+            // btnLimpiarCbx
+            // 
+            this.btnLimpiarCbx.Image = global::ABC_APP.Properties.Resources.clear;
+            this.btnLimpiarCbx.Location = new System.Drawing.Point(510, 94);
+            this.btnLimpiarCbx.Name = "btnLimpiarCbx";
+            this.btnLimpiarCbx.Size = new System.Drawing.Size(30, 30);
+            this.btnLimpiarCbx.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnLimpiarCbx.TabIndex = 8;
+            this.btnLimpiarCbx.TabStop = false;
             // 
             // btnFormatoCelda
             // 
             this.btnFormatoCelda.Image = global::ABC_APP.Properties.Resources.colors;
-            this.btnFormatoCelda.Location = new System.Drawing.Point(19, 633);
+            this.btnFormatoCelda.Location = new System.Drawing.Point(73, 44);
             this.btnFormatoCelda.Name = "btnFormatoCelda";
             this.btnFormatoCelda.Size = new System.Drawing.Size(25, 25);
             this.btnFormatoCelda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnFormatoCelda.TabIndex = 8;
             this.btnFormatoCelda.TabStop = false;
+            // 
+            // cbxDestino
+            // 
+            this.cbxDestino.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cbxDestino.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxDestino.ForeColor = System.Drawing.Color.DimGray;
+            this.cbxDestino.FormattingEnabled = true;
+            this.cbxDestino.Location = new System.Drawing.Point(394, 94);
+            this.cbxDestino.Name = "cbxDestino";
+            this.cbxDestino.Size = new System.Drawing.Size(112, 27);
+            this.cbxDestino.TabIndex = 7;
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnLimpiar.FlatAppearance.BorderSize = 0;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
+            this.btnLimpiar.Location = new System.Drawing.Point(500, 672);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(249, 26);
+            this.btnLimpiar.TabIndex = 2;
+            this.btnLimpiar.Text = "Limpiar Ventana";
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            // 
+            // elipseBtnImportar
+            // 
+            this.elipseBtnImportar.ElipseRadius = 3;
+            this.elipseBtnImportar.TargetControl = this.btnImportar;
             // 
             // FormHorizontalAnalisis
             // 
@@ -213,15 +331,13 @@ namespace ABC_APP.Vista
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(769, 724);
-            this.Controls.Add(this.btnFormatoCelda);
-            this.Controls.Add(this.cbxColumns);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnPython);
+            this.Controls.Add(this.btnLimpiar);
+            this.Controls.Add(this.btnBorrarFormato);
             this.Controls.Add(this.btnGrafica);
-            this.Controls.Add(this.btnPrueba);
-            this.Controls.Add(this.btnFormato);
             this.Controls.Add(this.btnImportar);
             this.Controls.Add(this.tbxRuta);
             this.Controls.Add(this.dgExport);
@@ -235,7 +351,10 @@ namespace ABC_APP.Vista
             this.Text = "FormHorizontalAnalisis";
             ((System.ComponentModel.ISupportInitialize)(this.dgImport)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgExport)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUPDownFormato)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLimpiarCbx)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFormatoCelda)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -252,9 +371,19 @@ namespace ABC_APP.Vista
         public System.Windows.Forms.Button btnGrafica;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        public System.Windows.Forms.Button btnPrueba;
         public System.Windows.Forms.ComboBox cbxColumns;
         public System.Windows.Forms.PictureBox btnFormatoCelda;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
+        public System.Windows.Forms.Button btnBorrarFormato;
+        public System.Windows.Forms.ComboBox cbxDestino;
+        public System.Windows.Forms.PictureBox btnLimpiarCbx;
+        public System.Windows.Forms.Button btnLimpiar;
+        public System.Windows.Forms.NumericUpDown numericUPDownFormato;
+        private Bunifu.Framework.UI.BunifuElipse elipseBtnImportar;
     }
 }

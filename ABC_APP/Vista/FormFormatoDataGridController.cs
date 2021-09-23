@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ABC_APP.Vista
 {
     class FormFormatoDataGridController
     {
         private FormFormatoDataGrid formFormato;
+        private FormConfirmacion formConfirmacion;
 
         public FormFormatoDataGridController(FormFormatoDataGrid formFormato)
         {
@@ -49,8 +51,17 @@ namespace ABC_APP.Vista
 
         private void AceptarCambios(object sender, EventArgs args)
         {
-            SetDefaultColors();
-            this.formFormato.Close();
+            using (formConfirmacion = new FormConfirmacion("¿Desea guardar los cambios de formato?"))
+            {
+                DialogResult result = formConfirmacion.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+                    SetDefaultColors();
+                    this.formFormato.Close();
+                }
+          
+            }
+          
         }
 
         private void SetDefaultColors()

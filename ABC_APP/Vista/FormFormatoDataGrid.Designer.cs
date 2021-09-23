@@ -40,28 +40,31 @@ namespace ABC_APP.Vista
             this.bunifuDragControl3 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuDragControl4 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuDragControl5 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.elipseForm = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.elipseBtnFondo = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.elipseBtnFuente = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.elipseBtnAceptar = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.colorDialogFondo = new System.Windows.Forms.ColorDialog();
             this.btnClose = new System.Windows.Forms.PictureBox();
+            this.pnlSuperior = new System.Windows.Forms.Panel();
+            this.bunifuDragControl6 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
+            this.pnlSuperior.SuspendLayout();
             this.SuspendLayout();
             // 
             // tbxTextoMuestra
             // 
             this.tbxTextoMuestra.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbxTextoMuestra.Font = new System.Drawing.Font("Poppins", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxTextoMuestra.Font = new System.Drawing.Font("Poppins", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxTextoMuestra.ForeColor = System.Drawing.Color.Gray;
-            this.tbxTextoMuestra.Location = new System.Drawing.Point(89, 102);
+            this.tbxTextoMuestra.Location = new System.Drawing.Point(89, 123);
             this.tbxTextoMuestra.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbxTextoMuestra.Multiline = true;
             this.tbxTextoMuestra.Name = "tbxTextoMuestra";
             this.tbxTextoMuestra.ReadOnly = true;
-            this.tbxTextoMuestra.Size = new System.Drawing.Size(403, 35);
+            this.tbxTextoMuestra.Size = new System.Drawing.Size(395, 24);
             this.tbxTextoMuestra.TabIndex = 100;
             this.tbxTextoMuestra.Text = "Texto de muestra para formatear celdas";
             this.tbxTextoMuestra.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -73,7 +76,7 @@ namespace ABC_APP.Vista
             this.btnCambiarFondo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCambiarFondo.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCambiarFondo.ForeColor = System.Drawing.Color.Transparent;
-            this.btnCambiarFondo.Location = new System.Drawing.Point(41, 167);
+            this.btnCambiarFondo.Location = new System.Drawing.Point(41, 191);
             this.btnCambiarFondo.Name = "btnCambiarFondo";
             this.btnCambiarFondo.Size = new System.Drawing.Size(246, 30);
             this.btnCambiarFondo.TabIndex = 1;
@@ -87,7 +90,7 @@ namespace ABC_APP.Vista
             this.BtnCambiarColorLetra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnCambiarColorLetra.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCambiarColorLetra.ForeColor = System.Drawing.Color.Transparent;
-            this.BtnCambiarColorLetra.Location = new System.Drawing.Point(293, 167);
+            this.BtnCambiarColorLetra.Location = new System.Drawing.Point(293, 191);
             this.BtnCambiarColorLetra.Name = "BtnCambiarColorLetra";
             this.BtnCambiarColorLetra.Size = new System.Drawing.Size(246, 30);
             this.BtnCambiarColorLetra.TabIndex = 1;
@@ -99,7 +102,7 @@ namespace ABC_APP.Vista
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Poppins", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(122, 29);
+            this.label1.Location = new System.Drawing.Point(122, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(336, 36);
             this.label1.TabIndex = 4;
@@ -154,6 +157,16 @@ namespace ABC_APP.Vista
             this.bunifuDragControl5.TargetControl = this.pictureBox1;
             this.bunifuDragControl5.Vertical = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ABC_APP.Properties.Resources.logo_reditos;
+            this.pictureBox1.Location = new System.Drawing.Point(7, 14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(49, 48);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
             // elipseForm
             // 
             this.elipseForm.ElipseRadius = 4;
@@ -174,20 +187,10 @@ namespace ABC_APP.Vista
             this.elipseBtnAceptar.ElipseRadius = 4;
             this.elipseBtnAceptar.TargetControl = this.btnAceptar;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ABC_APP.Properties.Resources.error_fondo;
-            this.pictureBox1.Location = new System.Drawing.Point(56, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(60, 60);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnClose
             // 
             this.btnClose.Image = global::ABC_APP.Properties.Resources.close_x;
-            this.btnClose.Location = new System.Drawing.Point(557, -2);
+            this.btnClose.Location = new System.Drawing.Point(556, 1);
             this.btnClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(25, 25);
@@ -195,15 +198,32 @@ namespace ABC_APP.Vista
             this.btnClose.TabIndex = 5;
             this.btnClose.TabStop = false;
             // 
+            // pnlSuperior
+            // 
+            this.pnlSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.pnlSuperior.Controls.Add(this.pictureBox1);
+            this.pnlSuperior.Controls.Add(this.btnClose);
+            this.pnlSuperior.Controls.Add(this.label1);
+            this.pnlSuperior.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlSuperior.Location = new System.Drawing.Point(0, 0);
+            this.pnlSuperior.Name = "pnlSuperior";
+            this.pnlSuperior.Size = new System.Drawing.Size(581, 76);
+            this.pnlSuperior.TabIndex = 101;
+            // 
+            // bunifuDragControl6
+            // 
+            this.bunifuDragControl6.Fixed = true;
+            this.bunifuDragControl6.Horizontal = true;
+            this.bunifuDragControl6.TargetControl = this.pnlSuperior;
+            this.bunifuDragControl6.Vertical = true;
+            // 
             // FormFormatoDataGrid
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(581, 275);
-            this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pnlSuperior);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.BtnCambiarColorLetra);
             this.Controls.Add(this.btnCambiarFondo);
@@ -217,6 +237,8 @@ namespace ABC_APP.Vista
             this.Text = "FormFormatoDataGrid";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
+            this.pnlSuperior.ResumeLayout(false);
+            this.pnlSuperior.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,5 +263,7 @@ namespace ABC_APP.Vista
         private Bunifu.Framework.UI.BunifuElipse elipseBtnAceptar;
         public System.Windows.Forms.ColorDialog colorDialogFondo;
         public System.Windows.Forms.PictureBox btnClose;
+        public System.Windows.Forms.Panel pnlSuperior;
+        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl6;
     }
 }
