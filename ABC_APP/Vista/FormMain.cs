@@ -17,5 +17,10 @@ namespace ABC_APP.Vista
             InitializeComponent();
             FormMainController formMainController = new FormMainController(this);
         }
+
+        private void analisisHorizontalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

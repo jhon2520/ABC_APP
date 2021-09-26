@@ -1,0 +1,3 @@
+﻿PENDIENTES
+
+**Organizar el archivo de python que grafica el análisis horizontal ya que es estático en este momento

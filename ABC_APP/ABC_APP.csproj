@@ -118,6 +118,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CacheData\Cache.cs" />
+    <Compile Include="DropDownMenu\JRDropDownMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DropDownMenu\MenuColorTable.cs" />
+    <Compile Include="DropDownMenu\MenuRenderer.cs" />
     <Compile Include="logica\Archivos.cs" />
     <Compile Include="logica\ComboBoxLogica.cs" />
     <Compile Include="logica\DataGridCellFormat.cs" />
@@ -183,6 +188,7 @@
     <Compile Include="Vista\FormSectorAnalisis.Designer.cs">
       <DependentUpon>FormSectorAnalisis.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vista\FormSectorController.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -237,6 +243,7 @@
     <Content Include="PythonCode\main.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="TextFile1.txt" />
     <None Include="Resources\clear.png" />
     <None Include="Resources\colors.png" />
     <None Include="Resources\reditos-footer1.jfif" />

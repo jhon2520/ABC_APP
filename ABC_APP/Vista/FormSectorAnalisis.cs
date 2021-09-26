@@ -15,6 +15,7 @@ namespace ABC_APP.Vista
         public FormSectorAnalisis()
         {
             InitializeComponent();
+            FormSectorController formSectorController = new FormSectorController(this);
         }
     }
 }

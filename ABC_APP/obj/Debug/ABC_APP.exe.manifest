@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ABC_APP.exe" size="444936">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ABC_APP.exe" size="452104">
       <assemblyIdentity name="ABC_APP" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>5NGEmGCYRMEkGS6EZpgVFNRtngyTK6PEl6dUzJPQIP0=</dsig:DigestValue>
+        <dsig:DigestValue>sNfuwbHn/2lNnHA3ETYP+i4lgTzAg/Tw7n8oSm0HrHs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -222,6 +222,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>vD4YxmIwAnGsFdxHRCjOMygFDcNFqAAAlLGEOeDpcig=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="TextFile1.txt" size="123">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>om5wZx3cPef38d0Uot4S6oMqfwXnETBpXQIvkZCJn1I=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

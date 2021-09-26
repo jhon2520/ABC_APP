@@ -7,14 +7,14 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="ABC_APP.exe.manifest" size="12549">
+    <dependentAssembly dependencyType="install" codebase="ABC_APP.exe.manifest" size="12939">
       <assemblyIdentity name="ABC_APP.exe" version="1.0.0.12" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>W6nwC5aKpjnlKrpb4I3s4F3ex8VDm2VOpuuwddCP4RE=</dsig:DigestValue>
+        <dsig:DigestValue>dbjFeSXiPJUh46/gZ9SyqWflIEKiK3aUzZq0MlU6V9o=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

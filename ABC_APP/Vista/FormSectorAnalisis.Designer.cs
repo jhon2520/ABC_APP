@@ -29,36 +29,79 @@ namespace ABC_APP.Vista
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.dgImport = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnImportar = new System.Windows.Forms.Button();
+            this.tbxRuta = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgImport)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // dgImport
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(295, 329);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Analisis Sector";
+            this.dgImport.AllowUserToAddRows = false;
+            this.dgImport.AllowUserToDeleteRows = false;
+            this.dgImport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgImport.Location = new System.Drawing.Point(31, 30);
+            this.dgImport.Name = "dgImport";
+            this.dgImport.ReadOnly = true;
+            this.dgImport.Size = new System.Drawing.Size(693, 147);
+            this.dgImport.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.Location = new System.Drawing.Point(31, 206);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(525, 1);
+            this.panel1.TabIndex = 6;
+            // 
+            // btnImportar
+            // 
+            this.btnImportar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(174)))), ((int)(((byte)(152)))));
+            this.btnImportar.FlatAppearance.BorderSize = 0;
+            this.btnImportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnImportar.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImportar.ForeColor = System.Drawing.Color.White;
+            this.btnImportar.Location = new System.Drawing.Point(562, 183);
+            this.btnImportar.Name = "btnImportar";
+            this.btnImportar.Size = new System.Drawing.Size(162, 26);
+            this.btnImportar.TabIndex = 5;
+            this.btnImportar.Text = "Importar";
+            this.btnImportar.UseVisualStyleBackColor = false;
+            // 
+            // tbxRuta
+            // 
+            this.tbxRuta.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbxRuta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbxRuta.Location = new System.Drawing.Point(31, 188);
+            this.tbxRuta.Name = "tbxRuta";
+            this.tbxRuta.Size = new System.Drawing.Size(525, 17);
+            this.tbxRuta.TabIndex = 4;
             // 
             // FormSectorAnalisis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(769, 724);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnImportar);
+            this.Controls.Add(this.tbxRuta);
+            this.Controls.Add(this.dgImport);
             this.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormSectorAnalisis";
             this.Text = "FormSectorAnalisis";
+            ((System.ComponentModel.ISupportInitialize)(this.dgImport)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Button btnImportar;
+        public System.Windows.Forms.TextBox tbxRuta;
+        public System.Windows.Forms.DataGridView dgImport;
     }
 }

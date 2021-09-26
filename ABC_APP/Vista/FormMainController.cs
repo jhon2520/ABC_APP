@@ -22,14 +22,16 @@ namespace ABC_APP.Vista
         {
             this.formMain = formMain;
             Recargas();
+            this.formMain.jrDropDownMenu1.IsMainMenu = true;
         }
 
         private void Recargas()
         {
             this.formMain.btnClose.Click += new EventHandler(CerrarForm);
-            this.formMain.btnHorizontal.Click += new EventHandler(AbrirFormHorizontal);
+            this.formMain.analisisHorizontalToolStripMenuItem.Click += new EventHandler(AbrirFormHorizontal);
             this.formMain.btnSector.Click += new EventHandler(AbrirFormSector);
             this.formMain.btnReturn.Click += new EventHandler(CerrarFormActivo);
+            this.formMain.btnAnalisisFinanciero.Click += new EventHandler(BtnAnalisisFinanciero);
 
         }
 
@@ -113,6 +115,11 @@ namespace ABC_APP.Vista
                     }
                 }
             }
+        }
+
+        private void BtnAnalisisFinanciero(object sender, EventArgs args)
+        {
+            this.formMain.jrDropDownMenu1.Show(this.formMain.btnAnalisisFinanciero, this.formMain.btnAnalisisFinanciero.Width,0);
         }
 
 
