@@ -38,7 +38,7 @@ namespace ABC_APP.DropDownMenu
         {
             if (isMainMenu)
             {
-                menuItemHeaderSize = new Bitmap(25, 45);
+                menuItemHeaderSize = new Bitmap(15, 15);
                 menuItemTextColor = Color.Gainsboro;
             }
             else

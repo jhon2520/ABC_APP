@@ -29,6 +29,7 @@ namespace ABC_APP.Vista
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSeleccionarRuta = new System.Windows.Forms.Button();
             this.tbxRutaFolder = new System.Windows.Forms.TextBox();
@@ -46,6 +47,12 @@ namespace ABC_APP.Vista
             this.pbxCurrentDomain = new System.Windows.Forms.PictureBox();
             this.dgCompilado = new System.Windows.Forms.DataGridView();
             this.btnVerArchivoCompilado = new System.Windows.Forms.Button();
+            this.btnExportarCompilado = new System.Windows.Forms.Button();
+            this.elipseBtnImportar = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.elipseBtnCompilar = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.elipseBtnVerCompilado = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.elipseBtnExportar = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.elipseDg = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCurrentDomain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgCompilado)).BeginInit();
@@ -54,7 +61,7 @@ namespace ABC_APP.Vista
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MediumTurquoise;
-            this.panel1.Location = new System.Drawing.Point(46, 276);
+            this.panel1.Location = new System.Drawing.Point(52, 276);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(665, 1);
             this.panel1.TabIndex = 9;
@@ -66,7 +73,7 @@ namespace ABC_APP.Vista
             this.btnSeleccionarRuta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeleccionarRuta.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeleccionarRuta.ForeColor = System.Drawing.Color.White;
-            this.btnSeleccionarRuta.Location = new System.Drawing.Point(46, 281);
+            this.btnSeleccionarRuta.Location = new System.Drawing.Point(52, 281);
             this.btnSeleccionarRuta.Name = "btnSeleccionarRuta";
             this.btnSeleccionarRuta.Size = new System.Drawing.Size(162, 26);
             this.btnSeleccionarRuta.TabIndex = 8;
@@ -77,8 +84,9 @@ namespace ABC_APP.Vista
             // 
             this.tbxRutaFolder.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tbxRutaFolder.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbxRutaFolder.Location = new System.Drawing.Point(46, 258);
+            this.tbxRutaFolder.Location = new System.Drawing.Point(52, 258);
             this.tbxRutaFolder.Name = "tbxRutaFolder";
+            this.tbxRutaFolder.ReadOnly = true;
             this.tbxRutaFolder.Size = new System.Drawing.Size(665, 17);
             this.tbxRutaFolder.TabIndex = 7;
             // 
@@ -87,7 +95,7 @@ namespace ABC_APP.Vista
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Poppins", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkGray;
-            this.label1.Location = new System.Drawing.Point(42, 24);
+            this.label1.Location = new System.Drawing.Point(48, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(673, 25);
             this.label1.TabIndex = 10;
@@ -99,7 +107,7 @@ namespace ABC_APP.Vista
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Maroon;
-            this.label2.Location = new System.Drawing.Point(42, 50);
+            this.label2.Location = new System.Drawing.Point(48, 50);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 22);
             this.label2.TabIndex = 10;
@@ -110,7 +118,7 @@ namespace ABC_APP.Vista
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DarkGray;
-            this.label3.Location = new System.Drawing.Point(42, 72);
+            this.label3.Location = new System.Drawing.Point(48, 72);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(574, 22);
             this.label3.TabIndex = 10;
@@ -168,7 +176,7 @@ namespace ABC_APP.Vista
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Location = new System.Drawing.Point(297, 110);
+            this.panel2.Location = new System.Drawing.Point(303, 110);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(174, 126);
             this.panel2.TabIndex = 11;
@@ -176,8 +184,9 @@ namespace ABC_APP.Vista
             // cbxArchivos
             // 
             this.cbxArchivos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxArchivos.ForeColor = System.Drawing.Color.Gray;
             this.cbxArchivos.FormattingEnabled = true;
-            this.cbxArchivos.Location = new System.Drawing.Point(47, 349);
+            this.cbxArchivos.Location = new System.Drawing.Point(53, 349);
             this.cbxArchivos.Name = "cbxArchivos";
             this.cbxArchivos.Size = new System.Drawing.Size(664, 27);
             this.cbxArchivos.TabIndex = 12;
@@ -188,7 +197,7 @@ namespace ABC_APP.Vista
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.DarkGray;
-            this.label8.Location = new System.Drawing.Point(52, 324);
+            this.label8.Location = new System.Drawing.Point(54, 324);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(180, 22);
             this.label8.TabIndex = 10;
@@ -201,7 +210,7 @@ namespace ABC_APP.Vista
             this.btnCompilarArchivos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompilarArchivos.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCompilarArchivos.ForeColor = System.Drawing.Color.White;
-            this.btnCompilarArchivos.Location = new System.Drawing.Point(47, 391);
+            this.btnCompilarArchivos.Location = new System.Drawing.Point(53, 391);
             this.btnCompilarArchivos.Name = "btnCompilarArchivos";
             this.btnCompilarArchivos.Size = new System.Drawing.Size(162, 26);
             this.btnCompilarArchivos.TabIndex = 8;
@@ -211,7 +220,7 @@ namespace ABC_APP.Vista
             // pbxCurrentDomain
             // 
             this.pbxCurrentDomain.Image = global::ABC_APP.Properties.Resources.question2;
-            this.pbxCurrentDomain.Location = new System.Drawing.Point(214, 391);
+            this.pbxCurrentDomain.Location = new System.Drawing.Point(220, 391);
             this.pbxCurrentDomain.Name = "pbxCurrentDomain";
             this.pbxCurrentDomain.Size = new System.Drawing.Size(26, 26);
             this.pbxCurrentDomain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -222,11 +231,12 @@ namespace ABC_APP.Vista
             // 
             this.dgCompilado.AllowUserToAddRows = false;
             this.dgCompilado.AllowUserToDeleteRows = false;
+            this.dgCompilado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgCompilado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgCompilado.Location = new System.Drawing.Point(46, 438);
+            this.dgCompilado.Location = new System.Drawing.Point(52, 423);
             this.dgCompilado.Name = "dgCompilado";
             this.dgCompilado.ReadOnly = true;
-            this.dgCompilado.Size = new System.Drawing.Size(669, 234);
+            this.dgCompilado.Size = new System.Drawing.Size(669, 249);
             this.dgCompilado.TabIndex = 14;
             // 
             // btnVerArchivoCompilado
@@ -236,12 +246,51 @@ namespace ABC_APP.Vista
             this.btnVerArchivoCompilado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVerArchivoCompilado.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerArchivoCompilado.ForeColor = System.Drawing.Color.White;
-            this.btnVerArchivoCompilado.Location = new System.Drawing.Point(46, 678);
+            this.btnVerArchivoCompilado.Location = new System.Drawing.Point(52, 678);
             this.btnVerArchivoCompilado.Name = "btnVerArchivoCompilado";
             this.btnVerArchivoCompilado.Size = new System.Drawing.Size(162, 26);
             this.btnVerArchivoCompilado.TabIndex = 8;
             this.btnVerArchivoCompilado.Text = "Visualizar Compilado";
             this.btnVerArchivoCompilado.UseVisualStyleBackColor = false;
+            // 
+            // btnExportarCompilado
+            // 
+            this.btnExportarCompilado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btnExportarCompilado.FlatAppearance.BorderSize = 0;
+            this.btnExportarCompilado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExportarCompilado.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportarCompilado.ForeColor = System.Drawing.Color.White;
+            this.btnExportarCompilado.Location = new System.Drawing.Point(220, 678);
+            this.btnExportarCompilado.Name = "btnExportarCompilado";
+            this.btnExportarCompilado.Size = new System.Drawing.Size(162, 26);
+            this.btnExportarCompilado.TabIndex = 8;
+            this.btnExportarCompilado.Text = "Exportar Compilado";
+            this.btnExportarCompilado.UseVisualStyleBackColor = false;
+            // 
+            // elipseBtnImportar
+            // 
+            this.elipseBtnImportar.ElipseRadius = 4;
+            this.elipseBtnImportar.TargetControl = this.btnSeleccionarRuta;
+            // 
+            // elipseBtnCompilar
+            // 
+            this.elipseBtnCompilar.ElipseRadius = 4;
+            this.elipseBtnCompilar.TargetControl = this.btnCompilarArchivos;
+            // 
+            // elipseBtnVerCompilado
+            // 
+            this.elipseBtnVerCompilado.ElipseRadius = 4;
+            this.elipseBtnVerCompilado.TargetControl = this.btnVerArchivoCompilado;
+            // 
+            // elipseBtnExportar
+            // 
+            this.elipseBtnExportar.ElipseRadius = 4;
+            this.elipseBtnExportar.TargetControl = this.btnExportarCompilado;
+            // 
+            // elipseDg
+            // 
+            this.elipseDg.ElipseRadius = 4;
+            this.elipseDg.TargetControl = this.dgCompilado;
             // 
             // FormCompiladorSuperSociedades
             // 
@@ -258,6 +307,7 @@ namespace ABC_APP.Vista
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnExportarCompilado);
             this.Controls.Add(this.btnVerArchivoCompilado);
             this.Controls.Add(this.btnCompilarArchivos);
             this.Controls.Add(this.btnSeleccionarRuta);
@@ -297,5 +347,11 @@ namespace ABC_APP.Vista
         public System.Windows.Forms.PictureBox pbxCurrentDomain;
         public System.Windows.Forms.DataGridView dgCompilado;
         public System.Windows.Forms.Button btnVerArchivoCompilado;
+        public System.Windows.Forms.Button btnExportarCompilado;
+        private Bunifu.Framework.UI.BunifuElipse elipseBtnImportar;
+        private Bunifu.Framework.UI.BunifuElipse elipseBtnCompilar;
+        private Bunifu.Framework.UI.BunifuElipse elipseBtnVerCompilado;
+        private Bunifu.Framework.UI.BunifuElipse elipseBtnExportar;
+        private Bunifu.Framework.UI.BunifuElipse elipseDg;
     }
 }

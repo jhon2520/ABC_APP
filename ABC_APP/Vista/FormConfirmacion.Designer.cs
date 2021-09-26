@@ -49,7 +49,6 @@ namespace ABC_APP.Vista
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(174)))), ((int)(((byte)(152)))));
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.lblMensaje);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -61,9 +60,9 @@ namespace ABC_APP.Vista
             // pictureBox1
             // 
             this.pictureBox1.Image = global::ABC_APP.Properties.Resources.question;
-            this.pictureBox1.Location = new System.Drawing.Point(377, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(15, 167);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(41, 32);
+            this.pictureBox1.Size = new System.Drawing.Size(26, 26);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -162,6 +161,7 @@ namespace ABC_APP.Vista
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(250)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(418, 205);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.panel1);

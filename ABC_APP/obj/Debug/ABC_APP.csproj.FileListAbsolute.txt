@@ -45,3 +45,5 @@ C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\obj\Debug\ABC_APP.Vista.FormFo
 C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\obj\Debug\ABC_APP.csproj.AssemblyReference.cache
 C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\obj\Debug\ABC_APP.Vista.FormCompiladorSuperSociedades.resources
 C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\bin\Debug\PythonCode\compilar_archivos_super.exe
+C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\obj\Debug\ABC_APP.VistaModuloPython.FormVerCodigoPython.resources
+C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\bin\Debug\VistaModuloPython\codigo_compilar_archivos.txt

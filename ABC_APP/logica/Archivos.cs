@@ -64,5 +64,10 @@ namespace ABC_APP.logica
   
         }
 
+        public void CopiarToClipBoard(string texto)
+        {
+            Clipboard.SetText(texto);
+        }
+
     }
 }

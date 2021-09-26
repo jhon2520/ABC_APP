@@ -133,6 +133,13 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Prueba.cs" />
+    <Compile Include="VistaModuloPython\FormVerCodigoPython.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VistaModuloPython\FormVerCodigoPython.Designer.cs">
+      <DependentUpon>FormVerCodigoPython.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VistaModuloPython\FormVerCodigoPythonController.cs" />
     <Compile Include="Vista\FormAviso.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +213,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="VistaModuloPython\FormVerCodigoPython.resx">
+      <DependentUpon>FormVerCodigoPython.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\FormAviso.resx">
       <DependentUpon>FormAviso.cs</DependentUpon>
     </EmbeddedResource>
@@ -254,6 +264,10 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="PythonCode\main.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\copy.png" />
+    <Content Include="VistaModuloPython\codigo_compilar_archivos.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\question2.png" />

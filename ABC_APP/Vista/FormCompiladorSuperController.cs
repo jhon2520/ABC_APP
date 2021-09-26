@@ -37,6 +37,7 @@ namespace ABC_APP.Vista
             this.formCompiladorSuperSociedades.btnCompilarArchivos.Click += new EventHandler(CompilarArchivos);
             this.formCompiladorSuperSociedades.pbxCurrentDomain.Click += new EventHandler(ShowCurrentDomain);
             this.formCompiladorSuperSociedades.btnVerArchivoCompilado.Click += new EventHandler(ImportarArchivoCompiladoExcel);
+            this.formCompiladorSuperSociedades.btnExportarCompilado.Click += new EventHandler(ExportarArchivoCompilado);
         }
 
         private void SeleccionarCarpeta(object sender, EventArgs args)
@@ -55,6 +56,7 @@ namespace ABC_APP.Vista
                         comboBoxLogica.FromListToComboBox(archivos, this.formCompiladorSuperSociedades.cbxArchivos);
                         rutaCarpeta = folderBrowserDialog.SelectedPath;
                         this.formCompiladorSuperSociedades.tbxRutaFolder.Text = rutaCarpeta;
+                        CopiarArchivos();
                     }
                 }
             }
@@ -65,7 +67,7 @@ namespace ABC_APP.Vista
                 formError.ShowDialog();
             }
 
-            CopiarArchivos();
+            
 
         }
 
@@ -106,7 +108,7 @@ namespace ABC_APP.Vista
                         if (result == DialogResult.OK)
                         {
                          
-                            procesos.EjecutarProceso(currentDomain + @"PythonCode\compilar_archivos_super.exe");
+                            procesos.EjecutarProceso(currentDomain + "compilar_archivos_super.exe");
                             
                         }
                         else
@@ -143,34 +145,66 @@ namespace ABC_APP.Vista
         }
         private void ImportarArchivoCompiladoExcel(object sender, EventArgs args)
         {
+            if (this.formCompiladorSuperSociedades.dgCompilado.Rows.Count == 0)
+            {
+
+                try
+                {
+                    if (File.Exists(pathArchivosABC + @"\df_complete_supersolidaria.xlsx"))
+                    {
+
+                        using (formAviso = new FormAviso("Espere un momento el cargue de la información"))
+                        {
+                            importExcel = new ImportExcel();
+                            formAviso.ShowDialog();
+                            importExcel.ImportarExcelDeRuta(this.formCompiladorSuperSociedades.dgCompilado, "Resultado", pathArchivosABC + @"\df_complete_supersolidaria.xlsx");
+                        }
+
+                    }
+                    else
+                    {
+                        using (formError = new FormError("No se encuentra el archivo compilado en la ruta " + pathArchivosABC))
+                        {
+                            formError.ShowDialog();
+                        }
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    formError = new FormError(ex.ToString());
+                    formError.ShowDialog();
+                }
+            }
+
+         
+        }
+
+        private void ExportarArchivoCompilado(object sender, EventArgs args)
+        {
             try
             {
-                if (File.Exists(pathArchivosABC + @"\df_complete_supersolidaria.xlsx"))
+                using (FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog())
                 {
-
-                    using (formAviso = new FormAviso("Espere un momento el cargue de la información"))
+                    DialogResult result = folderBrowserDialog.ShowDialog();
+                    if (result == DialogResult.OK && !string.IsNullOrEmpty(folderBrowserDialog.SelectedPath))
                     {
-                        importExcel = new ImportExcel();
+
+                        rutaCarpeta = folderBrowserDialog.SelectedPath;
+                        archivos.CopiarArchivo(pathArchivosABC + @"\df_complete_supersolidaria.xlsx", rutaCarpeta);
+                        formAviso = new FormAviso("Archivo copiado en la ruta: " + rutaCarpeta);
                         formAviso.ShowDialog();
-                        importExcel.ImportarExcelDeRuta(this.formCompiladorSuperSociedades.dgCompilado, "Resultado", pathArchivosABC + @"\df_complete_supersolidaria.xlsx");
-                    }
 
-                }
-                else
-                {
-                    using (formError = new FormError("No se encuentra el archivo compilado en la ruta "+ pathArchivosABC))
-                    {
-                        formError.ShowDialog();
                     }
                 }
-
             }
             catch (Exception ex)
             {
                 formError = new FormError(ex.ToString());
                 formError.ShowDialog();
             }
-         
+
+
         }
     }
 }
