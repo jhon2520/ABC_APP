@@ -37,8 +37,6 @@ namespace ABC_APP.Vista
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnReturn = new System.Windows.Forms.PictureBox();
             this.btnAnalisisFinanciero = new System.Windows.Forms.Button();
-            this.btnSector = new System.Windows.Forms.Button();
-            this.btnHorizontal = new System.Windows.Forms.Button();
             this.pnlCentral = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -100,8 +98,6 @@ namespace ABC_APP.Vista
             this.pnlIzquierdo.Controls.Add(this.panel1);
             this.pnlIzquierdo.Controls.Add(this.btnReturn);
             this.pnlIzquierdo.Controls.Add(this.btnAnalisisFinanciero);
-            this.pnlIzquierdo.Controls.Add(this.btnSector);
-            this.pnlIzquierdo.Controls.Add(this.btnHorizontal);
             this.pnlIzquierdo.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlIzquierdo.Location = new System.Drawing.Point(0, 66);
             this.pnlIzquierdo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -144,40 +140,6 @@ namespace ABC_APP.Vista
             this.btnAnalisisFinanciero.TabIndex = 0;
             this.btnAnalisisFinanciero.Text = "Análisis Sector";
             this.btnAnalisisFinanciero.UseVisualStyleBackColor = false;
-            // 
-            // btnSector
-            // 
-            this.btnSector.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSector.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(9)))), ((int)(((byte)(68)))));
-            this.btnSector.FlatAppearance.BorderSize = 0;
-            this.btnSector.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnSector.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnSector.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSector.ForeColor = System.Drawing.Color.White;
-            this.btnSector.Location = new System.Drawing.Point(0, 317);
-            this.btnSector.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnSector.Name = "btnSector";
-            this.btnSector.Size = new System.Drawing.Size(126, 24);
-            this.btnSector.TabIndex = 0;
-            this.btnSector.Text = "Análisis Sector";
-            this.btnSector.UseVisualStyleBackColor = false;
-            // 
-            // btnHorizontal
-            // 
-            this.btnHorizontal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnHorizontal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(9)))), ((int)(((byte)(68)))));
-            this.btnHorizontal.FlatAppearance.BorderSize = 0;
-            this.btnHorizontal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnHorizontal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.btnHorizontal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHorizontal.ForeColor = System.Drawing.Color.White;
-            this.btnHorizontal.Location = new System.Drawing.Point(0, 341);
-            this.btnHorizontal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnHorizontal.Name = "btnHorizontal";
-            this.btnHorizontal.Size = new System.Drawing.Size(126, 24);
-            this.btnHorizontal.TabIndex = 0;
-            this.btnHorizontal.Text = "Análisis Horizontal";
-            this.btnHorizontal.UseVisualStyleBackColor = false;
             // 
             // pnlCentral
             // 
@@ -305,8 +267,6 @@ namespace ABC_APP.Vista
         public System.Windows.Forms.Panel pnlIzquierdo;
         public System.Windows.Forms.Panel pnlCentral;
         private Bunifu.Framework.UI.BunifuDragControl dragSuperior;
-        public System.Windows.Forms.Button btnSector;
-        public System.Windows.Forms.Button btnHorizontal;
         public System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.PictureBox btnClose;
         public System.Windows.Forms.PictureBox btnReturn;
@@ -316,9 +276,9 @@ namespace ABC_APP.Vista
         private System.Windows.Forms.Panel panel1;
         public System.Windows.Forms.Button btnAnalisisFinanciero;
         private System.Windows.Forms.ToolStripMenuItem analisisPorSectorToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem compilarArchivoSupersolidariaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem analizarToolStripMenuItem;
         public DropDownMenu.JRDropDownMenu jrDropDownMenu1;
         public System.Windows.Forms.ToolStripMenuItem analisisHorizontalToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem analizarToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem compilarArchivoSupersolidariaToolStripMenuItem;
     }
 }

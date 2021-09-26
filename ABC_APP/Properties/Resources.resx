@@ -127,6 +127,9 @@
   <data name="minimice1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minimice.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="clear" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\clear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="notce" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\notce.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -136,8 +139,8 @@
   <data name="close1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\close1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="colors" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\colors.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logo-reditos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo-reditos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="no-imagen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\no-imagen.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,10 +172,10 @@
   <data name="1568379706" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1568379706.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logo-reditos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo-reditos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="colors" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\colors.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="clear" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\clear.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="question2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\question2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

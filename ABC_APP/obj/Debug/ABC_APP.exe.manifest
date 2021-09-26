@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="ABC_APP.exe" version="1.0.0.12" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="ABC_APP.exe" version="1.0.0.13" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
     <assemblyIdentity name="ABC_APP" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ABC_APP.exe" size="452104">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ABC_APP.exe" size="476680">
       <assemblyIdentity name="ABC_APP" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>sNfuwbHn/2lNnHA3ETYP+i4lgTzAg/Tw7n8oSm0HrHs=</dsig:DigestValue>
+        <dsig:DigestValue>y3Gfwt3i4egibyF+wBD9F51ncG3dR7pzeb0fhVQl7tw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -213,6 +213,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>lQ0lXeUb//FBTPY0Nn27TfSgDfzdmJNentJgGXOaHNI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="PythonCode\compilar_archivos_super.exe" size="76665724">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>8Q9p1bvHupmnx/3bALRkepc6E/Xw1UKtUsrfq6iwQJw=</dsig:DigestValue>
     </hash>
   </file>
   <file name="PythonCode\main.exe" size="76728687">

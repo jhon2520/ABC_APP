@@ -23,7 +23,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>12</ApplicationRevision>
+    <ApplicationRevision>13</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -140,6 +140,13 @@
       <DependentUpon>FormAviso.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\FormAvisoController.cs" />
+    <Compile Include="Vista\FormCompiladorSuperController.cs" />
+    <Compile Include="Vista\FormCompiladorSuperSociedades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormCompiladorSuperSociedades.Designer.cs">
+      <DependentUpon>FormCompiladorSuperSociedades.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vista\FormConfirmacionController.cs" />
     <Compile Include="Vista\FormConfirmacion.cs">
       <SubType>Form</SubType>
@@ -202,6 +209,9 @@
     <EmbeddedResource Include="Vista\FormAviso.resx">
       <DependentUpon>FormAviso.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormCompiladorSuperSociedades.resx">
+      <DependentUpon>FormCompiladorSuperSociedades.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\FormConfirmacion.resx">
       <DependentUpon>FormConfirmacion.cs</DependentUpon>
     </EmbeddedResource>
@@ -240,9 +250,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ObjectPy.py" />
+    <Content Include="PythonCode\compilar_archivos_super.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="PythonCode\main.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\question2.png" />
     <Content Include="TextFile1.txt" />
     <None Include="Resources\clear.png" />
     <None Include="Resources\colors.png" />

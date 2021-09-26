@@ -41,6 +41,18 @@ namespace ABC_APP.logica
             }
             return lista;
         }
+        /// <summary>
+        /// Método para pasar los elementos de una lista a items de un combobox
+        /// </summary>
+        /// <param name="lista"></param>
+        /// <param name="comboBox"></param>
+        public void FromListToComboBox(List<string> lista,ComboBox comboBox)
+        {
+            foreach (string item in lista)
+            {
+                comboBox.Items.Add(item);
+            }
+        }
 
     }
 }

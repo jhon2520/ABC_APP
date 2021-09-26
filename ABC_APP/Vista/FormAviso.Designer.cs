@@ -31,15 +31,15 @@ namespace ABC_APP.Vista
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblMensaje = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuDragControl2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuDragControl3 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.elipseForm = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.elipseBtn = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -56,6 +56,29 @@ namespace ABC_APP.Vista
             this.panel1.Size = new System.Drawing.Size(418, 143);
             this.panel1.TabIndex = 0;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ABC_APP.Properties.Resources.notce;
+            this.pictureBox1.Location = new System.Drawing.Point(389, 1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(26, 27);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblMensaje
+            // 
+            this.lblMensaje.AllowDrop = true;
+            this.lblMensaje.AutoEllipsis = true;
+            this.lblMensaje.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(132)))), ((int)(((byte)(4)))));
+            this.lblMensaje.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensaje.ForeColor = System.Drawing.Color.White;
+            this.lblMensaje.Location = new System.Drawing.Point(12, 56);
+            this.lblMensaje.Name = "lblMensaje";
+            this.lblMensaje.Size = new System.Drawing.Size(394, 74);
+            this.lblMensaje.TabIndex = 5;
+            this.lblMensaje.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -66,19 +89,6 @@ namespace ABC_APP.Vista
             this.label1.Size = new System.Drawing.Size(73, 36);
             this.label1.TabIndex = 4;
             this.label1.Text = "Aviso";
-            // 
-            // lblMensaje
-            // 
-            this.lblMensaje.AllowDrop = true;
-            this.lblMensaje.AutoEllipsis = true;
-            this.lblMensaje.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(132)))), ((int)(((byte)(4)))));
-            this.lblMensaje.Font = new System.Drawing.Font("Poppins", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMensaje.ForeColor = System.Drawing.Color.White;
-            this.lblMensaje.Location = new System.Drawing.Point(12, 66);
-            this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(394, 56);
-            this.lblMensaje.TabIndex = 5;
-            this.lblMensaje.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnAceptar
             // 
@@ -124,16 +134,6 @@ namespace ABC_APP.Vista
             // 
             this.elipseBtn.ElipseRadius = 4;
             this.elipseBtn.TargetControl = this.btnAceptar;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ABC_APP.Properties.Resources.notce;
-            this.pictureBox1.Location = new System.Drawing.Point(375, 1);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
             // 
             // FormAviso
             // 

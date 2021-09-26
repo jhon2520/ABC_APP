@@ -58,21 +58,11 @@ namespace ABC_APP.logica
         public void ImportarExcelDeRuta(DataGridView dataGridView, string nombreHoja, string rutaArchivo)
         {
             string ruta = "";
-            //string pathC = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
-            //string completePath = pathC + @"\archivosABC\Esportado.xlsx";
 
             try
             {
-                //OpenFileDialog openFileDialog = new OpenFileDialog();
-                //openFileDialog.Filter = "Excel Files |*.xlsx";
-                //openFileDialog.Title = "Selecciones el archivo de excel";
 
-                //if (openFileDialog.ShowDialog() == DialogResult.OK)
-                //{
                 ruta = rutaArchivo;
-
-            
-                //}
                 conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;data source=" + ruta + ";Extended Properties='Excel 12.0 Xml;HDR=Yes'");
                 adapter = new OleDbDataAdapter("Select * from [" + nombreHoja + "$]", conn);
                 dt = new DataTable();

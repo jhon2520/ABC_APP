@@ -16,6 +16,7 @@ namespace ABC_APP.Vista
         private FormHorizontalAnalisis formHorizontalAnalisis;
         private FormSectorAnalisis formSectorAnalisis;
         private FormConfirmacion formConfirmacion;
+        private FormCompiladorSuperSociedades formCompilador;
 
 
         public FormMainController(FormMain formMain)
@@ -29,7 +30,8 @@ namespace ABC_APP.Vista
         {
             this.formMain.btnClose.Click += new EventHandler(CerrarForm);
             this.formMain.analisisHorizontalToolStripMenuItem.Click += new EventHandler(AbrirFormHorizontal);
-            this.formMain.btnSector.Click += new EventHandler(AbrirFormSector);
+            this.formMain.analizarToolStripMenuItem.Click += new EventHandler(AbrirFormSector);
+            this.formMain.compilarArchivoSupersolidariaToolStripMenuItem.Click += new EventHandler(AbrirFormCompilar);
             this.formMain.btnReturn.Click += new EventHandler(CerrarFormActivo);
             this.formMain.btnAnalisisFinanciero.Click += new EventHandler(BtnAnalisisFinanciero);
 
@@ -65,11 +67,32 @@ namespace ABC_APP.Vista
                 formComportamiento.AbrirFormHijo(formHorizontalAnalisis, this.formMain.pnlCentral);
             }
 
+        }
+        private void AbrirFormCompilar(object sender, EventArgs args)
+        {
+            if (formComportamiento.activeForm != null)
+            {
+                using (formConfirmacion = new FormConfirmacion("¿Desea cambiar de ventana de análisis o reiniciar la actual?"))
+                {
+                    DialogResult result = formConfirmacion.ShowDialog();
+                    if (result == DialogResult.OK)
+                    {
+                        formCompilador = new FormCompiladorSuperSociedades();
+                        formComportamiento.AbrirFormHijo(formCompilador, this.formMain.pnlCentral);
 
-
-
+                    }
+                }
+            }
+            else
+            { 
+                formCompilador = new FormCompiladorSuperSociedades();
+                formComportamiento.AbrirFormHijo(formCompilador, this.formMain.pnlCentral);
+            }
 
         }
+        //compilarArchivoSupersolidariaToolStripMenuItem
+    
+
         private void AbrirFormSector(object sender, EventArgs args)
         {
 
@@ -121,6 +144,8 @@ namespace ABC_APP.Vista
         {
             this.formMain.jrDropDownMenu1.Show(this.formMain.btnAnalisisFinanciero, this.formMain.btnAnalisisFinanciero.Width,0);
         }
+
+
 
 
     }
