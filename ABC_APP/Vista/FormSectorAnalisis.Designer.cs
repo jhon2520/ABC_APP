@@ -41,18 +41,18 @@ namespace ABC_APP.Vista
             this.dgImport.AllowUserToAddRows = false;
             this.dgImport.AllowUserToDeleteRows = false;
             this.dgImport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgImport.Location = new System.Drawing.Point(38, 30);
+            this.dgImport.Location = new System.Drawing.Point(39, 30);
             this.dgImport.Name = "dgImport";
             this.dgImport.ReadOnly = true;
-            this.dgImport.Size = new System.Drawing.Size(251, 641);
+            this.dgImport.Size = new System.Drawing.Size(690, 157);
             this.dgImport.TabIndex = 0;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Silver;
-            this.panel1.Location = new System.Drawing.Point(305, 52);
+            this.panel1.Location = new System.Drawing.Point(39, 216);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(435, 1);
+            this.panel1.Size = new System.Drawing.Size(505, 1);
             this.panel1.TabIndex = 6;
             // 
             // btnImportar
@@ -62,7 +62,7 @@ namespace ABC_APP.Vista
             this.btnImportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImportar.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImportar.ForeColor = System.Drawing.Color.White;
-            this.btnImportar.Location = new System.Drawing.Point(305, 59);
+            this.btnImportar.Location = new System.Drawing.Point(567, 193);
             this.btnImportar.Name = "btnImportar";
             this.btnImportar.Size = new System.Drawing.Size(162, 26);
             this.btnImportar.TabIndex = 5;
@@ -73,9 +73,9 @@ namespace ABC_APP.Vista
             // 
             this.tbxRuta.BackColor = System.Drawing.Color.WhiteSmoke;
             this.tbxRuta.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbxRuta.Location = new System.Drawing.Point(305, 33);
+            this.tbxRuta.Location = new System.Drawing.Point(39, 197);
             this.tbxRuta.Name = "tbxRuta";
-            this.tbxRuta.Size = new System.Drawing.Size(435, 17);
+            this.tbxRuta.Size = new System.Drawing.Size(505, 17);
             this.tbxRuta.TabIndex = 4;
             // 
             // FormSectorAnalisis
