@@ -46,7 +46,7 @@ namespace ABC_APP.Vista
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(132)))), ((int)(((byte)(4)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(83)))), ((int)(((byte)(151)))));
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.lblMensaje);
             this.panel1.Controls.Add(this.label1);
@@ -58,7 +58,7 @@ namespace ABC_APP.Vista
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::ABC_APP.Properties.Resources.notce;
+            this.pictureBox1.Image = global::ABC_APP.Properties.Resources.error_fondo;
             this.pictureBox1.Location = new System.Drawing.Point(389, 1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(26, 27);
@@ -70,14 +70,14 @@ namespace ABC_APP.Vista
             // 
             this.lblMensaje.AllowDrop = true;
             this.lblMensaje.AutoEllipsis = true;
-            this.lblMensaje.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(132)))), ((int)(((byte)(4)))));
-            this.lblMensaje.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensaje.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(83)))), ((int)(((byte)(151)))));
+            this.lblMensaje.Font = new System.Drawing.Font("Poppins", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMensaje.ForeColor = System.Drawing.Color.White;
-            this.lblMensaje.Location = new System.Drawing.Point(12, 56);
+            this.lblMensaje.Location = new System.Drawing.Point(12, 37);
             this.lblMensaje.Name = "lblMensaje";
-            this.lblMensaje.Size = new System.Drawing.Size(394, 74);
+            this.lblMensaje.Size = new System.Drawing.Size(394, 93);
             this.lblMensaje.TabIndex = 5;
-            this.lblMensaje.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lblMensaje.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -92,7 +92,7 @@ namespace ABC_APP.Vista
             // 
             // btnAceptar
             // 
-            this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(132)))), ((int)(((byte)(4)))));
+            this.btnAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(83)))), ((int)(((byte)(151)))));
             this.btnAceptar.FlatAppearance.BorderSize = 0;
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

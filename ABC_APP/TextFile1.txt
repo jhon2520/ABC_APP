@@ -1,3 +1,7 @@
 ﻿PENDIENTES
 
 **Organizar el archivo de python que grafica el análisis horizontal ya que es estático en este momento
+**Colocar que al exportar me permita escoger un nombre al archivo
+**crear método para eliminar todos los archivos remanentes menos los de la supersolidaria 
+	https://docs.microsoft.com/en-us/dotnet/api/system.io.file.delete?view=net-5.0
+**Al importar un archivo de excel y no seleccionar nada está arrojando error, corregir esto.

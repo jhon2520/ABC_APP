@@ -21,6 +21,7 @@ namespace ABC_APP.Vista
         private FormCompiladorSuperSociedades formCompilador;
         private FormVerCodigoPython formVerCodigoPython;
         private FormError formError;
+        private Archivos archivos = new Archivos();
 
 
         public FormMainController(FormMain formMain)
@@ -45,6 +46,8 @@ namespace ABC_APP.Vista
 
         private void CerrarForm(object sender, EventArgs args)
         {
+            //TODO: COLOCAR ADVERTENCIA DE QUE SE VAN A ELIMINAR ARCHIVOS
+            archivos.EliminarArchivosInnecesarios();
             Application.Exit();
         }
 

@@ -33,7 +33,9 @@ namespace ABC_APP.Vista
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnImportar = new System.Windows.Forms.Button();
             this.tbxRuta = new System.Windows.Forms.TextBox();
+            this.pbxAyuda = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgImport)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxAyuda)).BeginInit();
             this.SuspendLayout();
             // 
             // dgImport
@@ -62,9 +64,9 @@ namespace ABC_APP.Vista
             this.btnImportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnImportar.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnImportar.ForeColor = System.Drawing.Color.White;
-            this.btnImportar.Location = new System.Drawing.Point(567, 193);
+            this.btnImportar.Location = new System.Drawing.Point(550, 193);
             this.btnImportar.Name = "btnImportar";
-            this.btnImportar.Size = new System.Drawing.Size(162, 26);
+            this.btnImportar.Size = new System.Drawing.Size(147, 26);
             this.btnImportar.TabIndex = 5;
             this.btnImportar.Text = "Importar";
             this.btnImportar.UseVisualStyleBackColor = false;
@@ -78,11 +80,22 @@ namespace ABC_APP.Vista
             this.tbxRuta.Size = new System.Drawing.Size(505, 17);
             this.tbxRuta.TabIndex = 4;
             // 
+            // pbxAyuda
+            // 
+            this.pbxAyuda.Image = global::ABC_APP.Properties.Resources.question2;
+            this.pbxAyuda.Location = new System.Drawing.Point(703, 193);
+            this.pbxAyuda.Name = "pbxAyuda";
+            this.pbxAyuda.Size = new System.Drawing.Size(26, 26);
+            this.pbxAyuda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxAyuda.TabIndex = 14;
+            this.pbxAyuda.TabStop = false;
+            // 
             // FormSectorAnalisis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(769, 724);
+            this.Controls.Add(this.pbxAyuda);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnImportar);
             this.Controls.Add(this.tbxRuta);
@@ -93,6 +106,7 @@ namespace ABC_APP.Vista
             this.Name = "FormSectorAnalisis";
             this.Text = "FormSectorAnalisis";
             ((System.ComponentModel.ISupportInitialize)(this.dgImport)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxAyuda)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -103,5 +117,6 @@ namespace ABC_APP.Vista
         public System.Windows.Forms.Button btnImportar;
         public System.Windows.Forms.TextBox tbxRuta;
         public System.Windows.Forms.DataGridView dgImport;
+        public System.Windows.Forms.PictureBox pbxAyuda;
     }
 }

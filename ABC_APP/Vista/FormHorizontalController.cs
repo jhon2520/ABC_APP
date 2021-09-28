@@ -51,6 +51,8 @@ namespace ABC_APP.Vista
             this.formHorizontalAnalisis.btnLimpiarCbx.Click += new EventHandler(LimpiarComboBox);
             this.formHorizontalAnalisis.numericUPDownFormato.ValueChanged += new EventHandler(SetCachevalorCeldaFormato);
             this.formHorizontalAnalisis.btnBorrarFormato.Click += new EventHandler(LimpiarFormato);
+            this.formHorizontalAnalisis.btnGuardarGrid.Click += new EventHandler(GuardarGridEnCache);
+            this.formHorizontalAnalisis.btnTraerGridCache.Click += new EventHandler(TraerGridDeCache);
 
 
         }
@@ -200,6 +202,7 @@ namespace ABC_APP.Vista
         {
             CacheData.Cache.ValorCeldaFormato = Convert.ToDouble(this.formHorizontalAnalisis.numericUPDownFormato.Value);
         }
+
         private void LimpiarFormato(object sender, EventArgs args)
         {
             using (formConfirmacion = new FormConfirmacion("¿Desea eliminar el formato de las celdas?"))
@@ -215,6 +218,38 @@ namespace ABC_APP.Vista
 
 
         }
+        private void GuardarGridEnCache(object sender, EventArgs args)
+        {
+            try
+            {
+            CacheData.Cache.DataTablePrueba = (DataTable)this.formHorizontalAnalisis.dgImport.DataSource;
+                MessageBox.Show("Data grid guardado");
+
+            }
+            catch (Exception ex)
+            {
+
+                FormError = new FormError(ex.ToString());
+                FormError.ShowDialog();
+            }
+        }
+        private void TraerGridDeCache(object sender, EventArgs args)
+        {
+            try
+            {
+                this.formHorizontalAnalisis.dgImport.DataSource = CacheData.Cache.DataTablePrueba;
+                MessageBox.Show("Data grid traído");
+
+            }
+            catch (Exception ex)
+            {
+
+                FormError = new FormError(ex.ToString());
+                FormError.ShowDialog();
+            }
+        }
+
+
 
 
     }

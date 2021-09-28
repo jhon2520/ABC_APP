@@ -13,9 +13,6 @@ namespace ABC_APP.logica
     class Archivos
     {
 
-        
-            
-
         /// <summary>
         /// Este método crea una carpeta en una ruta específica
         /// </summary>
@@ -67,6 +64,39 @@ namespace ABC_APP.logica
         public void CopiarToClipBoard(string texto)
         {
             Clipboard.SetText(texto);
+        }
+
+        public  bool ValidarNombreImportado(string ruta, string nombreArchivo)
+        {
+            if (!ruta.EndsWith(nombreArchivo))
+            {
+                return false;
+            }
+            return true;
+        }
+        public void EliminarArchivosInnecesarios()
+        {
+
+            string pathC = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            string completePath = pathC + @"\archivosABC";
+            //string rutaPrueba = @"C:\Users\Jhon Romero\Desktop\archivos";
+
+
+            string[] filesList = Directory.GetFiles(completePath);
+
+
+            foreach (string item in filesList)
+            {
+               string itemName = item.Substring(completePath.Length +1);
+
+                if (itemName != "pymes_sep.xlsx" && itemName != "pymes_ind.xlsx" && itemName != "plenas_sep.xlsx"
+                    && itemName != "plenas_ind.xlsx" && itemName != "df_complete_supersolidaria.xlsx")
+                {
+                    File.Delete(item);
+                }
+              
+            }
+   
         }
 
     }

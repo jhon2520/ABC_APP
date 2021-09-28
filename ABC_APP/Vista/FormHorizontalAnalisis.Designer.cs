@@ -47,13 +47,14 @@ namespace ABC_APP.Vista
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnBorrarFormato = new System.Windows.Forms.Button();
             this.btnLimpiarCbx = new System.Windows.Forms.PictureBox();
             this.btnFormatoCelda = new System.Windows.Forms.PictureBox();
             this.cbxDestino = new System.Windows.Forms.ComboBox();
-            this.btnBorrarFormato = new System.Windows.Forms.Button();
-            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnGuardarGrid = new System.Windows.Forms.Button();
             this.elipseBtnImportar = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.btnGenerarReporte = new System.Windows.Forms.Button();
+            this.btnTraerGridCache = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgImport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgExport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUPDownFormato)).BeginInit();
@@ -144,7 +145,7 @@ namespace ABC_APP.Vista
             this.btnGrafica.ForeColor = System.Drawing.Color.White;
             this.btnGrafica.Location = new System.Drawing.Point(-1, 686);
             this.btnGrafica.Name = "btnGrafica";
-            this.btnGrafica.Size = new System.Drawing.Size(269, 30);
+            this.btnGrafica.Size = new System.Drawing.Size(115, 30);
             this.btnGrafica.TabIndex = 2;
             this.btnGrafica.Text = "Ver Grafica";
             this.btnGrafica.UseVisualStyleBackColor = false;
@@ -263,6 +264,20 @@ namespace ABC_APP.Vista
             this.label2.TabIndex = 9;
             this.label2.Text = ">>> Seleccione un color de formato";
             // 
+            // btnBorrarFormato
+            // 
+            this.btnBorrarFormato.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnBorrarFormato.FlatAppearance.BorderSize = 0;
+            this.btnBorrarFormato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBorrarFormato.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrarFormato.ForeColor = System.Drawing.Color.White;
+            this.btnBorrarFormato.Location = new System.Drawing.Point(347, 139);
+            this.btnBorrarFormato.Name = "btnBorrarFormato";
+            this.btnBorrarFormato.Size = new System.Drawing.Size(160, 26);
+            this.btnBorrarFormato.TabIndex = 2;
+            this.btnBorrarFormato.Text = "Borrar Formato";
+            this.btnBorrarFormato.UseVisualStyleBackColor = false;
+            // 
             // btnLimpiarCbx
             // 
             this.btnLimpiarCbx.Image = global::ABC_APP.Properties.Resources.clear;
@@ -294,33 +309,19 @@ namespace ABC_APP.Vista
             this.cbxDestino.Size = new System.Drawing.Size(112, 27);
             this.cbxDestino.TabIndex = 7;
             // 
-            // btnBorrarFormato
+            // btnGuardarGrid
             // 
-            this.btnBorrarFormato.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.btnBorrarFormato.FlatAppearance.BorderSize = 0;
-            this.btnBorrarFormato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBorrarFormato.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBorrarFormato.ForeColor = System.Drawing.Color.White;
-            this.btnBorrarFormato.Location = new System.Drawing.Point(347, 139);
-            this.btnBorrarFormato.Name = "btnBorrarFormato";
-            this.btnBorrarFormato.Size = new System.Drawing.Size(160, 26);
-            this.btnBorrarFormato.TabIndex = 2;
-            this.btnBorrarFormato.Text = "Borrar Formato";
-            this.btnBorrarFormato.UseVisualStyleBackColor = false;
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.btnLimpiar.FlatAppearance.BorderSize = 0;
-            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiar.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiar.Location = new System.Drawing.Point(500, 686);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(270, 30);
-            this.btnLimpiar.TabIndex = 2;
-            this.btnLimpiar.Text = "Limpiar Ventana";
-            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnGuardarGrid.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnGuardarGrid.FlatAppearance.BorderSize = 0;
+            this.btnGuardarGrid.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardarGrid.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarGrid.ForeColor = System.Drawing.Color.White;
+            this.btnGuardarGrid.Location = new System.Drawing.Point(400, 696);
+            this.btnGuardarGrid.Name = "btnGuardarGrid";
+            this.btnGuardarGrid.Size = new System.Drawing.Size(179, 30);
+            this.btnGuardarGrid.TabIndex = 2;
+            this.btnGuardarGrid.Text = "GuardarGrid";
+            this.btnGuardarGrid.UseVisualStyleBackColor = false;
             // 
             // elipseBtnImportar
             // 
@@ -334,12 +335,26 @@ namespace ABC_APP.Vista
             this.btnGenerarReporte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerarReporte.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerarReporte.ForeColor = System.Drawing.Color.White;
-            this.btnGenerarReporte.Location = new System.Drawing.Point(268, 686);
+            this.btnGenerarReporte.Location = new System.Drawing.Point(120, 686);
             this.btnGenerarReporte.Name = "btnGenerarReporte";
-            this.btnGenerarReporte.Size = new System.Drawing.Size(232, 30);
+            this.btnGenerarReporte.Size = new System.Drawing.Size(163, 30);
             this.btnGenerarReporte.TabIndex = 2;
             this.btnGenerarReporte.Text = "Generar Reporte";
             this.btnGenerarReporte.UseVisualStyleBackColor = false;
+            // 
+            // btnTraerGridCache
+            // 
+            this.btnTraerGridCache.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnTraerGridCache.FlatAppearance.BorderSize = 0;
+            this.btnTraerGridCache.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTraerGridCache.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTraerGridCache.ForeColor = System.Drawing.Color.White;
+            this.btnTraerGridCache.Location = new System.Drawing.Point(585, 696);
+            this.btnTraerGridCache.Name = "btnTraerGridCache";
+            this.btnTraerGridCache.Size = new System.Drawing.Size(179, 30);
+            this.btnTraerGridCache.TabIndex = 2;
+            this.btnTraerGridCache.Text = "TraerGrid";
+            this.btnTraerGridCache.UseVisualStyleBackColor = false;
             // 
             // FormHorizontalAnalisis
             // 
@@ -351,7 +366,8 @@ namespace ABC_APP.Vista
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnPython);
-            this.Controls.Add(this.btnLimpiar);
+            this.Controls.Add(this.btnTraerGridCache);
+            this.Controls.Add(this.btnGuardarGrid);
             this.Controls.Add(this.btnGenerarReporte);
             this.Controls.Add(this.btnGrafica);
             this.Controls.Add(this.btnImportar);
@@ -398,9 +414,10 @@ namespace ABC_APP.Vista
         public System.Windows.Forms.Button btnBorrarFormato;
         public System.Windows.Forms.ComboBox cbxDestino;
         public System.Windows.Forms.PictureBox btnLimpiarCbx;
-        public System.Windows.Forms.Button btnLimpiar;
+        public System.Windows.Forms.Button btnGuardarGrid;
         public System.Windows.Forms.NumericUpDown numericUPDownFormato;
         private Bunifu.Framework.UI.BunifuElipse elipseBtnImportar;
         public System.Windows.Forms.Button btnGenerarReporte;
+        public System.Windows.Forms.Button btnTraerGridCache;
     }
 }

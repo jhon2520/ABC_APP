@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ABC_APP.exe" size="494600">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ABC_APP.exe" size="497160">
       <assemblyIdentity name="ABC_APP" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>/UBW4E7D2uhNXzrCqPvd2bhBCVgtq/dHjySZVVFHcZk=</dsig:DigestValue>
+        <dsig:DigestValue>VYnYQWjJWVrGZZh9u2dTiKPlkpnE4SYqZL4EYtCJ7PU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -233,13 +233,13 @@
       <dsig:DigestValue>vD4YxmIwAnGsFdxHRCjOMygFDcNFqAAAlLGEOeDpcig=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="TextFile1.txt" size="123">
+  <file name="TextFile1.txt" size="362">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>om5wZx3cPef38d0Uot4S6oMqfwXnETBpXQIvkZCJn1I=</dsig:DigestValue>
+      <dsig:DigestValue>S1EYgo+lN2clAFReZapvY9WXcS2D2fQkufh+E4tWM94=</dsig:DigestValue>
     </hash>
   </file>
   <file name="VistaModuloPython\codigo_compilar_archivos.txt" size="3334">

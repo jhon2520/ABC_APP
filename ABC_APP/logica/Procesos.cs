@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace ABC_APP.logica
 {
-    class Procesos
+    public class Procesos
     {
 
         private FormAviso formAviso;

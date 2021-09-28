@@ -140,6 +140,7 @@ namespace ABC_APP.Vista
             this.btnSistema.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnSistema.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnSistema.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSistema.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSistema.ForeColor = System.Drawing.Color.White;
             this.btnSistema.Location = new System.Drawing.Point(0, 318);
             this.btnSistema.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -157,13 +158,14 @@ namespace ABC_APP.Vista
             this.btnAnalisisFinanciero.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnAnalisisFinanciero.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.btnAnalisisFinanciero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAnalisisFinanciero.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAnalisisFinanciero.ForeColor = System.Drawing.Color.White;
             this.btnAnalisisFinanciero.Location = new System.Drawing.Point(0, 291);
             this.btnAnalisisFinanciero.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAnalisisFinanciero.Name = "btnAnalisisFinanciero";
             this.btnAnalisisFinanciero.Size = new System.Drawing.Size(126, 24);
             this.btnAnalisisFinanciero.TabIndex = 0;
-            this.btnAnalisisFinanciero.Text = "Análisis Sector";
+            this.btnAnalisisFinanciero.Text = "Est. Financieros";
             this.btnAnalisisFinanciero.UseVisualStyleBackColor = false;
             // 
             // pnlCentral
@@ -268,7 +270,7 @@ namespace ABC_APP.Vista
             this.jrDropDownMenuSistema.MenuItemTextColor = System.Drawing.Color.DimGray;
             this.jrDropDownMenuSistema.Name = "jrDropDownMenuSistema";
             this.jrDropDownMenuSistema.PrimaryColor = System.Drawing.Color.MediumSlateBlue;
-            this.jrDropDownMenuSistema.Size = new System.Drawing.Size(181, 48);
+            this.jrDropDownMenuSistema.Size = new System.Drawing.Size(174, 26);
             // 
             // verCódigoPythonToolStripMenuItem
             // 
@@ -277,7 +279,7 @@ namespace ABC_APP.Vista
             this.compararSupersociedadesToolStripMenuItem,
             this.analisisHorizontalToolStripMenuItem1});
             this.verCódigoPythonToolStripMenuItem.Name = "verCódigoPythonToolStripMenuItem";
-            this.verCódigoPythonToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.verCódigoPythonToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.verCódigoPythonToolStripMenuItem.Text = "Ver Código python";
             // 
             // compilarArchivosToolStripMenuItem
