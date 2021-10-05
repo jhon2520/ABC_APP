@@ -25,7 +25,7 @@ namespace ABC_APP.VistaModuloPython
 
         private void Recargas()
         {
-     
+           // compararSupersociedadesToolStripMenuItem
             this.formVerCodigo.btnCopiarCodigo.Click += new EventHandler(CopiarCodigoToClipBoard);
         }
 

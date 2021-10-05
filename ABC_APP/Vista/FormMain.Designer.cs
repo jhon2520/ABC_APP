@@ -53,6 +53,7 @@ namespace ABC_APP.Vista
             this.compilarArchivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.compararSupersociedadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.analisisHorizontalToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.informaciónAlmacenadaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
@@ -264,13 +265,14 @@ namespace ABC_APP.Vista
             // 
             this.jrDropDownMenuSistema.IsMainMenu = false;
             this.jrDropDownMenuSistema.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.verCódigoPythonToolStripMenuItem});
+            this.verCódigoPythonToolStripMenuItem,
+            this.informaciónAlmacenadaToolStripMenuItem});
             this.jrDropDownMenuSistema.MenuItemHeaderSize = null;
             this.jrDropDownMenuSistema.MenuItemHeight = 25;
             this.jrDropDownMenuSistema.MenuItemTextColor = System.Drawing.Color.DimGray;
             this.jrDropDownMenuSistema.Name = "jrDropDownMenuSistema";
             this.jrDropDownMenuSistema.PrimaryColor = System.Drawing.Color.MediumSlateBlue;
-            this.jrDropDownMenuSistema.Size = new System.Drawing.Size(174, 26);
+            this.jrDropDownMenuSistema.Size = new System.Drawing.Size(209, 70);
             // 
             // verCódigoPythonToolStripMenuItem
             // 
@@ -279,26 +281,32 @@ namespace ABC_APP.Vista
             this.compararSupersociedadesToolStripMenuItem,
             this.analisisHorizontalToolStripMenuItem1});
             this.verCódigoPythonToolStripMenuItem.Name = "verCódigoPythonToolStripMenuItem";
-            this.verCódigoPythonToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.verCódigoPythonToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.verCódigoPythonToolStripMenuItem.Text = "Ver Código python";
             // 
             // compilarArchivosToolStripMenuItem
             // 
             this.compilarArchivosToolStripMenuItem.Name = "compilarArchivosToolStripMenuItem";
-            this.compilarArchivosToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
+            this.compilarArchivosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.compilarArchivosToolStripMenuItem.Text = "Compilar Archivos";
             // 
             // compararSupersociedadesToolStripMenuItem
             // 
             this.compararSupersociedadesToolStripMenuItem.Name = "compararSupersociedadesToolStripMenuItem";
-            this.compararSupersociedadesToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
-            this.compararSupersociedadesToolStripMenuItem.Text = "Comparar Supersociedades";
+            this.compararSupersociedadesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.compararSupersociedadesToolStripMenuItem.Text = "Comparar Archivos";
             // 
             // analisisHorizontalToolStripMenuItem1
             // 
             this.analisisHorizontalToolStripMenuItem1.Name = "analisisHorizontalToolStripMenuItem1";
-            this.analisisHorizontalToolStripMenuItem1.Size = new System.Drawing.Size(218, 22);
+            this.analisisHorizontalToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.analisisHorizontalToolStripMenuItem1.Text = "Analisis Horizontal";
+            // 
+            // informaciónAlmacenadaToolStripMenuItem
+            // 
+            this.informaciónAlmacenadaToolStripMenuItem.Name = "informaciónAlmacenadaToolStripMenuItem";
+            this.informaciónAlmacenadaToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.informaciónAlmacenadaToolStripMenuItem.Text = "Información Almacenada";
             // 
             // FormMain
             // 
@@ -350,9 +358,10 @@ namespace ABC_APP.Vista
         public System.Windows.Forms.ToolStripMenuItem compilarArchivoSupersolidariaToolStripMenuItem;
         public System.Windows.Forms.Button btnSistema;
         private System.Windows.Forms.ToolStripMenuItem verCódigoPythonToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem compararSupersociedadesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem analisisHorizontalToolStripMenuItem1;
         public DropDownMenu.JRDropDownMenu jrDropDownMenuSistema;
         public System.Windows.Forms.ToolStripMenuItem compilarArchivosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem informaciónAlmacenadaToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem compararSupersociedadesToolStripMenuItem;
     }
 }

@@ -39,6 +39,7 @@ namespace ABC_APP.Vista
             this.formMain.analizarToolStripMenuItem.Click += new EventHandler(AbrirFormSector);
             this.formMain.compilarArchivoSupersolidariaToolStripMenuItem.Click += new EventHandler(AbrirFormCompilar);
             this.formMain.compilarArchivosToolStripMenuItem.Click += new EventHandler(AbrirCodigoPythonCompilar);
+            this.formMain.compararSupersociedadesToolStripMenuItem.Click += new EventHandler(AbrirCodigoPythonComparar);
             this.formMain.btnReturn.Click += new EventHandler(CerrarFormActivo);
             this.formMain.btnAnalisisFinanciero.Click += new EventHandler(BtnAnalisisFinanciero);
             this.formMain.btnSistema.Click += new EventHandler(BtnSistema);
@@ -47,7 +48,7 @@ namespace ABC_APP.Vista
         private void CerrarForm(object sender, EventArgs args)
         {
             //TODO: COLOCAR ADVERTENCIA DE QUE SE VAN A ELIMINAR ARCHIVOS
-            archivos.EliminarArchivosInnecesarios();
+            //archivos.EliminarArchivosInnecesarios();
             Application.Exit();
         }
 
@@ -181,6 +182,20 @@ namespace ABC_APP.Vista
                 formError.ShowDialog();
             }
         
+        }
+        private void AbrirCodigoPythonComparar(object sender, EventArgs args)
+        {
+            try
+            {
+                string currentDomain = AppDomain.CurrentDomain.BaseDirectory + @"VistaModuloPython\";
+                LeerCodigoPythonCompilar("Codigo para comparar archivo SuperSolidaria", File.ReadAllText(currentDomain + "codigo_comparar_archivos.txt"));
+            }
+            catch (Exception ex)
+            {
+                formError = new FormError(ex.ToString());
+                formError.ShowDialog();
+            }
+
         }
 
 

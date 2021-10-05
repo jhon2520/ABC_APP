@@ -92,6 +92,7 @@ namespace ABC_APP.logica
                 if (itemName != "pymes_sep.xlsx" && itemName != "pymes_ind.xlsx" && itemName != "plenas_sep.xlsx"
                     && itemName != "plenas_ind.xlsx" && itemName != "df_complete_supersolidaria.xlsx")
                 {
+
                     File.Delete(item);
                 }
               

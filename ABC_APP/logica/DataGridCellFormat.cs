@@ -89,6 +89,36 @@ namespace ABC_APP.logica
             }
 
         }
+        public void EjecutarFormateoDeAlertas(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+
+                if (this.dataGrid.Columns[e.ColumnIndex].Name == "Alertas")
+                {
+
+                    try
+                    {
+                        if (e.Value != null && e.Value.ToString() != string.Empty)
+                        {
+                            //las condiciones deben estar anidadas 
+                            if (Convert.ToInt32(e.Value) > 0)
+                            {
+                                e.CellStyle.ForeColor = Color.White;
+                                e.CellStyle.BackColor = Color.Red;
+                                
+
+                            }
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString());
+                    }
+
+                }
+            
+
+        }
 
 
     }

@@ -5,3 +5,5 @@
 **crear método para eliminar todos los archivos remanentes menos los de la supersolidaria 
 	https://docs.microsoft.com/en-us/dotnet/api/system.io.file.delete?view=net-5.0
 **Al importar un archivo de excel y no seleccionar nada está arrojando error, corregir esto.
+**Crear datos guardados en el sistema que sean los CIIU que se dispongan
+**Agregar la seguridad a botones que no debe estar activos antes de otras cosas
