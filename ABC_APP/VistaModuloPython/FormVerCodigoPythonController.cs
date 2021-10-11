@@ -43,10 +43,13 @@ namespace ABC_APP.VistaModuloPython
                     }
 
                 }
-                catch (Exception)
+                catch (Exception e)
                 {
 
-                    throw;
+                    using (formError = new FormError(e.ToString()))
+                    {
+                        formError.ShowDialog();
+                    }
                 }
             }
  

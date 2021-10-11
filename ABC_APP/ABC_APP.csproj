@@ -270,6 +270,10 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\copy.png" />
+    <None Include="Resources\loading.gif" />
+    <None Include="Resources\excel.png" />
+    <None Include="Resources\plot.png" />
+    <None Include="Resources\export-img.png" />
     <Content Include="VistaModuloPython\codigo_comparar_archivos.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

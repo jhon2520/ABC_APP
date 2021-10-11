@@ -35,17 +35,18 @@ namespace ABC_APP.logica
                     ruta = openFileDialog.FileName;
                     rutaArchivo = ruta;
                     textBox.Text = ruta;
-                     
+                    conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;data source=" + ruta + ";Extended Properties='Excel 12.0 Xml;HDR=Yes'");
+                    adapter = new OleDbDataAdapter("Select * from [" + nombreHoja + "$]", conn);
+                    dt = new DataTable();
+                    adapter.Fill(dt);
+                    dataGridView.DataSource = dt;
+
+
+                    //copiar archivo a la carpeta
+                    archivos.CopiarArchivo(rutaArchivo, completePath);
+
                 }
-                conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;data source=" + ruta + ";Extended Properties='Excel 12.0 Xml;HDR=Yes'");
-                adapter = new OleDbDataAdapter("Select * from [" + nombreHoja + "$]", conn);
-                dt = new DataTable();
-                adapter.Fill(dt);
-                dataGridView.DataSource = dt;
-
-
-                //copiar archivo a la carpeta
-                archivos.CopiarArchivo(rutaArchivo, completePath);
+      
 
 
             }
@@ -67,15 +68,24 @@ namespace ABC_APP.logica
                 adapter = new OleDbDataAdapter("Select * from [" + nombreHoja + "$]", conn);
                 dt = new DataTable();
                 adapter.Fill(dt);
-                dataGridView.DataSource = dt;
 
+            if (dataGridView.InvokeRequired)
+            {
+                dataGridView.Invoke(new Action(() => dataGridView.DataSource = dt));
 
             }
+            else
+            {
+                dataGridView.DataSource = dt;
+            }
+
+
+        }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
-        }
+            }
 
     }
 }

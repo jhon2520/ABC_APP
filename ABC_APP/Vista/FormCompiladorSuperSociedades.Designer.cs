@@ -44,18 +44,24 @@ namespace ABC_APP.Vista
             this.cbxArchivos = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnCompilarArchivos = new System.Windows.Forms.Button();
-            this.pbxCurrentDomain = new System.Windows.Forms.PictureBox();
             this.dgCompilado = new System.Windows.Forms.DataGridView();
             this.btnVerArchivoCompilado = new System.Windows.Forms.Button();
-            this.btnExportarCompilado = new System.Windows.Forms.Button();
             this.elipseBtnImportar = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.elipseBtnCompilar = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.elipseBtnVerCompilado = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.elipseBtnExportar = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.elipseDg = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.pbarVisualizador = new System.Windows.Forms.ProgressBar();
+            this.timerVisualizarCompilador = new System.Windows.Forms.Timer(this.components);
+            this.bgwVisualizarCompilado = new System.ComponentModel.BackgroundWorker();
+            this.pbxLoagindGif = new System.Windows.Forms.PictureBox();
+            this.pbxCurrentDomain = new System.Windows.Forms.PictureBox();
+            this.btnExportarCompilado = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxCurrentDomain)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgCompilado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLoagindGif)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxCurrentDomain)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -210,22 +216,12 @@ namespace ABC_APP.Vista
             this.btnCompilarArchivos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompilarArchivos.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCompilarArchivos.ForeColor = System.Drawing.Color.White;
-            this.btnCompilarArchivos.Location = new System.Drawing.Point(53, 391);
+            this.btnCompilarArchivos.Location = new System.Drawing.Point(53, 389);
             this.btnCompilarArchivos.Name = "btnCompilarArchivos";
             this.btnCompilarArchivos.Size = new System.Drawing.Size(162, 26);
             this.btnCompilarArchivos.TabIndex = 8;
             this.btnCompilarArchivos.Text = "Compilar Archivos";
             this.btnCompilarArchivos.UseVisualStyleBackColor = false;
-            // 
-            // pbxCurrentDomain
-            // 
-            this.pbxCurrentDomain.Image = global::ABC_APP.Properties.Resources.question2;
-            this.pbxCurrentDomain.Location = new System.Drawing.Point(220, 391);
-            this.pbxCurrentDomain.Name = "pbxCurrentDomain";
-            this.pbxCurrentDomain.Size = new System.Drawing.Size(26, 26);
-            this.pbxCurrentDomain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxCurrentDomain.TabIndex = 13;
-            this.pbxCurrentDomain.TabStop = false;
             // 
             // dgCompilado
             // 
@@ -233,10 +229,10 @@ namespace ABC_APP.Vista
             this.dgCompilado.AllowUserToDeleteRows = false;
             this.dgCompilado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgCompilado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgCompilado.Location = new System.Drawing.Point(52, 423);
+            this.dgCompilado.Location = new System.Drawing.Point(52, 421);
             this.dgCompilado.Name = "dgCompilado";
             this.dgCompilado.ReadOnly = true;
-            this.dgCompilado.Size = new System.Drawing.Size(669, 249);
+            this.dgCompilado.Size = new System.Drawing.Size(675, 234);
             this.dgCompilado.TabIndex = 14;
             // 
             // btnVerArchivoCompilado
@@ -246,26 +242,12 @@ namespace ABC_APP.Vista
             this.btnVerArchivoCompilado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVerArchivoCompilado.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerArchivoCompilado.ForeColor = System.Drawing.Color.White;
-            this.btnVerArchivoCompilado.Location = new System.Drawing.Point(52, 678);
+            this.btnVerArchivoCompilado.Location = new System.Drawing.Point(52, 662);
             this.btnVerArchivoCompilado.Name = "btnVerArchivoCompilado";
             this.btnVerArchivoCompilado.Size = new System.Drawing.Size(162, 26);
             this.btnVerArchivoCompilado.TabIndex = 8;
             this.btnVerArchivoCompilado.Text = "Visualizar Compilado";
             this.btnVerArchivoCompilado.UseVisualStyleBackColor = false;
-            // 
-            // btnExportarCompilado
-            // 
-            this.btnExportarCompilado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnExportarCompilado.FlatAppearance.BorderSize = 0;
-            this.btnExportarCompilado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExportarCompilado.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExportarCompilado.ForeColor = System.Drawing.Color.White;
-            this.btnExportarCompilado.Location = new System.Drawing.Point(220, 678);
-            this.btnExportarCompilado.Name = "btnExportarCompilado";
-            this.btnExportarCompilado.Size = new System.Drawing.Size(162, 26);
-            this.btnExportarCompilado.TabIndex = 8;
-            this.btnExportarCompilado.Text = "Exportar Compilado";
-            this.btnExportarCompilado.UseVisualStyleBackColor = false;
             // 
             // elipseBtnImportar
             // 
@@ -292,12 +274,78 @@ namespace ABC_APP.Vista
             this.elipseDg.ElipseRadius = 4;
             this.elipseDg.TargetControl = this.dgCompilado;
             // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(0, 0);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(100, 23);
+            this.progressBar1.TabIndex = 15;
+            // 
+            // pbarVisualizador
+            // 
+            this.pbarVisualizador.Location = new System.Drawing.Point(52, 690);
+            this.pbarVisualizador.Name = "pbarVisualizador";
+            this.pbarVisualizador.Size = new System.Drawing.Size(674, 10);
+            this.pbarVisualizador.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.pbarVisualizador.TabIndex = 16;
+            this.pbarVisualizador.Visible = false;
+            // 
+            // timerVisualizarCompilador
+            // 
+            this.timerVisualizarCompilador.Interval = 1000;
+            // 
+            // bgwVisualizarCompilado
+            // 
+            this.bgwVisualizarCompilado.WorkerReportsProgress = true;
+            this.bgwVisualizarCompilado.WorkerSupportsCancellation = true;
+            // 
+            // pbxLoagindGif
+            // 
+            this.pbxLoagindGif.Image = global::ABC_APP.Properties.Resources.loading;
+            this.pbxLoagindGif.Location = new System.Drawing.Point(696, 662);
+            this.pbxLoagindGif.Name = "pbxLoagindGif";
+            this.pbxLoagindGif.Size = new System.Drawing.Size(30, 30);
+            this.pbxLoagindGif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxLoagindGif.TabIndex = 17;
+            this.pbxLoagindGif.TabStop = false;
+            this.pbxLoagindGif.Visible = false;
+            // 
+            // pbxCurrentDomain
+            // 
+            this.pbxCurrentDomain.Image = global::ABC_APP.Properties.Resources.question2;
+            this.pbxCurrentDomain.Location = new System.Drawing.Point(220, 389);
+            this.pbxCurrentDomain.Name = "pbxCurrentDomain";
+            this.pbxCurrentDomain.Size = new System.Drawing.Size(26, 26);
+            this.pbxCurrentDomain.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxCurrentDomain.TabIndex = 13;
+            this.pbxCurrentDomain.TabStop = false;
+            // 
+            // btnExportarCompilado
+            // 
+            this.btnExportarCompilado.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnExportarCompilado.BackgroundImage = global::ABC_APP.Properties.Resources.excel;
+            this.btnExportarCompilado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExportarCompilado.FlatAppearance.BorderSize = 0;
+            this.btnExportarCompilado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnExportarCompilado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnExportarCompilado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExportarCompilado.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportarCompilado.ForeColor = System.Drawing.Color.White;
+            this.btnExportarCompilado.Location = new System.Drawing.Point(220, 661);
+            this.btnExportarCompilado.Name = "btnExportarCompilado";
+            this.btnExportarCompilado.Size = new System.Drawing.Size(28, 28);
+            this.btnExportarCompilado.TabIndex = 8;
+            this.btnExportarCompilado.UseVisualStyleBackColor = false;
+            // 
             // FormCompiladorSuperSociedades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(769, 724);
+            this.Controls.Add(this.pbxLoagindGif);
+            this.Controls.Add(this.pbarVisualizador);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.dgCompilado);
             this.Controls.Add(this.pbxCurrentDomain);
             this.Controls.Add(this.cbxArchivos);
@@ -321,8 +369,9 @@ namespace ABC_APP.Vista
             this.Text = "FormCompiladorSuperSociedades";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxCurrentDomain)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgCompilado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLoagindGif)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxCurrentDomain)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -353,5 +402,10 @@ namespace ABC_APP.Vista
         private Bunifu.Framework.UI.BunifuElipse elipseBtnVerCompilado;
         private Bunifu.Framework.UI.BunifuElipse elipseBtnExportar;
         private Bunifu.Framework.UI.BunifuElipse elipseDg;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        public System.Windows.Forms.Timer timerVisualizarCompilador;
+        public System.ComponentModel.BackgroundWorker bgwVisualizarCompilado;
+        public System.Windows.Forms.ProgressBar pbarVisualizador;
+        public System.Windows.Forms.PictureBox pbxLoagindGif;
     }
 }

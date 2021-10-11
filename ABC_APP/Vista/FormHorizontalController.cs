@@ -161,8 +161,8 @@ namespace ABC_APP.Vista
 
         private void MostrarGrafica(object sender, EventArgs args)
         {
-            formGrafica = new FormGrafica();
-            formGrafica.ShowDialog();
+            //formGrafica = new FormGrafica();
+            //formGrafica.ShowDialog();
         }
 
         private void GetDataGridColumnsToComboBox()

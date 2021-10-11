@@ -12,10 +12,10 @@ namespace ABC_APP.Vista
 {
     public partial class FormGrafica : Form
     {
-        public FormGrafica()
+        public FormGrafica(string nombreGrafica)
         {
             InitializeComponent();
-            FormGraficaController formGrafica = new FormGraficaController(this);
+            FormGraficaController formGrafica = new FormGraficaController(this,nombreGrafica);
         }
     }
 }

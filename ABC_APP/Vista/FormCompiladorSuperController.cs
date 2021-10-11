@@ -1,6 +1,7 @@
 ﻿using ABC_APP.logica;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ namespace ABC_APP.Vista
         string currentDomain = AppDomain.CurrentDomain.BaseDirectory + @"PythonCode\";
         private DataGridStyle dataGridStyle = new DataGridStyle();
         private ImportExcel importExcel;
+        private int contador = 1;
 
         public FormCompiladorSuperController(FormCompiladorSuperSociedades formCompiladorSuperSociedades)
         {
@@ -38,6 +40,10 @@ namespace ABC_APP.Vista
             this.formCompiladorSuperSociedades.pbxCurrentDomain.Click += new EventHandler(ShowCurrentDomain);
             this.formCompiladorSuperSociedades.btnVerArchivoCompilado.Click += new EventHandler(ImportarArchivoCompiladoExcel);
             this.formCompiladorSuperSociedades.btnExportarCompilado.Click += new EventHandler(ExportarArchivoCompilado);
+            this.formCompiladorSuperSociedades.bgwVisualizarCompilado.DoWork += new DoWorkEventHandler(BackGroundWorkerDoWork);
+            this.formCompiladorSuperSociedades.bgwVisualizarCompilado.ProgressChanged += new ProgressChangedEventHandler(BackGroundWorkerProgress);
+            this.formCompiladorSuperSociedades.bgwVisualizarCompilado.RunWorkerCompleted += new RunWorkerCompletedEventHandler(BackGroundWorkerCompleted);
+            this.formCompiladorSuperSociedades.timerVisualizarCompilador.Tick += new EventHandler(TimerTick);
         }
 
         private void SeleccionarCarpeta(object sender, EventArgs args)
@@ -66,6 +72,7 @@ namespace ABC_APP.Vista
                 formError = new FormError(ex.ToString());
                 formError.ShowDialog();
             }
+           
 
             
 
@@ -107,8 +114,9 @@ namespace ABC_APP.Vista
                         DialogResult result = formConfirmacion.ShowDialog();
                         if (result == DialogResult.OK)
                         {
-                         
+                            this.formCompiladorSuperSociedades.pbxLoagindGif.Visible = true;
                             procesos.EjecutarProceso(currentDomain + "compilar_archivos_super.exe");
+                            this.formCompiladorSuperSociedades.pbxLoagindGif.Visible = false;
                             
                         }
                         else
@@ -143,22 +151,40 @@ namespace ABC_APP.Vista
                 formAviso.ShowDialog();
             }
         }
+
+        #region ProgressBar
         private void ImportarArchivoCompiladoExcel(object sender, EventArgs args)
+        {
+
+            this.formCompiladorSuperSociedades.timerVisualizarCompilador.Enabled = true;
+            this.formCompiladorSuperSociedades.timerVisualizarCompilador.Start();
+            if (this.formCompiladorSuperSociedades.bgwVisualizarCompilado.IsBusy != true)
+            {
+                this.formCompiladorSuperSociedades.bgwVisualizarCompilado.RunWorkerAsync();
+            }
+         
+        }
+
+        private void BackGroundWorkerDoWork(object sender, DoWorkEventArgs e)
         {
             if (this.formCompiladorSuperSociedades.dgCompilado.Rows.Count == 0)
             {
+                if (this.formCompiladorSuperSociedades.pbarVisualizador.InvokeRequired || this.formCompiladorSuperSociedades.pbxLoagindGif.InvokeRequired)
+                {
+                    this.formCompiladorSuperSociedades.pbarVisualizador.Invoke(new Action(() =>
+                    {
+                        this.formCompiladorSuperSociedades.pbarVisualizador.Visible = true;
+                        this.formCompiladorSuperSociedades.pbxLoagindGif.Visible = true;
 
+                    }));
+                }
                 try
                 {
                     if (File.Exists(pathArchivosABC + @"\df_complete_supersolidaria.xlsx"))
                     {
 
-                        using (formAviso = new FormAviso("Espere un momento el cargue de la información"))
-                        {
-                            importExcel = new ImportExcel();
-                            formAviso.ShowDialog();
-                            importExcel.ImportarExcelDeRuta(this.formCompiladorSuperSociedades.dgCompilado, "Resultado", pathArchivosABC + @"\df_complete_supersolidaria.xlsx");
-                        }
+                        importExcel = new ImportExcel();
+                        importExcel.ImportarExcelDeRuta(this.formCompiladorSuperSociedades.dgCompilado, "Resultado", pathArchivosABC + @"\df_complete_supersolidaria.xlsx");
 
                     }
                     else
@@ -169,16 +195,41 @@ namespace ABC_APP.Vista
                         }
                     }
 
-                }
-                catch (Exception ex)
-                {
-                    formError = new FormError(ex.ToString());
-                    formError.ShowDialog();
-                }
             }
-
-         
+                catch (Exception ex)
+            {
+                formError = new FormError(ex.ToString());
+                formError.ShowDialog();
+            }
         }
+
+            this.formCompiladorSuperSociedades.timerVisualizarCompilador.Stop();
+            this.formCompiladorSuperSociedades.bgwVisualizarCompilado.ReportProgress(100);
+        }
+
+        private void BackGroundWorkerProgress(object sender, ProgressChangedEventArgs e)
+        {
+            this.formCompiladorSuperSociedades.pbarVisualizador.Value = e.ProgressPercentage;
+        }
+
+        private void BackGroundWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            using (formAviso = new FormAviso("Proceso terminado, gracias por esperar"))
+            {
+                this.formCompiladorSuperSociedades.pbarVisualizador.Visible = false;
+                this.formCompiladorSuperSociedades.pbxLoagindGif.Visible = false;
+                formAviso.ShowDialog();
+            }
+        }
+
+        private void TimerTick(object sender, EventArgs e)
+        {
+            this.contador++;
+            this.formCompiladorSuperSociedades.bgwVisualizarCompilado.ReportProgress(100 - (100 / contador));
+        }
+
+
+        #endregion
 
         private void ExportarArchivoCompilado(object sender, EventArgs args)
         {
@@ -206,5 +257,7 @@ namespace ABC_APP.Vista
 
 
         }
+
+
     }
 }
