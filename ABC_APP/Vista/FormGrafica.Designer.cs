@@ -81,6 +81,6 @@ namespace ABC_APP.Vista
         #endregion
 
         public System.Windows.Forms.PictureBox pbxGrafica;
-        private System.Windows.Forms.Button btnGuardarGrafica;
+        public System.Windows.Forms.Button btnGuardarGrafica;
     }
 }

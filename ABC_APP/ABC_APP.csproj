@@ -259,7 +259,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ObjectPy.py" />
+    <Content Include="PythonCode\comparacion_horizontal.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="PythonCode\comparar_archivos_super.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -274,6 +276,7 @@
     <None Include="Resources\excel.png" />
     <None Include="Resources\plot.png" />
     <None Include="Resources\export-img.png" />
+    <Content Include="VistaModuloPython\codigo_comparacion_horizontal.txt" />
     <Content Include="VistaModuloPython\codigo_comparar_archivos.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -233,27 +233,34 @@ namespace ABC_APP.Vista
 
         private void ExportarArchivoCompilado(object sender, EventArgs args)
         {
-            try
+
+            if(this.formCompiladorSuperSociedades.dgCompilado.Rows.Count > 0)
             {
-                using (FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog())
+
+                try
                 {
-                    DialogResult result = folderBrowserDialog.ShowDialog();
-                    if (result == DialogResult.OK && !string.IsNullOrEmpty(folderBrowserDialog.SelectedPath))
+
+                    using (FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog())
                     {
+                        DialogResult result = folderBrowserDialog.ShowDialog();
+                        if (result == DialogResult.OK && !string.IsNullOrEmpty(folderBrowserDialog.SelectedPath))
+                        {
 
-                        rutaCarpeta = folderBrowserDialog.SelectedPath;
-                        archivos.CopiarArchivo(pathArchivosABC + @"\df_complete_supersolidaria.xlsx", rutaCarpeta);
-                        formAviso = new FormAviso("Archivo copiado en la ruta: " + rutaCarpeta);
-                        formAviso.ShowDialog();
+                            rutaCarpeta = folderBrowserDialog.SelectedPath;
+                            archivos.CopiarArchivo(pathArchivosABC + @"\df_complete_supersolidaria.xlsx", rutaCarpeta);
+                            formAviso = new FormAviso("Archivo copiado en la ruta: " + rutaCarpeta);
+                            formAviso.ShowDialog();
 
+                        }
                     }
                 }
+                catch (Exception ex)
+                {
+                    formError = new FormError(ex.ToString());
+                    formError.ShowDialog();
+                }
             }
-            catch (Exception ex)
-            {
-                formError = new FormError(ex.ToString());
-                formError.ShowDialog();
-            }
+
 
 
         }

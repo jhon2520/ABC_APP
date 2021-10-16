@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ABC_APP.exe" size="2885640">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ABC_APP.exe" size="2886664">
       <assemblyIdentity name="ABC_APP" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>0XO7QbRUzkWX19YPVMwJm3KtMtA/DIfEjkIEph+oivs=</dsig:DigestValue>
+        <dsig:DigestValue>gZ0mYM17VQXy8k2wrUGfxTENUKLun89Wg6uiRZOYWfw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -206,13 +206,13 @@
       <dsig:DigestValue>R+Wg8QGvQVHX8T0ta/qbhH1bXkqY0fRnS3wBV3J0bN8=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="ObjectPy.py" size="97">
+  <file name="PythonCode\comparacion_horizontal.exe" size="76728835">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>lQ0lXeUb//FBTPY0Nn27TfSgDfzdmJNentJgGXOaHNI=</dsig:DigestValue>
+      <dsig:DigestValue>uT13zgkB4uNMEt9mdppUCQfwluFc1J9/jOpH9BF/VuA=</dsig:DigestValue>
     </hash>
   </file>
   <file name="PythonCode\comparar_archivos_super.exe" size="76648990">
@@ -242,13 +242,13 @@
       <dsig:DigestValue>vD4YxmIwAnGsFdxHRCjOMygFDcNFqAAAlLGEOeDpcig=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="TextFile1.txt" size="671">
+  <file name="TextFile1.txt" size="828">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>6u8/KhVuUGu1Cr0wY7TIbus3rFaQcFzuJ0qTq6u4Jnw=</dsig:DigestValue>
+      <dsig:DigestValue>4pOHjqEQttlQnU17Cs0+zWN6flDv0uI4QTSH8QTW9NU=</dsig:DigestValue>
     </hash>
   </file>
   <file name="VistaModuloPython\codigo_comparar_archivos.txt" size="22516">

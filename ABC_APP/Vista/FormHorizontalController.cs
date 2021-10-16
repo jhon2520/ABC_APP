@@ -89,7 +89,7 @@ namespace ABC_APP.Vista
 
                 //TODO: Quitar la primera columna del archivo que se exporta
                 importExcel = new ImportExcel();
-                string completePath = this.pathC + @"\archivosABC\Exportado.xlsx";
+                string completePath = this.pathC + @"\archivosABC\archivo_analisis_horizontal_final.xlsx";
                 importExcel.ImportarExcelDeRuta(this.formHorizontalAnalisis.dgExport, "Results", completePath);
                 dataGridStyle.DataGridDecimales(this.formHorizontalAnalisis.dgExport);
                 GetDataGridColumnsToComboBox();
@@ -129,7 +129,7 @@ namespace ABC_APP.Vista
         {
             try
             {
-                string currentDomain = AppDomain.CurrentDomain.BaseDirectory + @"PythonCode\main.exe";
+                string currentDomain = AppDomain.CurrentDomain.BaseDirectory + @"PythonCode\comparacion_horizontal.exe";
                 //TODO: Mejor la gráfica visualmente, probar en otro pc el código hasta el momento
                 procesos.EjecutarProceso(currentDomain);
                 ImportarExcelToDGVInferior();

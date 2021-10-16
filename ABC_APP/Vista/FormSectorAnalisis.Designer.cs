@@ -594,6 +594,8 @@ namespace ABC_APP.Vista
             this.btnGrafica.BackgroundImage = global::ABC_APP.Properties.Resources.plot;
             this.btnGrafica.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnGrafica.FlatAppearance.BorderSize = 0;
+            this.btnGrafica.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnGrafica.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btnGrafica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGrafica.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGrafica.ForeColor = System.Drawing.Color.White;

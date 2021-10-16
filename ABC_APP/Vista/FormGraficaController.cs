@@ -14,8 +14,10 @@ namespace ABC_APP.Vista
         private FormGrafica formGrafica;
         private Archivos archivos = new Archivos();
         private FormError formError;
+        private FormAviso formAviso;
         private string nombreGragica;
-        private double zoom = 1.0;
+        private string rutaCarpeta;
+        string pathArchivosABC = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\archivosABC";
 
         public string NombreGragica { get => nombreGragica; set => nombreGragica = value; }
 
@@ -29,6 +31,7 @@ namespace ABC_APP.Vista
         public void Sobrecargas()
         {
             this.formGrafica.Load += new EventHandler(AbrirForm);
+            this.formGrafica.btnGuardarGrafica.Click += new EventHandler(ExportarGrafica);
 
         }
 
@@ -47,7 +50,33 @@ namespace ABC_APP.Vista
             }
 
         }
+        private void ExportarGrafica(object sender, EventArgs args)
+        {
+            try
+            {
+                using (FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog())
+                {
+                    DialogResult result = folderBrowserDialog.ShowDialog();
+                    if (result == DialogResult.OK && !string.IsNullOrEmpty(folderBrowserDialog.SelectedPath))
+                    {
 
-       
+                        rutaCarpeta = folderBrowserDialog.SelectedPath;
+                        archivos.CopiarArchivo(pathArchivosABC + @"\comparacion_CIIU_user.png", rutaCarpeta);
+                        formAviso = new FormAviso("Archivo copiado en la ruta: " + rutaCarpeta);
+                        formAviso.ShowDialog();
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                formError = new FormError(ex.ToString());
+                formError.ShowDialog();
+            }
+
+
+        }
+
+
     }
 }

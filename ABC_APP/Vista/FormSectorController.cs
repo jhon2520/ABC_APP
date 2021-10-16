@@ -23,6 +23,8 @@ namespace ABC_APP.Vista
         private DataGridCellFormat gridCellFormat = new DataGridCellFormat();
         private int contador = 0;
         private int alertas = 0;
+        private string rutaCarpeta;
+        string pathArchivosABC = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\archivosABC";
 
         public FormSectorController(FormSectorAnalisis formSectorAnalisis)
         {
@@ -41,6 +43,7 @@ namespace ABC_APP.Vista
             this.formSectorAnalisis.dgImport.CellContentClick += new DataGridViewCellEventHandler(MostrarDatosGridEnTbx);
             this.formSectorAnalisis.dgImport.CellClick += new DataGridViewCellEventHandler(MostrarDatosGridEnTbx);
             this.formSectorAnalisis.btnGrafica.Click+= new EventHandler(MostrarGrafica);
+            this.formSectorAnalisis.btnExportarGrid.Click+= new EventHandler(ExportarArchivoCompilado);
 
 
             this.formSectorAnalisis.bgwEjecutarPython.DoWork += new DoWorkEventHandler(BackGroundWorkerDoWork);
@@ -128,6 +131,36 @@ namespace ABC_APP.Vista
             formGrafica.ShowDialog();
             
         }
+
+
+
+        private void ExportarArchivoCompilado(object sender, EventArgs args)
+        {
+            try
+            {
+                using (FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog())
+                {
+                    DialogResult result = folderBrowserDialog.ShowDialog();
+                    if (result == DialogResult.OK && !string.IsNullOrEmpty(folderBrowserDialog.SelectedPath))
+                    {
+
+                        rutaCarpeta = folderBrowserDialog.SelectedPath;
+                        archivos.CopiarArchivo(pathArchivosABC + @"\archivo_usuario_CIIU_final.xlsx", rutaCarpeta);
+                        formAviso = new FormAviso("Archivo copiado en la ruta: " + rutaCarpeta);
+                        formAviso.ShowDialog();
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                formError = new FormError(ex.ToString());
+                formError.ShowDialog();
+            }
+
+
+        }
+
         #endregion
 
         #region Validaciones

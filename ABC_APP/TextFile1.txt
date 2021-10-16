@@ -8,3 +8,10 @@
 **Crear datos guardados en el sistema que sean los CIIU que se dispongan
 **Agregar la seguridad a botones que no debe estar activos antes de otras cosas
 **Agregar Lista de CIIU con los que se cuenta
+**Crear un boton en el menú de estados financieros que simule un limpieza de caché cuando se va a hacer otro caso y que muestre los archivos que quedan
+
+**** 15/10/2021 En el análisis horizontal hacer que el método que ejecuta el python se haga en un backgroudworker mostrando una barra de progreso. El archivo de 
+python en el que se ejecuta este código tiene unas columnas estáticas en la columna 50 las cuales generarían error en un archivo con otra estructura
+Esto se debe corregir, compilar y convertir en .exe
+
+
