@@ -91,10 +91,8 @@ namespace ABC_APP.logica
         }
         public void EjecutarFormateoDeAlertas(object sender, DataGridViewCellFormattingEventArgs e)
         {
-
                 if (this.dataGrid.Columns[e.ColumnIndex].Name == "Alertas")
                 {
-
                     try
                     {
                         if (e.Value != null && e.Value.ToString() != string.Empty)
@@ -104,20 +102,28 @@ namespace ABC_APP.logica
                             {
                                 e.CellStyle.ForeColor = Color.White;
                                 e.CellStyle.BackColor = Color.Red;
-                                
-
                             }
                         }
-
                     }
                     catch (Exception ex)
                     {
                         MessageBox.Show(ex.ToString());
                     }
-
                 }
-            
+        }
 
+        public void RellenarCeldasDataGrid(DataGridView dataGridView, int valor)
+        {
+            for(int i = 1; i < dataGridView.Columns.Count; i++)
+            {
+                for (int j = 1; j < dataGridView.Rows.Count; j++)
+                {
+                    if (dataGridView.Rows[j].Cells[i].Value.ToString() == "inf")
+                    {
+                        dataGridView.Rows[j].Cells[i].Value = valor;
+                    }
+                }
+            }
         }
 
 

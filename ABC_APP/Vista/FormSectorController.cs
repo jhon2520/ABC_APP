@@ -25,6 +25,7 @@ namespace ABC_APP.Vista
         private int alertas = 0;
         private string rutaCarpeta;
         string pathArchivosABC = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\archivosABC";
+ 
 
         public FormSectorController(FormSectorAnalisis formSectorAnalisis)
         {
@@ -40,10 +41,12 @@ namespace ABC_APP.Vista
             this.formSectorAnalisis.btnPython.Click += new EventHandler(BtnEjecutarPython);
             this.formSectorAnalisis.btnSobreescribirGrid.Click += new EventHandler(BtnSobreescribirGrid);
             this.formSectorAnalisis.btnAlertas.Click += new EventHandler(BtnAlertas);
-            this.formSectorAnalisis.dgImport.CellContentClick += new DataGridViewCellEventHandler(MostrarDatosGridEnTbx);
-            this.formSectorAnalisis.dgImport.CellClick += new DataGridViewCellEventHandler(MostrarDatosGridEnTbx);
+            this.formSectorAnalisis.dgImport.CellContentClick += new DataGridViewCellEventHandler(BtnMostrarDatosGridEnTbx);
+            this.formSectorAnalisis.dgImport.CellClick += new DataGridViewCellEventHandler(BtnMostrarDatosGridEnTbx);
             this.formSectorAnalisis.btnGrafica.Click+= new EventHandler(MostrarGrafica);
             this.formSectorAnalisis.btnExportarGrid.Click+= new EventHandler(ExportarArchivoCompilado);
+            this.formSectorAnalisis.cbxAlertas.SelectedValueChanged += new EventHandler(ComboBoxAlertasCambio);
+            this.formSectorAnalisis.cbxAlertas.MouseWheel += new MouseEventHandler(ComboBoxMauseWheel);
 
 
             this.formSectorAnalisis.bgwEjecutarPython.DoWork += new DoWorkEventHandler(BackGroundWorkerDoWork);
@@ -88,6 +91,7 @@ namespace ABC_APP.Vista
         private void BtnSobreescribirGrid(object sender, EventArgs args)
         {
             ImportarExcelToDGV();
+            //gridCellFormat.RellenarCeldasDataGrid(this.formSectorAnalisis.dgImport, 0);
         }
         private void BtnAlertas(object sender, EventArgs args)
         {
@@ -96,33 +100,74 @@ namespace ABC_APP.Vista
             ContadorDeAlertas();
         }
 
-        private void MostrarDatosGridEnTbx(object sender, DataGridViewCellEventArgs e)
+        private void MostrarDatosGridEnTbx()
         {
-            if(this.formSectorAnalisis.dgImport.Columns.Count > 4)
+            try
             {
 
-                this.formSectorAnalisis.tbxCuenta.Text = this.formSectorAnalisis.dgImport.CurrentRow.Cells[1].Value.ToString();
-                this.formSectorAnalisis.tbxProm.Text = this.formSectorAnalisis.dgImport.CurrentRow.Cells[2].Value.ToString();
-                this.formSectorAnalisis.tbxMax.Text = this.formSectorAnalisis.dgImport.CurrentRow.Cells[3].Value.ToString();
-                this.formSectorAnalisis.tbxMin.Text = this.formSectorAnalisis.dgImport.CurrentRow.Cells[4].Value.ToString();
-                this.formSectorAnalisis.tbxDesviacion.Text = this.formSectorAnalisis.dgImport.CurrentRow.Cells[5].Value.ToString();
-                this.formSectorAnalisis.tbxUser.Text = this.formSectorAnalisis.dgImport.CurrentRow.Cells[6].Value.ToString();
-                this.formSectorAnalisis.tbxDif.Text = this.formSectorAnalisis.dgImport.CurrentRow.Cells[7].Value.ToString();
-                this.formSectorAnalisis.tbxDifPor.Text = this.formSectorAnalisis.dgImport.CurrentRow.Cells[8].Value.ToString();
-                this.formSectorAnalisis.tbxLimSup.Text = this.formSectorAnalisis.dgImport.CurrentRow.Cells[9].Value.ToString();
-                this.formSectorAnalisis.tbxLimInf.Text = this.formSectorAnalisis.dgImport.CurrentRow.Cells[10].Value.ToString();
+                if (this.formSectorAnalisis.dgImport.Columns.Count > 4)
+                {
 
-                this.formSectorAnalisis.tbxProm.Text = string.Format(System.Globalization.CultureInfo.GetCultureInfo("id-ID"), "{0:#,##0.00}", double.Parse(this.formSectorAnalisis.tbxProm.Text));
-                this.formSectorAnalisis.tbxMax.Text = string.Format(System.Globalization.CultureInfo.GetCultureInfo("id-ID"), "{0:#,##0.00}", double.Parse(this.formSectorAnalisis.tbxMax.Text));
-                this.formSectorAnalisis.tbxMin.Text = string.Format(System.Globalization.CultureInfo.GetCultureInfo("id-ID"), "{0:#,##0.00}", double.Parse(this.formSectorAnalisis.tbxMin.Text));
-                this.formSectorAnalisis.tbxDesviacion.Text = string.Format(System.Globalization.CultureInfo.GetCultureInfo("id-ID"), "{0:#,##0.00}", double.Parse(this.formSectorAnalisis.tbxDesviacion.Text));
-                this.formSectorAnalisis.tbxUser.Text = string.Format(System.Globalization.CultureInfo.GetCultureInfo("id-ID"), "{0:#,##0.00}", double.Parse(this.formSectorAnalisis.tbxUser.Text));
-                this.formSectorAnalisis.tbxDif.Text = string.Format(System.Globalization.CultureInfo.GetCultureInfo("id-ID"), "{0:#,##0.00}", double.Parse(this.formSectorAnalisis.tbxDif.Text));
-                this.formSectorAnalisis.tbxDifPor.Text = string.Format(System.Globalization.CultureInfo.GetCultureInfo("id-ID"), "{0:#,##0.00}", double.Parse(this.formSectorAnalisis.tbxDifPor.Text));
-                this.formSectorAnalisis.tbxLimSup.Text = string.Format(System.Globalization.CultureInfo.GetCultureInfo("id-ID"), "{0:#,##0.00}", double.Parse(this.formSectorAnalisis.tbxLimSup.Text));
-                this.formSectorAnalisis.tbxLimInf.Text = string.Format(System.Globalization.CultureInfo.GetCultureInfo("id-ID"), "{0:#,##0.00}", double.Parse(this.formSectorAnalisis.tbxLimInf.Text));
+                    this.formSectorAnalisis.tbxCuenta.Text = this.formSectorAnalisis.dgImport.CurrentRow.Cells[1].Value.ToString();
+                    this.formSectorAnalisis.tbxProm.Text = this.formSectorAnalisis.dgImport.CurrentRow.Cells[2].Value.ToString();
+                    this.formSectorAnalisis.tbxMax.Text = this.formSectorAnalisis.dgImport.CurrentRow.Cells[3].Value.ToString();
+                    this.formSectorAnalisis.tbxMin.Text = this.formSectorAnalisis.dgImport.CurrentRow.Cells[4].Value.ToString();
+                    this.formSectorAnalisis.tbxDesviacion.Text = this.formSectorAnalisis.dgImport.CurrentRow.Cells[5].Value.ToString();
+                    this.formSectorAnalisis.tbxUser.Text = this.formSectorAnalisis.dgImport.CurrentRow.Cells[6].Value.ToString();
+                    this.formSectorAnalisis.tbxDif.Text = this.formSectorAnalisis.dgImport.CurrentRow.Cells[7].Value.ToString();
+                    this.formSectorAnalisis.tbxDifPor.Text = this.formSectorAnalisis.dgImport.CurrentRow.Cells[8].Value.ToString();
+                    this.formSectorAnalisis.tbxLimSup.Text = this.formSectorAnalisis.dgImport.CurrentRow.Cells[9].Value.ToString();
+                    this.formSectorAnalisis.tbxLimInf.Text = this.formSectorAnalisis.dgImport.CurrentRow.Cells[10].Value.ToString();
 
+                    this.formSectorAnalisis.tbxProm.Text = string.Format(System.Globalization.CultureInfo.GetCultureInfo("id-ID"), "{0:#,##0.00}", double.Parse(this.formSectorAnalisis.tbxProm.Text));
+                    this.formSectorAnalisis.tbxMax.Text = string.Format(System.Globalization.CultureInfo.GetCultureInfo("id-ID"), "{0:#,##0.00}", double.Parse(this.formSectorAnalisis.tbxMax.Text));
+                    this.formSectorAnalisis.tbxMin.Text = string.Format(System.Globalization.CultureInfo.GetCultureInfo("id-ID"), "{0:#,##0.00}", double.Parse(this.formSectorAnalisis.tbxMin.Text));
+                    this.formSectorAnalisis.tbxDesviacion.Text = string.Format(System.Globalization.CultureInfo.GetCultureInfo("id-ID"), "{0:#,##0.00}", double.Parse(this.formSectorAnalisis.tbxDesviacion.Text));
+                    this.formSectorAnalisis.tbxUser.Text = string.Format(System.Globalization.CultureInfo.GetCultureInfo("id-ID"), "{0:#,##0.00}", double.Parse(this.formSectorAnalisis.tbxUser.Text));
+                    this.formSectorAnalisis.tbxDif.Text = string.Format(System.Globalization.CultureInfo.GetCultureInfo("id-ID"), "{0:#,##0.00}", double.Parse(this.formSectorAnalisis.tbxDif.Text));
+                    this.formSectorAnalisis.tbxDifPor.Text = string.Format(System.Globalization.CultureInfo.GetCultureInfo("id-ID"), "{0:#,##0.00}", double.Parse(this.formSectorAnalisis.tbxDifPor.Text));
+                    this.formSectorAnalisis.tbxLimSup.Text = string.Format(System.Globalization.CultureInfo.GetCultureInfo("id-ID"), "{0:#,##0.00}", double.Parse(this.formSectorAnalisis.tbxLimSup.Text));
+                    this.formSectorAnalisis.tbxLimInf.Text = string.Format(System.Globalization.CultureInfo.GetCultureInfo("id-ID"), "{0:#,##0.00}", double.Parse(this.formSectorAnalisis.tbxLimInf.Text));
+
+                }
             }
+            catch (Exception e)
+            {
+
+                using (formError = new FormError(e.ToString()))
+                {
+                    formError.ShowDialog();
+                }
+            }
+
+        }
+
+        private void BtnMostrarDatosGridEnTbx(object sender, DataGridViewCellEventArgs e)
+        {
+
+            MostrarDatosGridEnTbx();
+        }
+
+
+        private void ComboBoxAlertasCambio(object sender, EventArgs args)
+        {
+           
+            for(int i =0; i< this.formSectorAnalisis.dgImport.Rows.Count; i++)
+            {
+                if(this.formSectorAnalisis.dgImport.Rows[i].Cells[1].Value == this.formSectorAnalisis.cbxAlertas.SelectedItem)
+                {
+                    this.formSectorAnalisis.dgImport.ClearSelection();
+                    this.formSectorAnalisis.dgImport.Rows[i].Cells[1].Selected = true;
+                    this.formSectorAnalisis.dgImport.CurrentCell = this.formSectorAnalisis.dgImport.Rows[i].Cells[1];
+                    MostrarDatosGridEnTbx();
+            
+                }
+            }
+        }
+
+        private void ComboBoxMauseWheel(object sender, MouseEventArgs e)
+        {
+            ((HandledMouseEventArgs)e).Handled = true;
         }
 
         private void MostrarGrafica(object sender, EventArgs args)
@@ -240,7 +285,7 @@ namespace ABC_APP.Vista
             {
                 string currentDomain = AppDomain.CurrentDomain.BaseDirectory + @"PythonCode\comparar_archivos_super.exe";
                 procesos.EjecutarProceso(currentDomain);
-                // ImportarExcelToDGV();
+               // ImportarExcelToDGV();
 
 
 

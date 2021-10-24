@@ -17,7 +17,7 @@ namespace ABC_APP.Vista
         private FormAviso formAviso;
         private string nombreGragica;
         private string rutaCarpeta;
-        string pathArchivosABC = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\archivosABC";
+        string pathArchivosABC = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\archivosABC\";
 
         public string NombreGragica { get => nombreGragica; set => nombreGragica = value; }
 
@@ -41,7 +41,7 @@ namespace ABC_APP.Vista
 
             try
             {
-                this.formGrafica.pbxGrafica.Image = Image.FromFile(@"C:\Users\Jhon Romero\archivosABC\" + this.NombreGragica + ".png");
+                this.formGrafica.pbxGrafica.Image = Image.FromFile(pathArchivosABC + this.NombreGragica + ".png");
             }
             catch (Exception ex)
             {
@@ -61,7 +61,7 @@ namespace ABC_APP.Vista
                     {
 
                         rutaCarpeta = folderBrowserDialog.SelectedPath;
-                        archivos.CopiarArchivo(pathArchivosABC + @"\comparacion_CIIU_user.png", rutaCarpeta);
+                        archivos.CopiarArchivo(pathArchivosABC  + this.NombreGragica + ".png", rutaCarpeta);
                         formAviso = new FormAviso("Archivo copiado en la ruta: " + rutaCarpeta);
                         formAviso.ShowDialog();
 

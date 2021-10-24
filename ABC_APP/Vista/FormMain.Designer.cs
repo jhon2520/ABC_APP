@@ -54,6 +54,7 @@ namespace ABC_APP.Vista
             this.compararSupersociedadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.analisisHorizontalToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.informaciónAlmacenadaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.analizarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
@@ -231,7 +232,7 @@ namespace ABC_APP.Vista
             this.jrDropDownMenu1.MenuItemTextColor = System.Drawing.Color.DimGray;
             this.jrDropDownMenu1.Name = "jrDropDownMenu1";
             this.jrDropDownMenu1.PrimaryColor = System.Drawing.Color.MediumSlateBlue;
-            this.jrDropDownMenu1.Size = new System.Drawing.Size(173, 48);
+            this.jrDropDownMenu1.Size = new System.Drawing.Size(181, 70);
             // 
             // analisisPorSectorToolStripMenuItem
             // 
@@ -239,7 +240,7 @@ namespace ABC_APP.Vista
             this.compilarArchivoSupersolidariaToolStripMenuItem,
             this.analizarToolStripMenuItem});
             this.analisisPorSectorToolStripMenuItem.Name = "analisisPorSectorToolStripMenuItem";
-            this.analisisPorSectorToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.analisisPorSectorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.analisisPorSectorToolStripMenuItem.Text = "Analisis Por Sector";
             // 
             // compilarArchivoSupersolidariaToolStripMenuItem
@@ -256,8 +257,10 @@ namespace ABC_APP.Vista
             // 
             // analisisHorizontalToolStripMenuItem
             // 
+            this.analisisHorizontalToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.analizarToolStripMenuItem1});
             this.analisisHorizontalToolStripMenuItem.Name = "analisisHorizontalToolStripMenuItem";
-            this.analisisHorizontalToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.analisisHorizontalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.analisisHorizontalToolStripMenuItem.Text = "Analisis Horizontal";
             this.analisisHorizontalToolStripMenuItem.Click += new System.EventHandler(this.analisisHorizontalToolStripMenuItem_Click);
             // 
@@ -272,7 +275,7 @@ namespace ABC_APP.Vista
             this.jrDropDownMenuSistema.MenuItemTextColor = System.Drawing.Color.DimGray;
             this.jrDropDownMenuSistema.Name = "jrDropDownMenuSistema";
             this.jrDropDownMenuSistema.PrimaryColor = System.Drawing.Color.MediumSlateBlue;
-            this.jrDropDownMenuSistema.Size = new System.Drawing.Size(209, 70);
+            this.jrDropDownMenuSistema.Size = new System.Drawing.Size(209, 48);
             // 
             // verCódigoPythonToolStripMenuItem
             // 
@@ -287,19 +290,19 @@ namespace ABC_APP.Vista
             // compilarArchivosToolStripMenuItem
             // 
             this.compilarArchivosToolStripMenuItem.Name = "compilarArchivosToolStripMenuItem";
-            this.compilarArchivosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.compilarArchivosToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.compilarArchivosToolStripMenuItem.Text = "Compilar Archivos";
             // 
             // compararSupersociedadesToolStripMenuItem
             // 
             this.compararSupersociedadesToolStripMenuItem.Name = "compararSupersociedadesToolStripMenuItem";
-            this.compararSupersociedadesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.compararSupersociedadesToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.compararSupersociedadesToolStripMenuItem.Text = "Comparar Archivos";
             // 
             // analisisHorizontalToolStripMenuItem1
             // 
             this.analisisHorizontalToolStripMenuItem1.Name = "analisisHorizontalToolStripMenuItem1";
-            this.analisisHorizontalToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.analisisHorizontalToolStripMenuItem1.Size = new System.Drawing.Size(176, 22);
             this.analisisHorizontalToolStripMenuItem1.Text = "Analisis Horizontal";
             // 
             // informaciónAlmacenadaToolStripMenuItem
@@ -307,6 +310,12 @@ namespace ABC_APP.Vista
             this.informaciónAlmacenadaToolStripMenuItem.Name = "informaciónAlmacenadaToolStripMenuItem";
             this.informaciónAlmacenadaToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.informaciónAlmacenadaToolStripMenuItem.Text = "Información Almacenada";
+            // 
+            // analizarToolStripMenuItem1
+            // 
+            this.analizarToolStripMenuItem1.Name = "analizarToolStripMenuItem1";
+            this.analizarToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.analizarToolStripMenuItem1.Text = "Analizar";
             // 
             // FormMain
             // 
@@ -363,5 +372,6 @@ namespace ABC_APP.Vista
         public System.Windows.Forms.ToolStripMenuItem compilarArchivosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem informaciónAlmacenadaToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem compararSupersociedadesToolStripMenuItem;
+        public System.Windows.Forms.ToolStripMenuItem analizarToolStripMenuItem1;
     }
 }

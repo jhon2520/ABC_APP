@@ -35,7 +35,7 @@ namespace ABC_APP.Vista
         private void Recargas()
         {
             this.formMain.btnClose.Click += new EventHandler(CerrarForm);
-            this.formMain.analisisHorizontalToolStripMenuItem.Click += new EventHandler(AbrirFormHorizontal);
+            this.formMain.analizarToolStripMenuItem1.Click += new EventHandler(AbrirFormHorizontal);
             this.formMain.analizarToolStripMenuItem.Click += new EventHandler(AbrirFormSector);
             this.formMain.compilarArchivoSupersolidariaToolStripMenuItem.Click += new EventHandler(AbrirFormCompilar);
             this.formMain.compilarArchivosToolStripMenuItem.Click += new EventHandler(AbrirCodigoPythonCompilar);

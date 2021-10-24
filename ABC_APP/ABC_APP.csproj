@@ -276,6 +276,8 @@
     <None Include="Resources\excel.png" />
     <None Include="Resources\plot.png" />
     <None Include="Resources\export-img.png" />
+    <None Include="Resources\fill-color.png" />
+    <None Include="Resources\font-color.png" />
     <Content Include="VistaModuloPython\codigo_comparacion_horizontal.txt" />
     <Content Include="VistaModuloPython\codigo_comparar_archivos.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
