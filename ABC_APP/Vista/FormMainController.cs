@@ -52,9 +52,28 @@ namespace ABC_APP.Vista
 
         private void CerrarForm(object sender, EventArgs args)
         {
-            //TODO: COLOCAR ADVERTENCIA DE QUE SE VAN A ELIMINAR ARCHIVOS
-            //archivos.EliminarArchivosInnecesarios();
-            Application.Exit();
+            try
+            {
+                using (formConfirmacion = new FormConfirmacion("¿Desea salir de la aplicacion? \n Perderá información que no haya sido exportada"))
+                {
+                    DialogResult result = formConfirmacion.ShowDialog();
+                    if (result == DialogResult.OK)
+                    {
+                        archivos.EliminarArchivosInnecesarios();
+                        Application.Exit();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                using (formError = new FormError(ex.ToString()))
+                {
+                    formError.ShowDialog();
+                }
+            }
+
+
+         
         }
 
         private void MinimizarForm(object sender, EventArgs args)

@@ -40,6 +40,7 @@ namespace ABC_APP.Vista
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.dragForm = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.dragLogo = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -139,6 +140,11 @@ namespace ABC_APP.Vista
             this.dragLogo.TargetControl = this.pbxLogo;
             this.dragLogo.Vertical = true;
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 6;
+            this.bunifuElipse1.TargetControl = this;
+            // 
             // FormSplashScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -152,8 +158,8 @@ namespace ABC_APP.Vista
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pbxLogo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormSplashScreen";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormSplashScreen";
             this.TopMost = true;
@@ -174,5 +180,6 @@ namespace ABC_APP.Vista
         private System.Windows.Forms.Timer timer1;
         private Bunifu.Framework.UI.BunifuDragControl dragForm;
         private Bunifu.Framework.UI.BunifuDragControl dragLogo;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }

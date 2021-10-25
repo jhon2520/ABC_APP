@@ -201,7 +201,7 @@ namespace ABC_APP.Vista
             // 
             // pbarVisualizador
             // 
-            this.pbarVisualizador.Location = new System.Drawing.Point(39, 701);
+            this.pbarVisualizador.Location = new System.Drawing.Point(39, 693);
             this.pbarVisualizador.Name = "pbarVisualizador";
             this.pbarVisualizador.Size = new System.Drawing.Size(690, 10);
             this.pbarVisualizador.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
@@ -578,7 +578,7 @@ namespace ABC_APP.Vista
             // pbxLoagindGif
             // 
             this.pbxLoagindGif.Image = global::ABC_APP.Properties.Resources.loading;
-            this.pbxLoagindGif.Location = new System.Drawing.Point(708, 680);
+            this.pbxLoagindGif.Location = new System.Drawing.Point(708, 672);
             this.pbxLoagindGif.Name = "pbxLoagindGif";
             this.pbxLoagindGif.Size = new System.Drawing.Size(20, 20);
             this.pbxLoagindGif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -614,7 +614,7 @@ namespace ABC_APP.Vista
             this.btnGrafica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGrafica.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGrafica.ForeColor = System.Drawing.Color.White;
-            this.btnGrafica.Location = new System.Drawing.Point(360, 651);
+            this.btnGrafica.Location = new System.Drawing.Point(360, 647);
             this.btnGrafica.Name = "btnGrafica";
             this.btnGrafica.Size = new System.Drawing.Size(49, 44);
             this.btnGrafica.TabIndex = 15;

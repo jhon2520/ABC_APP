@@ -77,13 +77,15 @@ namespace ABC_APP.logica
         public void EliminarArchivosInnecesarios()
         {
 
+
             string pathC = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
             string completePath = pathC + @"\archivosABC";
             //string rutaPrueba = @"C:\Users\Jhon Romero\Desktop\archivos";
 
 
             string[] filesList = Directory.GetFiles(completePath);
-
+            
+            //TODO: si los archivos están abiertos, debo cerrarlos primero
 
             foreach (string item in filesList)
             {
@@ -92,7 +94,7 @@ namespace ABC_APP.logica
                 if (itemName != "pymes_sep.xlsx" && itemName != "pymes_ind.xlsx" && itemName != "plenas_sep.xlsx"
                     && itemName != "plenas_ind.xlsx" && itemName != "df_complete_supersolidaria.xlsx")
                 {
-
+                    File.Create(itemName).Close();
                     File.Delete(item);
                 }
               

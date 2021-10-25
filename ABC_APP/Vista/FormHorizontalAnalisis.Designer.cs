@@ -30,7 +30,7 @@ namespace ABC_APP.Vista
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgImport = new System.Windows.Forms.DataGridView();
             this.tbxRuta = new System.Windows.Forms.TextBox();
             this.btnImportar = new System.Windows.Forms.Button();
@@ -53,6 +53,8 @@ namespace ABC_APP.Vista
             this.bgwEjecutarPython = new System.ComponentModel.BackgroundWorker();
             this.timerEjecutarPython = new System.Windows.Forms.Timer(this.components);
             this.btnSobreescribirGrid = new System.Windows.Forms.Button();
+            this.elipseBtnPython = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.elipseBtnSobreescribir = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.btnExportarGrid = new System.Windows.Forms.Button();
             this.pbxLoagindGif = new System.Windows.Forms.PictureBox();
             this.btnBorrarFormato = new System.Windows.Forms.Button();
@@ -60,8 +62,6 @@ namespace ABC_APP.Vista
             this.btnFormatoCelda = new System.Windows.Forms.PictureBox();
             this.btnFormato = new System.Windows.Forms.Button();
             this.btnGrafica = new System.Windows.Forms.Button();
-            this.elipseBtnPython = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.elipseBtnSobreescribir = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgImport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUPDownFormato)).BeginInit();
             this.panel2.SuspendLayout();
@@ -75,14 +75,14 @@ namespace ABC_APP.Vista
             this.dgImport.AllowUserToAddRows = false;
             this.dgImport.AllowUserToDeleteRows = false;
             this.dgImport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgImport.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgImport.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgImport.Location = new System.Drawing.Point(37, 26);
             this.dgImport.Name = "dgImport";
             this.dgImport.ReadOnly = true;
@@ -258,7 +258,7 @@ namespace ABC_APP.Vista
             this.btnGuardarGrid.ForeColor = System.Drawing.Color.White;
             this.btnGuardarGrid.Location = new System.Drawing.Point(587, 672);
             this.btnGuardarGrid.Name = "btnGuardarGrid";
-            this.btnGuardarGrid.Size = new System.Drawing.Size(81, 22);
+            this.btnGuardarGrid.Size = new System.Drawing.Size(81, 11);
             this.btnGuardarGrid.TabIndex = 2;
             this.btnGuardarGrid.Text = "GuardarGrid";
             this.btnGuardarGrid.UseVisualStyleBackColor = false;
@@ -278,7 +278,7 @@ namespace ABC_APP.Vista
             this.btnTraerGridCache.ForeColor = System.Drawing.Color.White;
             this.btnTraerGridCache.Location = new System.Drawing.Point(463, 672);
             this.btnTraerGridCache.Name = "btnTraerGridCache";
-            this.btnTraerGridCache.Size = new System.Drawing.Size(118, 22);
+            this.btnTraerGridCache.Size = new System.Drawing.Size(118, 11);
             this.btnTraerGridCache.TabIndex = 2;
             this.btnTraerGridCache.Text = "TraerGrid";
             this.btnTraerGridCache.UseVisualStyleBackColor = false;
@@ -286,7 +286,7 @@ namespace ABC_APP.Vista
             // 
             // pbarVisualizador
             // 
-            this.pbarVisualizador.Location = new System.Drawing.Point(31, 700);
+            this.pbarVisualizador.Location = new System.Drawing.Point(31, 686);
             this.pbarVisualizador.Name = "pbarVisualizador";
             this.pbarVisualizador.Size = new System.Drawing.Size(702, 10);
             this.pbarVisualizador.TabIndex = 10;
@@ -315,6 +315,16 @@ namespace ABC_APP.Vista
             this.btnSobreescribirGrid.Text = "Sobreescribir Datos";
             this.btnSobreescribirGrid.UseVisualStyleBackColor = false;
             // 
+            // elipseBtnPython
+            // 
+            this.elipseBtnPython.ElipseRadius = 4;
+            this.elipseBtnPython.TargetControl = this.btnPython;
+            // 
+            // elipseBtnSobreescribir
+            // 
+            this.elipseBtnSobreescribir.ElipseRadius = 4;
+            this.elipseBtnSobreescribir.TargetControl = this.btnSobreescribirGrid;
+            // 
             // btnExportarGrid
             // 
             this.btnExportarGrid.BackColor = System.Drawing.Color.White;
@@ -335,7 +345,7 @@ namespace ABC_APP.Vista
             // pbxLoagindGif
             // 
             this.pbxLoagindGif.Image = global::ABC_APP.Properties.Resources.loading;
-            this.pbxLoagindGif.Location = new System.Drawing.Point(712, 679);
+            this.pbxLoagindGif.Location = new System.Drawing.Point(712, 665);
             this.pbxLoagindGif.Name = "pbxLoagindGif";
             this.pbxLoagindGif.Size = new System.Drawing.Size(20, 20);
             this.pbxLoagindGif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -413,16 +423,6 @@ namespace ABC_APP.Vista
             this.btnGrafica.Size = new System.Drawing.Size(45, 45);
             this.btnGrafica.TabIndex = 2;
             this.btnGrafica.UseVisualStyleBackColor = false;
-            // 
-            // elipseBtnPython
-            // 
-            this.elipseBtnPython.ElipseRadius = 4;
-            this.elipseBtnPython.TargetControl = this.btnPython;
-            // 
-            // elipseBtnSobreescribir
-            // 
-            this.elipseBtnSobreescribir.ElipseRadius = 4;
-            this.elipseBtnSobreescribir.TargetControl = this.btnSobreescribirGrid;
             // 
             // FormHorizontalAnalisis
             // 

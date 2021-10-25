@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ABC_APP.exe" size="3011080">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ABC_APP.exe" size="3296776">
       <assemblyIdentity name="ABC_APP" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>cCHO78so/nteoLo8UTwJyVxvUKTAgECRxkue/qjzbTY=</dsig:DigestValue>
+        <dsig:DigestValue>oTbt/IIxIt23NKd58uKqQA+aMaAQY/Q/mLDD5QQ2xPA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

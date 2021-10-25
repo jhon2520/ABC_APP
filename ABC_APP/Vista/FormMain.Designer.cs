@@ -30,6 +30,7 @@ namespace ABC_APP.Vista
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.pnlSuperior = new System.Windows.Forms.Panel();
             this.pbxMinimizar = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.PictureBox();
@@ -83,12 +84,13 @@ namespace ABC_APP.Vista
             // pbxMinimizar
             // 
             this.pbxMinimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(105)))), ((int)(((byte)(122)))));
+            this.pbxMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbxMinimizar.Cursor = System.Windows.Forms.Cursors.Default;
             this.pbxMinimizar.Image = global::ABC_APP.Properties.Resources.minimize;
             this.pbxMinimizar.Location = new System.Drawing.Point(835, 0);
             this.pbxMinimizar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pbxMinimizar.Name = "pbxMinimizar";
-            this.pbxMinimizar.Padding = new System.Windows.Forms.Padding(4);
+            this.pbxMinimizar.Padding = new System.Windows.Forms.Padding(3);
             this.pbxMinimizar.Size = new System.Drawing.Size(30, 30);
             this.pbxMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxMinimizar.TabIndex = 0;
@@ -97,6 +99,7 @@ namespace ABC_APP.Vista
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(105)))), ((int)(((byte)(122)))));
+            this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.btnClose.Image = global::ABC_APP.Properties.Resources.close_button;
             this.btnClose.Location = new System.Drawing.Point(864, 0);
@@ -338,6 +341,7 @@ namespace ABC_APP.Vista
             this.Controls.Add(this.pnlSuperior);
             this.Font = new System.Drawing.Font("Poppins", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
