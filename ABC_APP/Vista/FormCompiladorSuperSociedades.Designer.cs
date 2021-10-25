@@ -50,14 +50,13 @@ namespace ABC_APP.Vista
             this.elipseBtnCompilar = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.elipseBtnVerCompilado = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.elipseBtnExportar = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.btnExportarCompilado = new System.Windows.Forms.Button();
             this.elipseDg = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.pbarVisualizador = new System.Windows.Forms.ProgressBar();
             this.timerVisualizarCompilador = new System.Windows.Forms.Timer(this.components);
             this.bgwVisualizarCompilado = new System.ComponentModel.BackgroundWorker();
             this.pbxLoagindGif = new System.Windows.Forms.PictureBox();
             this.pbxCurrentDomain = new System.Windows.Forms.PictureBox();
-            this.btnExportarCompilado = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgCompilado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLoagindGif)).BeginInit();
@@ -269,17 +268,27 @@ namespace ABC_APP.Vista
             this.elipseBtnExportar.ElipseRadius = 4;
             this.elipseBtnExportar.TargetControl = this.btnExportarCompilado;
             // 
+            // btnExportarCompilado
+            // 
+            this.btnExportarCompilado.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnExportarCompilado.BackgroundImage = global::ABC_APP.Properties.Resources.excel;
+            this.btnExportarCompilado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExportarCompilado.FlatAppearance.BorderSize = 0;
+            this.btnExportarCompilado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnExportarCompilado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnExportarCompilado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExportarCompilado.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportarCompilado.ForeColor = System.Drawing.Color.White;
+            this.btnExportarCompilado.Location = new System.Drawing.Point(220, 661);
+            this.btnExportarCompilado.Name = "btnExportarCompilado";
+            this.btnExportarCompilado.Size = new System.Drawing.Size(28, 28);
+            this.btnExportarCompilado.TabIndex = 8;
+            this.btnExportarCompilado.UseVisualStyleBackColor = false;
+            // 
             // elipseDg
             // 
             this.elipseDg.ElipseRadius = 4;
             this.elipseDg.TargetControl = this.dgCompilado;
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(0, 0);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(100, 23);
-            this.progressBar1.TabIndex = 15;
             // 
             // pbarVisualizador
             // 
@@ -320,23 +329,6 @@ namespace ABC_APP.Vista
             this.pbxCurrentDomain.TabIndex = 13;
             this.pbxCurrentDomain.TabStop = false;
             // 
-            // btnExportarCompilado
-            // 
-            this.btnExportarCompilado.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnExportarCompilado.BackgroundImage = global::ABC_APP.Properties.Resources.excel;
-            this.btnExportarCompilado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnExportarCompilado.FlatAppearance.BorderSize = 0;
-            this.btnExportarCompilado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnExportarCompilado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnExportarCompilado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExportarCompilado.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExportarCompilado.ForeColor = System.Drawing.Color.White;
-            this.btnExportarCompilado.Location = new System.Drawing.Point(220, 661);
-            this.btnExportarCompilado.Name = "btnExportarCompilado";
-            this.btnExportarCompilado.Size = new System.Drawing.Size(28, 28);
-            this.btnExportarCompilado.TabIndex = 8;
-            this.btnExportarCompilado.UseVisualStyleBackColor = false;
-            // 
             // FormCompiladorSuperSociedades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 19F);
@@ -345,7 +337,6 @@ namespace ABC_APP.Vista
             this.ClientSize = new System.Drawing.Size(769, 724);
             this.Controls.Add(this.pbxLoagindGif);
             this.Controls.Add(this.pbarVisualizador);
-            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.dgCompilado);
             this.Controls.Add(this.pbxCurrentDomain);
             this.Controls.Add(this.cbxArchivos);
@@ -402,7 +393,6 @@ namespace ABC_APP.Vista
         private Bunifu.Framework.UI.BunifuElipse elipseBtnVerCompilado;
         private Bunifu.Framework.UI.BunifuElipse elipseBtnExportar;
         private Bunifu.Framework.UI.BunifuElipse elipseDg;
-        private System.Windows.Forms.ProgressBar progressBar1;
         public System.Windows.Forms.Timer timerVisualizarCompilador;
         public System.ComponentModel.BackgroundWorker bgwVisualizarCompilado;
         public System.Windows.Forms.ProgressBar pbarVisualizador;

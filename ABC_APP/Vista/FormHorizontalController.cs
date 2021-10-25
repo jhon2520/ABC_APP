@@ -13,6 +13,7 @@ using System.IO;
 using System.Drawing;
 using System.ComponentModel;
 
+
 namespace ABC_APP.Vista
 {
     class FormHorizontalController
@@ -30,6 +31,7 @@ namespace ABC_APP.Vista
         private FormFormatoDataGrid formFormato;
         private ComboBoxLogica comboBoxLogica = new ComboBoxLogica();
         private FormConfirmacion formConfirmacion;
+        private Excel excel;
         private int contador = 0;
 
 
@@ -37,7 +39,7 @@ namespace ABC_APP.Vista
         public FormHorizontalController(FormHorizontalAnalisis formHorizontalAnalisis)
         {
             this.formHorizontalAnalisis = formHorizontalAnalisis;
-            dataGridStyle.DataGridGetStyle(new List<DataGridView>() { this.formHorizontalAnalisis.dgImport} );
+            this.formHorizontalAnalisis.dgImport = dataGridStyle.DataGridGetStyle(this.formHorizontalAnalisis.dgImport );
             Recargas();
             SetDefaultColors();
             CreateFolder();
@@ -58,6 +60,7 @@ namespace ABC_APP.Vista
             this.formHorizontalAnalisis.btnGuardarGrid.Click += new EventHandler(GuardarGridEnCache);
             this.formHorizontalAnalisis.btnTraerGridCache.Click += new EventHandler(TraerGridDeCache);
             this.formHorizontalAnalisis.btnSobreescribirGrid.Click += new EventHandler(BtnSobreescribirGrid);
+            this.formHorizontalAnalisis.btnExportarGrid.Click += new EventHandler(BtnExportarGridConFormato);
 
             //ProgressBarr
             this.formHorizontalAnalisis.bgwEjecutarPython.DoWork += new DoWorkEventHandler(BackGroundWorkerDoWork);
@@ -156,8 +159,29 @@ namespace ABC_APP.Vista
 
         private void BtnMostrarGrafica(object sender, EventArgs args)
         {
-            formGrafica = new FormGrafica("crafica_analisis_horizontal");
-            formGrafica.ShowDialog();
+            //formGrafica = new FormGrafica("crafica_analisis_horizontal");
+            //formGrafica.ShowDialog();
+            Form formBG = new Form();
+            using (formGrafica = new FormGrafica("crafica_analisis_horizontal"))
+            {
+                formBG.StartPosition = FormStartPosition.Manual;
+                formBG.FormBorderStyle = FormBorderStyle.None;
+                formBG.Opacity = 0.7d;
+                formBG.BackColor = Color.Black;
+                formBG.Left = 0;
+                formBG.Top = 0;
+                formBG.Width = Screen.PrimaryScreen.WorkingArea.Width;
+                formBG.Height = Screen.PrimaryScreen.WorkingArea.Height;
+                formBG.TopMost = true;
+                formBG.Location = this.formHorizontalAnalisis.Location;
+                formBG.ShowInTaskbar = false;
+                formBG.Show();
+
+                formGrafica.Owner = formBG;
+                formGrafica.ShowDialog();
+                formBG.Dispose();
+
+            }
 
         }
 
@@ -168,9 +192,31 @@ namespace ABC_APP.Vista
 
         private void AbrirFormFormatoGrid(object sender, EventArgs args)
         {
+            //using (formFormato = new FormFormatoDataGrid())
+            //{
+            //    formFormato.ShowDialog();
+            //}
+
+            Form formBG = new Form();
             using (formFormato = new FormFormatoDataGrid())
             {
+                formBG.StartPosition = FormStartPosition.Manual;
+                formBG.FormBorderStyle = FormBorderStyle.None;
+                formBG.Opacity = 0.7d;
+                formBG.BackColor = Color.Black;
+                formBG.Left = 0;
+                formBG.Top = 0;
+                formBG.Width = Screen.PrimaryScreen.WorkingArea.Width;
+                formBG.Height = Screen.PrimaryScreen.WorkingArea.Height;
+                formBG.TopMost = true;
+                formBG.Location = this.formHorizontalAnalisis.Location;
+                formBG.ShowInTaskbar = false;
+                formBG.Show();
+
+                formFormato.Owner = formBG;
                 formFormato.ShowDialog();
+                formBG.Dispose();
+
             }
         }
 
@@ -315,11 +361,22 @@ namespace ABC_APP.Vista
         private void BtnSobreescribirGrid(object sender, EventArgs args)
         {
             this.formHorizontalAnalisis.dgImport.DataSource = null;
+            this.formHorizontalAnalisis.cbxColumns.Items.Clear();
             ImportarExcelToDGVInferior();
         }
 
         #endregion
 
+        #region ExportarGridConFormato
+     
+
+        private void BtnExportarGridConFormato(object sender, EventArgs args)
+        {
+            excel = new Excel();
+            excel.ExportToExcelWithFormatting(this.formHorizontalAnalisis.dgImport);
+        }
+
+        #endregion
 
 
 

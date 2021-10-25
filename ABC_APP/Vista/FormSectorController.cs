@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,7 @@ namespace ABC_APP.Vista
         private DataGridCellFormat gridCellFormat = new DataGridCellFormat();
         private int contador = 0;
         private int alertas = 0;
+        private Excel excel;
         private string rutaCarpeta;
         string pathArchivosABC = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\archivosABC";
  
@@ -30,7 +32,7 @@ namespace ABC_APP.Vista
         public FormSectorController(FormSectorAnalisis formSectorAnalisis)
         {
             this.formSectorAnalisis = formSectorAnalisis;
-            dataGridStyle.DataGridGetStyle(new List<DataGridView>() { this.formSectorAnalisis.dgImport});
+            dataGridStyle.DataGridGetStyle( this.formSectorAnalisis.dgImport);
             Recargas();
         }
 
@@ -82,10 +84,30 @@ namespace ABC_APP.Vista
 
         private void BtnAyuda(object sender, EventArgs args)
         {
-            using (formAviso = new FormAviso("Archivo 'archivo_usuario_CIIU.xlsx', nombre hoja 'EF' comparado con df_complete_supersolidaria.xlsx"))
+
+            Form formBG = new Form();
+            using (formAviso = new FormAviso("rchivo 'archivo_usuario_CIIU.xlsx', nombre hoja 'EF' comparado con df_complete_supersolidaria.xlsx"))
             {
+                formBG.StartPosition = FormStartPosition.Manual;
+                formBG.FormBorderStyle = FormBorderStyle.None;
+                formBG.Opacity = 0.7d;
+                formBG.BackColor = Color.Black;
+                formBG.Left = 0;
+                formBG.Top = 0;
+                formBG.Width = Screen.PrimaryScreen.WorkingArea.Width;
+                formBG.Height = Screen.PrimaryScreen.WorkingArea.Height;
+                formBG.TopMost = true;
+                formBG.Location = this.formSectorAnalisis.Location;
+                formBG.ShowInTaskbar = false;
+                formBG.Show();
+
+                formAviso.Owner = formBG;
                 formAviso.ShowDialog();
+                formBG.Dispose();
+
             }
+
+
         }
 
         private void BtnSobreescribirGrid(object sender, EventArgs args)
@@ -172,8 +194,27 @@ namespace ABC_APP.Vista
 
         private void MostrarGrafica(object sender, EventArgs args)
         {
-            formGrafica = new FormGrafica("comparacion_CIIU_user");
-            formGrafica.ShowDialog();
+            Form formBG = new Form();
+            using (formGrafica = new FormGrafica("comparacion_CIIU_user"))
+            {
+                formBG.StartPosition = FormStartPosition.Manual;
+                formBG.FormBorderStyle = FormBorderStyle.None;
+                formBG.Opacity = 0.7d;
+                formBG.BackColor = Color.Black;
+                formBG.Left = 0;
+                formBG.Top = 0;
+                formBG.Width = Screen.PrimaryScreen.WorkingArea.Width;
+                formBG.Height = Screen.PrimaryScreen.WorkingArea.Height;
+                formBG.TopMost = true;
+                formBG.Location = this.formSectorAnalisis.Location;
+                formBG.ShowInTaskbar = false;
+                formBG.Show();
+
+                formGrafica.Owner = formBG;
+                formGrafica.ShowDialog();
+                formBG.Dispose();
+
+            }
             
         }
 
@@ -183,19 +224,21 @@ namespace ABC_APP.Vista
         {
             try
             {
-                using (FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog())
-                {
-                    DialogResult result = folderBrowserDialog.ShowDialog();
-                    if (result == DialogResult.OK && !string.IsNullOrEmpty(folderBrowserDialog.SelectedPath))
-                    {
+                //using (FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog())
+                //{
+                //    DialogResult result = folderBrowserDialog.ShowDialog();
+                //    if (result == DialogResult.OK && !string.IsNullOrEmpty(folderBrowserDialog.SelectedPath))
+                //    {
 
-                        rutaCarpeta = folderBrowserDialog.SelectedPath;
-                        archivos.CopiarArchivo(pathArchivosABC + @"\archivo_usuario_CIIU_final.xlsx", rutaCarpeta);
-                        formAviso = new FormAviso("Archivo copiado en la ruta: " + rutaCarpeta);
-                        formAviso.ShowDialog();
+                //        rutaCarpeta = folderBrowserDialog.SelectedPath;
+                //        archivos.CopiarArchivo(pathArchivosABC + @"\archivo_usuario_CIIU_final.xlsx", rutaCarpeta);
+                //        formAviso = new FormAviso("Archivo copiado en la ruta: " + rutaCarpeta);
+                //        formAviso.ShowDialog();
 
-                    }
-                }
+                //    }
+                //}
+                excel = new Excel();
+                excel.ExportToExcelWithFormatting(this.formSectorAnalisis.dgImport);
             }
             catch (Exception ex)
             {

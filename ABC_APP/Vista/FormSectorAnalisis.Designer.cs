@@ -44,43 +44,43 @@ namespace ABC_APP.Vista
             this.timerEjecutarPython = new System.Windows.Forms.Timer(this.components);
             this.elipseBtnImportar = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tbxLimInf = new System.Windows.Forms.TextBox();
+            this.tbxDif = new System.Windows.Forms.TextBox();
+            this.tbxMin = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tbxLimSup = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tbxUser = new System.Windows.Forms.TextBox();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.tbxMax = new System.Windows.Forms.TextBox();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.tbxDifPor = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.tbxDesviacion = new System.Windows.Forms.TextBox();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.tbxProm = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.tbxCuenta = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.tbxProm = new System.Windows.Forms.TextBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.tbxMax = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.tbxMin = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.tbxDesviacion = new System.Windows.Forms.TextBox();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.tbxUser = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.tbxDif = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.tbxDifPor = new System.Windows.Forms.TextBox();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.tbxLimSup = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.tbxLimInf = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.elipseBtnPython = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.elipseBtnDatos = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.elipseBtnAlertas = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pbxLoagindGif = new System.Windows.Forms.PictureBox();
             this.btnExportarGrid = new System.Windows.Forms.Button();
             this.btnGrafica = new System.Windows.Forms.Button();
             this.pbxAyuda = new System.Windows.Forms.PictureBox();
-            this.elipseBtnPython = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.elipseBtnDatos = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.elipseBtnAlertas = new Bunifu.Framework.UI.BunifuElipse(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgImport)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.contadorAlertas)).BeginInit();
             this.panel2.SuspendLayout();
@@ -260,6 +260,222 @@ namespace ABC_APP.Vista
             this.panel2.Size = new System.Drawing.Size(690, 153);
             this.panel2.TabIndex = 20;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.DarkGray;
+            this.label10.Location = new System.Drawing.Point(463, 115);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(41, 22);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "L. Inf.";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.DarkGray;
+            this.label7.Location = new System.Drawing.Point(463, 82);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(42, 22);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Difer.";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DarkGray;
+            this.label4.Location = new System.Drawing.Point(463, 48);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(36, 22);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Mín.";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.DarkGray;
+            this.label9.Location = new System.Drawing.Point(243, 115);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(45, 22);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "L. Sup";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.DarkGray;
+            this.label6.Location = new System.Drawing.Point(243, 82);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(37, 22);
+            this.label6.TabIndex = 11;
+            this.label6.Text = "User";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkGray;
+            this.label2.Location = new System.Drawing.Point(243, 48);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(39, 22);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Máx.";
+            // 
+            // tbxLimInf
+            // 
+            this.tbxLimInf.BackColor = System.Drawing.Color.White;
+            this.tbxLimInf.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbxLimInf.ForeColor = System.Drawing.Color.DimGray;
+            this.tbxLimInf.Location = new System.Drawing.Point(514, 115);
+            this.tbxLimInf.Name = "tbxLimInf";
+            this.tbxLimInf.Size = new System.Drawing.Size(145, 17);
+            this.tbxLimInf.TabIndex = 4;
+            this.tbxLimInf.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbxDif
+            // 
+            this.tbxDif.BackColor = System.Drawing.Color.White;
+            this.tbxDif.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbxDif.ForeColor = System.Drawing.Color.DimGray;
+            this.tbxDif.Location = new System.Drawing.Point(514, 82);
+            this.tbxDif.Name = "tbxDif";
+            this.tbxDif.Size = new System.Drawing.Size(145, 17);
+            this.tbxDif.TabIndex = 4;
+            this.tbxDif.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // tbxMin
+            // 
+            this.tbxMin.BackColor = System.Drawing.Color.White;
+            this.tbxMin.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbxMin.ForeColor = System.Drawing.Color.DimGray;
+            this.tbxMin.Location = new System.Drawing.Point(514, 48);
+            this.tbxMin.Name = "tbxMin";
+            this.tbxMin.Size = new System.Drawing.Size(145, 17);
+            this.tbxMin.TabIndex = 4;
+            this.tbxMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.DarkGray;
+            this.label8.Location = new System.Drawing.Point(31, 115);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(55, 22);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "D. Porc.";
+            // 
+            // tbxLimSup
+            // 
+            this.tbxLimSup.BackColor = System.Drawing.Color.White;
+            this.tbxLimSup.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbxLimSup.ForeColor = System.Drawing.Color.DimGray;
+            this.tbxLimSup.Location = new System.Drawing.Point(294, 115);
+            this.tbxLimSup.Name = "tbxLimSup";
+            this.tbxLimSup.Size = new System.Drawing.Size(145, 17);
+            this.tbxLimSup.TabIndex = 4;
+            this.tbxLimSup.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.DarkGray;
+            this.label5.Location = new System.Drawing.Point(31, 82);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(46, 22);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "D. Est.";
+            // 
+            // tbxUser
+            // 
+            this.tbxUser.BackColor = System.Drawing.Color.White;
+            this.tbxUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbxUser.ForeColor = System.Drawing.Color.DimGray;
+            this.tbxUser.Location = new System.Drawing.Point(294, 82);
+            this.tbxUser.Name = "tbxUser";
+            this.tbxUser.Size = new System.Drawing.Size(145, 17);
+            this.tbxUser.TabIndex = 4;
+            this.tbxUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.Silver;
+            this.panel12.Location = new System.Drawing.Point(514, 134);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(145, 1);
+            this.panel12.TabIndex = 6;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkGray;
+            this.label1.Location = new System.Drawing.Point(31, 48);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 22);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Prom.";
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.Silver;
+            this.panel9.Location = new System.Drawing.Point(514, 101);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(145, 1);
+            this.panel9.TabIndex = 6;
+            // 
+            // tbxMax
+            // 
+            this.tbxMax.BackColor = System.Drawing.Color.White;
+            this.tbxMax.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbxMax.ForeColor = System.Drawing.Color.DimGray;
+            this.tbxMax.Location = new System.Drawing.Point(294, 48);
+            this.tbxMax.Name = "tbxMax";
+            this.tbxMax.Size = new System.Drawing.Size(145, 17);
+            this.tbxMax.TabIndex = 4;
+            this.tbxMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.Silver;
+            this.panel11.Location = new System.Drawing.Point(294, 134);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(145, 1);
+            this.panel11.TabIndex = 6;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Silver;
+            this.panel6.Location = new System.Drawing.Point(514, 67);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(145, 1);
+            this.panel6.TabIndex = 6;
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.Silver;
+            this.panel8.Location = new System.Drawing.Point(294, 101);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(145, 1);
+            this.panel8.TabIndex = 6;
+            // 
+            // tbxDifPor
+            // 
+            this.tbxDifPor.BackColor = System.Drawing.Color.White;
+            this.tbxDifPor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbxDifPor.ForeColor = System.Drawing.Color.DimGray;
+            this.tbxDifPor.Location = new System.Drawing.Point(82, 115);
+            this.tbxDifPor.Name = "tbxDifPor";
+            this.tbxDifPor.Size = new System.Drawing.Size(145, 17);
+            this.tbxDifPor.TabIndex = 4;
+            this.tbxDifPor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -270,6 +486,60 @@ namespace ABC_APP.Vista
             this.label3.Size = new System.Drawing.Size(55, 22);
             this.label3.TabIndex = 11;
             this.label3.Text = "Cuenta";
+            // 
+            // tbxDesviacion
+            // 
+            this.tbxDesviacion.BackColor = System.Drawing.Color.White;
+            this.tbxDesviacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbxDesviacion.ForeColor = System.Drawing.Color.DimGray;
+            this.tbxDesviacion.Location = new System.Drawing.Point(82, 82);
+            this.tbxDesviacion.Name = "tbxDesviacion";
+            this.tbxDesviacion.Size = new System.Drawing.Size(145, 17);
+            this.tbxDesviacion.TabIndex = 4;
+            this.tbxDesviacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.Silver;
+            this.panel10.Location = new System.Drawing.Point(82, 134);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(145, 1);
+            this.panel10.TabIndex = 6;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Silver;
+            this.panel5.Location = new System.Drawing.Point(294, 67);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(145, 1);
+            this.panel5.TabIndex = 6;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Silver;
+            this.panel7.Location = new System.Drawing.Point(82, 101);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(145, 1);
+            this.panel7.TabIndex = 6;
+            // 
+            // tbxProm
+            // 
+            this.tbxProm.BackColor = System.Drawing.Color.White;
+            this.tbxProm.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbxProm.ForeColor = System.Drawing.Color.DimGray;
+            this.tbxProm.Location = new System.Drawing.Point(82, 48);
+            this.tbxProm.Name = "tbxProm";
+            this.tbxProm.Size = new System.Drawing.Size(145, 17);
+            this.tbxProm.TabIndex = 4;
+            this.tbxProm.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.Silver;
+            this.panel4.Location = new System.Drawing.Point(82, 67);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(145, 1);
+            this.panel4.TabIndex = 6;
             // 
             // tbxCuenta
             // 
@@ -290,282 +560,27 @@ namespace ABC_APP.Vista
             this.panel3.Size = new System.Drawing.Size(565, 1);
             this.panel3.TabIndex = 6;
             // 
-            // label1
+            // elipseBtnPython
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DarkGray;
-            this.label1.Location = new System.Drawing.Point(31, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 22);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Prom.";
+            this.elipseBtnPython.ElipseRadius = 4;
+            this.elipseBtnPython.TargetControl = this.btnPython;
             // 
-            // panel4
+            // elipseBtnDatos
             // 
-            this.panel4.BackColor = System.Drawing.Color.Silver;
-            this.panel4.Location = new System.Drawing.Point(82, 67);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(145, 1);
-            this.panel4.TabIndex = 6;
+            this.elipseBtnDatos.ElipseRadius = 4;
+            this.elipseBtnDatos.TargetControl = this.btnSobreescribirGrid;
             // 
-            // tbxProm
+            // elipseBtnAlertas
             // 
-            this.tbxProm.BackColor = System.Drawing.Color.White;
-            this.tbxProm.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbxProm.ForeColor = System.Drawing.Color.DimGray;
-            this.tbxProm.Location = new System.Drawing.Point(82, 48);
-            this.tbxProm.Name = "tbxProm";
-            this.tbxProm.Size = new System.Drawing.Size(145, 17);
-            this.tbxProm.TabIndex = 4;
-            this.tbxProm.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.Silver;
-            this.panel5.Location = new System.Drawing.Point(294, 67);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(145, 1);
-            this.panel5.TabIndex = 6;
-            // 
-            // tbxMax
-            // 
-            this.tbxMax.BackColor = System.Drawing.Color.White;
-            this.tbxMax.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbxMax.ForeColor = System.Drawing.Color.DimGray;
-            this.tbxMax.Location = new System.Drawing.Point(294, 48);
-            this.tbxMax.Name = "tbxMax";
-            this.tbxMax.Size = new System.Drawing.Size(145, 17);
-            this.tbxMax.TabIndex = 4;
-            this.tbxMax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DarkGray;
-            this.label2.Location = new System.Drawing.Point(243, 48);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 22);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Máx.";
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.Silver;
-            this.panel6.Location = new System.Drawing.Point(514, 67);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(145, 1);
-            this.panel6.TabIndex = 6;
-            // 
-            // tbxMin
-            // 
-            this.tbxMin.BackColor = System.Drawing.Color.White;
-            this.tbxMin.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbxMin.ForeColor = System.Drawing.Color.DimGray;
-            this.tbxMin.Location = new System.Drawing.Point(514, 48);
-            this.tbxMin.Name = "tbxMin";
-            this.tbxMin.Size = new System.Drawing.Size(145, 17);
-            this.tbxMin.TabIndex = 4;
-            this.tbxMin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DarkGray;
-            this.label4.Location = new System.Drawing.Point(463, 48);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(36, 22);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "Mín.";
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.Silver;
-            this.panel7.Location = new System.Drawing.Point(82, 101);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(145, 1);
-            this.panel7.TabIndex = 6;
-            // 
-            // tbxDesviacion
-            // 
-            this.tbxDesviacion.BackColor = System.Drawing.Color.White;
-            this.tbxDesviacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbxDesviacion.ForeColor = System.Drawing.Color.DimGray;
-            this.tbxDesviacion.Location = new System.Drawing.Point(82, 82);
-            this.tbxDesviacion.Name = "tbxDesviacion";
-            this.tbxDesviacion.Size = new System.Drawing.Size(145, 17);
-            this.tbxDesviacion.TabIndex = 4;
-            this.tbxDesviacion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.Silver;
-            this.panel8.Location = new System.Drawing.Point(294, 101);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(145, 1);
-            this.panel8.TabIndex = 6;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.Silver;
-            this.panel9.Location = new System.Drawing.Point(514, 101);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(145, 1);
-            this.panel9.TabIndex = 6;
-            // 
-            // tbxUser
-            // 
-            this.tbxUser.BackColor = System.Drawing.Color.White;
-            this.tbxUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbxUser.ForeColor = System.Drawing.Color.DimGray;
-            this.tbxUser.Location = new System.Drawing.Point(294, 82);
-            this.tbxUser.Name = "tbxUser";
-            this.tbxUser.Size = new System.Drawing.Size(145, 17);
-            this.tbxUser.TabIndex = 4;
-            this.tbxUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DarkGray;
-            this.label5.Location = new System.Drawing.Point(31, 82);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 22);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "D. Est.";
-            // 
-            // tbxDif
-            // 
-            this.tbxDif.BackColor = System.Drawing.Color.White;
-            this.tbxDif.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbxDif.ForeColor = System.Drawing.Color.DimGray;
-            this.tbxDif.Location = new System.Drawing.Point(514, 82);
-            this.tbxDif.Name = "tbxDif";
-            this.tbxDif.Size = new System.Drawing.Size(145, 17);
-            this.tbxDif.TabIndex = 4;
-            this.tbxDif.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.DarkGray;
-            this.label6.Location = new System.Drawing.Point(243, 82);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 22);
-            this.label6.TabIndex = 11;
-            this.label6.Text = "User";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.DarkGray;
-            this.label7.Location = new System.Drawing.Point(463, 82);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(42, 22);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Difer.";
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.Silver;
-            this.panel10.Location = new System.Drawing.Point(82, 134);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(145, 1);
-            this.panel10.TabIndex = 6;
-            // 
-            // tbxDifPor
-            // 
-            this.tbxDifPor.BackColor = System.Drawing.Color.White;
-            this.tbxDifPor.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbxDifPor.ForeColor = System.Drawing.Color.DimGray;
-            this.tbxDifPor.Location = new System.Drawing.Point(82, 115);
-            this.tbxDifPor.Name = "tbxDifPor";
-            this.tbxDifPor.Size = new System.Drawing.Size(145, 17);
-            this.tbxDifPor.TabIndex = 4;
-            this.tbxDifPor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.Silver;
-            this.panel11.Location = new System.Drawing.Point(294, 134);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(145, 1);
-            this.panel11.TabIndex = 6;
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.Silver;
-            this.panel12.Location = new System.Drawing.Point(514, 134);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(145, 1);
-            this.panel12.TabIndex = 6;
-            // 
-            // tbxLimSup
-            // 
-            this.tbxLimSup.BackColor = System.Drawing.Color.White;
-            this.tbxLimSup.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbxLimSup.ForeColor = System.Drawing.Color.DimGray;
-            this.tbxLimSup.Location = new System.Drawing.Point(294, 115);
-            this.tbxLimSup.Name = "tbxLimSup";
-            this.tbxLimSup.Size = new System.Drawing.Size(145, 17);
-            this.tbxLimSup.TabIndex = 4;
-            this.tbxLimSup.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.DarkGray;
-            this.label8.Location = new System.Drawing.Point(31, 115);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(55, 22);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "D. Porc.";
-            // 
-            // tbxLimInf
-            // 
-            this.tbxLimInf.BackColor = System.Drawing.Color.White;
-            this.tbxLimInf.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbxLimInf.ForeColor = System.Drawing.Color.DimGray;
-            this.tbxLimInf.Location = new System.Drawing.Point(514, 115);
-            this.tbxLimInf.Name = "tbxLimInf";
-            this.tbxLimInf.Size = new System.Drawing.Size(145, 17);
-            this.tbxLimInf.TabIndex = 4;
-            this.tbxLimInf.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.DarkGray;
-            this.label9.Location = new System.Drawing.Point(243, 115);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(45, 22);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "L. Sup";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.DarkGray;
-            this.label10.Location = new System.Drawing.Point(463, 115);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 22);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "L. Inf.";
+            this.elipseBtnAlertas.ElipseRadius = 4;
+            this.elipseBtnAlertas.TargetControl = this.btnAlertas;
             // 
             // pbxLoagindGif
             // 
             this.pbxLoagindGif.Image = global::ABC_APP.Properties.Resources.loading;
-            this.pbxLoagindGif.Location = new System.Drawing.Point(699, 669);
+            this.pbxLoagindGif.Location = new System.Drawing.Point(708, 680);
             this.pbxLoagindGif.Name = "pbxLoagindGif";
-            this.pbxLoagindGif.Size = new System.Drawing.Size(30, 30);
+            this.pbxLoagindGif.Size = new System.Drawing.Size(20, 20);
             this.pbxLoagindGif.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxLoagindGif.TabIndex = 19;
             this.pbxLoagindGif.TabStop = false;
@@ -614,21 +629,6 @@ namespace ABC_APP.Vista
             this.pbxAyuda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxAyuda.TabIndex = 14;
             this.pbxAyuda.TabStop = false;
-            // 
-            // elipseBtnPython
-            // 
-            this.elipseBtnPython.ElipseRadius = 4;
-            this.elipseBtnPython.TargetControl = this.btnPython;
-            // 
-            // elipseBtnDatos
-            // 
-            this.elipseBtnDatos.ElipseRadius = 4;
-            this.elipseBtnDatos.TargetControl = this.btnSobreescribirGrid;
-            // 
-            // elipseBtnAlertas
-            // 
-            this.elipseBtnAlertas.ElipseRadius = 4;
-            this.elipseBtnAlertas.TargetControl = this.btnAlertas;
             // 
             // FormSectorAnalisis
             // 

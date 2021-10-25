@@ -31,7 +31,7 @@ namespace ABC_APP.Vista
         {
             this.components = new System.ComponentModel.Container();
             this.pnlSuperior = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbxMinimizar = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.PictureBox();
             this.pnlIzquierdo = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -48,15 +48,16 @@ namespace ABC_APP.Vista
             this.compilarArchivoSupersolidariaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.analizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.analisisHorizontalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.analizarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.jrDropDownMenuSistema = new ABC_APP.DropDownMenu.JRDropDownMenu(this.components);
             this.verCódigoPythonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.compilarArchivosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.compararSupersociedadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.analisisHorizontalToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.informaciónAlmacenadaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.analizarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.elipseForm = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnlSuperior.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).BeginInit();
             this.pnlIzquierdo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnReturn)).BeginInit();
@@ -70,7 +71,7 @@ namespace ABC_APP.Vista
             // pnlSuperior
             // 
             this.pnlSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(105)))), ((int)(((byte)(122)))));
-            this.pnlSuperior.Controls.Add(this.pictureBox1);
+            this.pnlSuperior.Controls.Add(this.pbxMinimizar);
             this.pnlSuperior.Controls.Add(this.btnClose);
             this.pnlSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSuperior.Location = new System.Drawing.Point(0, 0);
@@ -79,24 +80,29 @@ namespace ABC_APP.Vista
             this.pnlSuperior.Size = new System.Drawing.Size(895, 66);
             this.pnlSuperior.TabIndex = 0;
             // 
-            // pictureBox1
+            // pbxMinimizar
             // 
-            this.pictureBox1.Image = global::ABC_APP.Properties.Resources.horizontal_line_64px;
-            this.pictureBox1.Location = new System.Drawing.Point(842, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pbxMinimizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(105)))), ((int)(((byte)(122)))));
+            this.pbxMinimizar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pbxMinimizar.Image = global::ABC_APP.Properties.Resources.minimize;
+            this.pbxMinimizar.Location = new System.Drawing.Point(835, 0);
+            this.pbxMinimizar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pbxMinimizar.Name = "pbxMinimizar";
+            this.pbxMinimizar.Padding = new System.Windows.Forms.Padding(4);
+            this.pbxMinimizar.Size = new System.Drawing.Size(30, 30);
+            this.pbxMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxMinimizar.TabIndex = 0;
+            this.pbxMinimizar.TabStop = false;
             // 
             // btnClose
             // 
-            this.btnClose.Image = global::ABC_APP.Properties.Resources.close_x;
-            this.btnClose.Location = new System.Drawing.Point(868, 2);
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(105)))), ((int)(((byte)(122)))));
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.btnClose.Image = global::ABC_APP.Properties.Resources.close_button;
+            this.btnClose.Location = new System.Drawing.Point(864, 0);
             this.btnClose.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(25, 25);
+            this.btnClose.Size = new System.Drawing.Size(30, 30);
             this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnClose.TabIndex = 0;
             this.btnClose.TabStop = false;
@@ -232,7 +238,7 @@ namespace ABC_APP.Vista
             this.jrDropDownMenu1.MenuItemTextColor = System.Drawing.Color.DimGray;
             this.jrDropDownMenu1.Name = "jrDropDownMenu1";
             this.jrDropDownMenu1.PrimaryColor = System.Drawing.Color.MediumSlateBlue;
-            this.jrDropDownMenu1.Size = new System.Drawing.Size(181, 70);
+            this.jrDropDownMenu1.Size = new System.Drawing.Size(173, 48);
             // 
             // analisisPorSectorToolStripMenuItem
             // 
@@ -240,7 +246,7 @@ namespace ABC_APP.Vista
             this.compilarArchivoSupersolidariaToolStripMenuItem,
             this.analizarToolStripMenuItem});
             this.analisisPorSectorToolStripMenuItem.Name = "analisisPorSectorToolStripMenuItem";
-            this.analisisPorSectorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.analisisPorSectorToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.analisisPorSectorToolStripMenuItem.Text = "Analisis Por Sector";
             // 
             // compilarArchivoSupersolidariaToolStripMenuItem
@@ -260,9 +266,15 @@ namespace ABC_APP.Vista
             this.analisisHorizontalToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.analizarToolStripMenuItem1});
             this.analisisHorizontalToolStripMenuItem.Name = "analisisHorizontalToolStripMenuItem";
-            this.analisisHorizontalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.analisisHorizontalToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.analisisHorizontalToolStripMenuItem.Text = "Analisis Horizontal";
             this.analisisHorizontalToolStripMenuItem.Click += new System.EventHandler(this.analisisHorizontalToolStripMenuItem_Click);
+            // 
+            // analizarToolStripMenuItem1
+            // 
+            this.analizarToolStripMenuItem1.Name = "analizarToolStripMenuItem1";
+            this.analizarToolStripMenuItem1.Size = new System.Drawing.Size(116, 22);
+            this.analizarToolStripMenuItem1.Text = "Analizar";
             // 
             // jrDropDownMenuSistema
             // 
@@ -311,11 +323,10 @@ namespace ABC_APP.Vista
             this.informaciónAlmacenadaToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
             this.informaciónAlmacenadaToolStripMenuItem.Text = "Información Almacenada";
             // 
-            // analizarToolStripMenuItem1
+            // elipseForm
             // 
-            this.analizarToolStripMenuItem1.Name = "analizarToolStripMenuItem1";
-            this.analizarToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
-            this.analizarToolStripMenuItem1.Text = "Analizar";
+            this.elipseForm.ElipseRadius = 6;
+            this.elipseForm.TargetControl = this;
             // 
             // FormMain
             // 
@@ -332,7 +343,7 @@ namespace ABC_APP.Vista
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMain";
             this.pnlSuperior.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClose)).EndInit();
             this.pnlIzquierdo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnReturn)).EndInit();
@@ -352,7 +363,7 @@ namespace ABC_APP.Vista
         public System.Windows.Forms.Panel pnlIzquierdo;
         public System.Windows.Forms.Panel pnlCentral;
         private Bunifu.Framework.UI.BunifuDragControl dragSuperior;
-        public System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.PictureBox pbxMinimizar;
         public System.Windows.Forms.PictureBox btnClose;
         public System.Windows.Forms.PictureBox btnReturn;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -367,11 +378,12 @@ namespace ABC_APP.Vista
         public System.Windows.Forms.ToolStripMenuItem compilarArchivoSupersolidariaToolStripMenuItem;
         public System.Windows.Forms.Button btnSistema;
         private System.Windows.Forms.ToolStripMenuItem verCódigoPythonToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem analisisHorizontalToolStripMenuItem1;
         public DropDownMenu.JRDropDownMenu jrDropDownMenuSistema;
         public System.Windows.Forms.ToolStripMenuItem compilarArchivosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem informaciónAlmacenadaToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem compararSupersociedadesToolStripMenuItem;
         public System.Windows.Forms.ToolStripMenuItem analizarToolStripMenuItem1;
+        public System.Windows.Forms.ToolStripMenuItem analisisHorizontalToolStripMenuItem1;
+        private Bunifu.Framework.UI.BunifuElipse elipseForm;
     }
 }

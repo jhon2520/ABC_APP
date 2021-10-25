@@ -16,7 +16,7 @@ namespace ABC_APP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Vista.FormMain());
+            Application.Run(new Vista.FormSplashScreen());
         }
     }
 }

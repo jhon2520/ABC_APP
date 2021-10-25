@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -25,11 +26,12 @@ namespace ABC_APP.Vista
         private DataGridStyle dataGridStyle = new DataGridStyle();
         private ImportExcel importExcel;
         private int contador = 1;
+        private Excel excel;
 
         public FormCompiladorSuperController(FormCompiladorSuperSociedades formCompiladorSuperSociedades)
         {
             this.formCompiladorSuperSociedades = formCompiladorSuperSociedades;
-            dataGridStyle.DataGridGetStyle(new List<DataGridView>() { this.formCompiladorSuperSociedades.dgCompilado});
+            dataGridStyle.DataGridGetStyle( this.formCompiladorSuperSociedades.dgCompilado);
             Recargas();
         }
 
@@ -146,9 +148,34 @@ namespace ABC_APP.Vista
 
         private void ShowCurrentDomain(object sender, EventArgs args)
         {
+            /*
+             Nota: el formulario que se va a mostrar encima, en este caso, FormAviso, debe tener las propiedades siguientes
+
+            startposition = centerScreen
+            TopMost = true
+             
+             */
+
+            Form formBG = new Form();
             using (formAviso = new FormAviso("Ruta archivo py.exe: " + currentDomain))
             {
+                formBG.StartPosition = FormStartPosition.Manual;
+                formBG.FormBorderStyle = FormBorderStyle.None;
+                formBG.Opacity = 0.7d;
+                formBG.BackColor = Color.Black;
+                formBG.Left = 0;
+                formBG.Top = 0;
+                formBG.Width = Screen.PrimaryScreen.WorkingArea.Width;
+                formBG.Height = Screen.PrimaryScreen.WorkingArea.Height;
+                formBG.TopMost = true;
+                formBG.Location = this.formCompiladorSuperSociedades.Location;
+                formBG.ShowInTaskbar = false;
+                formBG.Show();
+
+                formAviso.Owner = formBG;
                 formAviso.ShowDialog();
+                formBG.Dispose();
+
             }
         }
 
@@ -240,6 +267,7 @@ namespace ABC_APP.Vista
                 try
                 {
 
+              
                     using (FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog())
                     {
                         DialogResult result = folderBrowserDialog.ShowDialog();

@@ -18,7 +18,6 @@ C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\bin\Debug\Microsoft.Scripting.
 C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\obj\Debug\ABC_APP.Properties.Resources.resources
 C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\obj\Debug\ABC_APP.csproj.GenerateResource.cache
 C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\obj\Debug\ABC_APP.csproj.CoreCompileInputs.cache
-C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\obj\Debug\ABC_APP.csproj.CopyComplete
 C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\obj\Debug\ABC_APP.exe
 C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\obj\Debug\ABC_APP.pdb
 C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\obj\Debug\ABC_APP.Vista.FormMain.resources
@@ -50,3 +49,10 @@ C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\bin\Debug\PythonCode\compilar_
 C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\bin\Debug\PythonCode\comparar_archivos_super.exe
 C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\bin\Debug\VistaModuloPython\codigo_comparar_archivos.txt
 C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\bin\Debug\PythonCode\comparacion_horizontal.exe
+C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\bin\Debug\VistaModuloPython\codigo_comparacion_horizontal.txt
+C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\bin\Debug\ClosedXML.dll
+C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\bin\Debug\ExcelNumberFormat.dll
+C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\bin\Debug\ClosedXML.pdb
+C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\bin\Debug\ClosedXML.xml
+C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\bin\Debug\ExcelNumberFormat.xml
+C:\Users\Jhon Romero\source\repos\ABC_APP\ABC_APP\obj\Debug\ABC_APP.Vista.FormSplashScreen.resources

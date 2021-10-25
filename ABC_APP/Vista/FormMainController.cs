@@ -40,9 +40,14 @@ namespace ABC_APP.Vista
             this.formMain.compilarArchivoSupersolidariaToolStripMenuItem.Click += new EventHandler(AbrirFormCompilar);
             this.formMain.compilarArchivosToolStripMenuItem.Click += new EventHandler(AbrirCodigoPythonCompilar);
             this.formMain.compararSupersociedadesToolStripMenuItem.Click += new EventHandler(AbrirCodigoPythonComparar);
+            this.formMain.analisisHorizontalToolStripMenuItem1.Click += new EventHandler(AbrirCodigoPythonComparacionHorizontal);
             this.formMain.btnReturn.Click += new EventHandler(CerrarFormActivo);
+            this.formMain.pbxMinimizar.Click += new EventHandler(MinimizarForm);
             this.formMain.btnAnalisisFinanciero.Click += new EventHandler(BtnAnalisisFinanciero);
             this.formMain.btnSistema.Click += new EventHandler(BtnSistema);
+            this.formMain.pnlSuperior.MouseDown += new MouseEventHandler(MakeTranspartente);
+            this.formMain.pnlSuperior.MouseUp += new MouseEventHandler(QuitarTransparencia);
+
         }
 
         private void CerrarForm(object sender, EventArgs args)
@@ -50,6 +55,11 @@ namespace ABC_APP.Vista
             //TODO: COLOCAR ADVERTENCIA DE QUE SE VAN A ELIMINAR ARCHIVOS
             //archivos.EliminarArchivosInnecesarios();
             Application.Exit();
+        }
+
+        private void MinimizarForm(object sender, EventArgs args)
+        {
+            this.formMain.WindowState = FormWindowState.Minimized;
         }
 
         private void AbrirFormHorizontal(object sender, EventArgs args)
@@ -198,6 +208,22 @@ namespace ABC_APP.Vista
 
         }
 
+        
+        private void AbrirCodigoPythonComparacionHorizontal(object sender, EventArgs args)
+        {
+            try
+            {
+                string currentDomain = AppDomain.CurrentDomain.BaseDirectory + @"VistaModuloPython\";
+                LeerCodigoPythonCompilar("Codigo para comparar horizontalmente estados financieros", File.ReadAllText(currentDomain + "codigo_comparacion_horizontal.txt"));
+            }
+            catch (Exception ex)
+            {
+                formError = new FormError(ex.ToString());
+                formError.ShowDialog();
+            }
+
+        }
+
 
         private void BtnAnalisisFinanciero(object sender, EventArgs args)
         {
@@ -207,6 +233,19 @@ namespace ABC_APP.Vista
         {
             this.formMain.jrDropDownMenuSistema.Show(this.formMain.btnSistema, this.formMain.btnSistema.Width, 0);
         }
+
+        #region DragTransparent
+
+        private void MakeTranspartente(object sender, EventArgs args)
+        {
+            this.formMain.Opacity = 0.7;
+        }
+        private void QuitarTransparencia(object sender, EventArgs args)
+        {
+            this.formMain.Opacity = 1;
+        }
+
+        #endregion
 
 
 

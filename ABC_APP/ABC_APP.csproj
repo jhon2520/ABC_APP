@@ -64,8 +64,14 @@
     <Reference Include="Bunifu_UI_v1.52">
       <HintPath>..\..\..\..\Documents\Code++\Bunifu\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
+    <Reference Include="ClosedXML, Version=0.95.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.95.4\lib\net46\ClosedXML.dll</HintPath>
+    </Reference>
     <Reference Include="DocumentFormat.OpenXml, Version=2.11.3.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
       <HintPath>..\packages\DocumentFormat.OpenXml.2.11.3\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.0.10.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.0.10\lib\net20\ExcelNumberFormat.dll</HintPath>
     </Reference>
     <Reference Include="IronPython, Version=2.7.11.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
       <HintPath>..\packages\IronPython.2.7.11\lib\net45\IronPython.dll</HintPath>
@@ -127,6 +133,7 @@
     <Compile Include="logica\ComboBoxLogica.cs" />
     <Compile Include="logica\DataGridCellFormat.cs" />
     <Compile Include="logica\DataGridStyle.cs" />
+    <Compile Include="logica\Excel.cs" />
     <Compile Include="logica\FormComportamiento.cs" />
     <Compile Include="logica\ImportExcel.cs" />
     <Compile Include="logica\Procesos.cs" />
@@ -203,6 +210,12 @@
       <DependentUpon>FormSectorAnalisis.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\FormSectorController.cs" />
+    <Compile Include="Vista\FormSplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormSplashScreen.Designer.cs">
+      <DependentUpon>FormSplashScreen.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -243,6 +256,9 @@
     <EmbeddedResource Include="Vista\FormSectorAnalisis.resx">
       <DependentUpon>FormSectorAnalisis.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormSplashScreen.resx">
+      <DependentUpon>FormSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="ABC_APP_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -278,7 +294,13 @@
     <None Include="Resources\export-img.png" />
     <None Include="Resources\fill-color.png" />
     <None Include="Resources\font-color.png" />
-    <Content Include="VistaModuloPython\codigo_comparacion_horizontal.txt" />
+    <None Include="Resources\formato.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\minimize.png" />
+    <None Include="Resources\close-button.png" />
+    <Content Include="VistaModuloPython\codigo_comparacion_horizontal.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="VistaModuloPython\codigo_comparar_archivos.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

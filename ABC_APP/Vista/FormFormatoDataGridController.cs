@@ -35,13 +35,21 @@ namespace ABC_APP.Vista
 
         private void CambiarFondo(object sender,EventArgs args)
         {
-            this.formFormato.colorDialogFondo.ShowDialog();
-            this.formFormato.tbxTextoMuestra.BackColor = this.formFormato.colorDialogFondo.Color;
+            DialogResult result = this.formFormato.colorDialogFondo.ShowDialog();
+
+            if (result == DialogResult.OK)
+            {
+                this.formFormato.tbxTextoMuestra.BackColor = this.formFormato.colorDialogFondo.Color;
+            }
+
         }
         private void CambiarFuente(object sender, EventArgs args)
         {
-            this.formFormato.colorDialogFondo.ShowDialog();
-            this.formFormato.tbxTextoMuestra.ForeColor = this.formFormato.colorDialogFondo.Color;
+            DialogResult result = this.formFormato.colorDialogFondo.ShowDialog();
+            if (result == DialogResult.OK)
+            {             
+                this.formFormato.tbxTextoMuestra.ForeColor = this.formFormato.colorDialogFondo.Color;
+            }
         }
 
         private void CerrarForm(object sender, EventArgs args)

@@ -44,7 +44,7 @@ namespace ABC_APP.Vista
             this.btnGuardarGrafica.FlatAppearance.MouseDownBackColor = System.Drawing.Color.WhiteSmoke;
             this.btnGuardarGrafica.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.btnGuardarGrafica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardarGrafica.Location = new System.Drawing.Point(910, 541);
+            this.btnGuardarGrafica.Location = new System.Drawing.Point(900, 531);
             this.btnGuardarGrafica.Name = "btnGuardarGrafica";
             this.btnGuardarGrafica.Size = new System.Drawing.Size(40, 40);
             this.btnGuardarGrafica.TabIndex = 1;
@@ -55,10 +55,10 @@ namespace ABC_APP.Vista
             this.pbxGrafica.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pbxGrafica.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbxGrafica.ErrorImage = global::ABC_APP.Properties.Resources.no_imagen;
-            this.pbxGrafica.Location = new System.Drawing.Point(0, 0);
+            this.pbxGrafica.Location = new System.Drawing.Point(10, 10);
             this.pbxGrafica.MinimumSize = new System.Drawing.Size(635, 390);
             this.pbxGrafica.Name = "pbxGrafica";
-            this.pbxGrafica.Size = new System.Drawing.Size(955, 585);
+            this.pbxGrafica.Size = new System.Drawing.Size(935, 565);
             this.pbxGrafica.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxGrafica.TabIndex = 0;
             this.pbxGrafica.TabStop = false;
@@ -72,7 +72,10 @@ namespace ABC_APP.Vista
             this.Controls.Add(this.pbxGrafica);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormGrafica";
+            this.Padding = new System.Windows.Forms.Padding(10);
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.pbxGrafica)).EndInit();
             this.ResumeLayout(false);
 
